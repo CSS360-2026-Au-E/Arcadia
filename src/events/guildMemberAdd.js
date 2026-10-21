@@ -9,6 +9,8 @@ const event = {
     const channel = member.guild.channels.cache.find(
       (channel) => channel.name === CHANNEL_NAME
     );
+    // Stop here if the server has no channel with that name.
+    if (!channel) return console.error(`No channel named ${CHANNEL_NAME} found`);
 
     /*
       TODO: Change getWelcomeMessage to getWelcomeMessageWithMeme to send a meme to welcome your user.
@@ -24,8 +26,8 @@ const getWelcomeMessage = (userId) => {
     Play around with the code here and customise the welcome message.
   */
   return {
-    content: `Welcome ${userMention(userId)},
-    Hope you have great time here!
+    content: `Welcome to Arcadia, ${userMention(userId)}!
+    Type /hangman to play a game.
   `,
   };
 };
