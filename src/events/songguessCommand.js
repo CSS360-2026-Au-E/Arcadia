@@ -1,4 +1,10 @@
-import { createGame, downloadPreview, games, getRandomSong } from "../games/songguess";
+import {
+  createGame,
+  describeChoice,
+  downloadPreview,
+  games,
+  getRandomSong,
+} from "../games/songguess";
 import { endGame, playClip } from "../games/songguessRound";
 
 // Runs when someone uses a slash command. This file only handles /songguess.
@@ -21,20 +27,29 @@ const event = {
     // Getting a song takes a moment, so tell Discord we're working on it.
     await interaction.deferReply();
 
+    // The genre and era the player picked from the menus.
+    const genre = interaction.options.getString("genre") || "general";
+    const era = interaction.options.getString("era") || "general";
+    const choice = describeChoice(genre, era);
+
     const game = createGame(null);
     games.set(interaction.channelId, game); // claim the channel right away
 
     try {
-      game.song = await getRandomSong();
+      game.song = await getRandomSong(genre, era);
       game.mp3 = await downloadPreview(game.song);
     } catch (error) {
       console.error("Could not get a song:", error.message);
       endGame(interaction.channel, game);
-      await interaction.editReply("Sorry, I couldn't get a song right now. Try again in a bit.");
+      await interaction.editReply(
+        `Sorry, I couldn't find ${choice} songs right now. Try another genre or era.`
+      );
       return;
     }
 
-    await interaction.editReply("**Song Guesser!** Name the song from the shortest clip you can.");
+    await interaction.editReply(
+      `**Song Guesser!** Songs: **${choice}**. Name the song from the shortest clip you can.`
+    );
     await playClip(interaction.channel, game);
   },
 };
