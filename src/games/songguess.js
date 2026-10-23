@@ -12,12 +12,15 @@
   key, and every song comes with a 30 second preview MP3. (Spotify
   stopped giving preview clips to new apps in 2024, so it can't be used.)
 
+  Players pick a genre and an era (or "General" for either). The bot
+  finds a Deezer playlist that matches both, like "80s Rock", and picks
+  a random song from it.
+
   A "game" is a plain object that looks like this:
     {
       song: { title, artist, link, preview },
       stage: 0,      // which clip we are on, 0 is the shortest
-      over: false,   // true once someone wins or the last clip ran out
-      timer: null,   // the countdown to the next clip
+      over: false,   // true once someone wins or gives up
     }
 */
 import axios from "axios";
@@ -26,17 +29,38 @@ import axios from "axios";
 // Every time nobody guesses it, the next clip is longer.
 export const CLIP_SECONDS = [0.1, 1, 2, 4, 8, 16];
 
-// How long players get on each clip before the bot plays a longer one.
-export const SECONDS_PER_CLIP = 20;
+// The genres players can pick. `word` goes into the playlist search,
+// and `match` checks that a playlist's title really is that genre.
+export const GENRES = {
+  general: { name: "General" },
+  pop: { name: "Pop", word: "pop", match: /pop/i },
+  hiphop: { name: "Hip-Hop / Rap", word: "hip hop", match: /hip.?hop|rap/i },
+  rock: { name: "Rock", word: "rock", match: /rock/i },
+  rnb: { name: "R&B", word: "r&b", match: /r&b|rnb|soul/i },
+  country: { name: "Country", word: "country", match: /country/i },
+  electronic: { name: "Electronic / Dance", word: "dance", match: /electro|dance|edm|house/i },
+  latin: { name: "Latin", word: "latin", match: /latin|reggaeton/i },
+  kpop: { name: "K-Pop", word: "k-pop", match: /k-?pop/i },
+};
 
-// Deezer's top 100 songs right now, so most people will know them.
-const CHART_URL = "https://api.deezer.com/chart/0/tracks?limit=100";
+// The eras players can pick, the same way.
+export const ERAS = {
+  general: { name: "General" },
+  "70s": { name: "70s", word: "70s", match: /70s|70's|seventies|197\d/i },
+  "80s": { name: "80s", word: "80s", match: /80s|80's|eighties|198\d/i },
+  "90s": { name: "90s", word: "90s", match: /90s|90's|nineties|199\d/i },
+  "2000s": { name: "2000s", word: "2000s", match: /2000s|\b00s|00's|200\d/i },
+  "2010s": { name: "2010s", word: "2010s", match: /2010s|\b10s|10's|201\d/i },
+  "2020s": { name: "2020s", word: "2020s", match: /2020s|\b20s|20's|202\d/i },
+};
+
+const DEEZER = "https://api.deezer.com";
 
 // Deezer previews are 30 seconds long.
 const PREVIEW_SECONDS = 30;
 
 export function createGame(song) {
-  return { song, stage: 0, over: false, timer: null };
+  return { song, stage: 0, over: false };
 }
 
 // True when the game has already played its longest clip.
@@ -111,11 +135,64 @@ export function id3Size(mp3) {
   return 10 + size;
 }
 
-// Pick a random popular song that has a preview.
-export async function getRandomSong() {
-  const response = await axios.get(CHART_URL);
+// What to search Deezer for, like "80s rock hits" or "pop hits".
+export function searchText(genreKey, eraKey) {
+  return [ERAS[eraKey].word, GENRES[genreKey].word, "hits"].filter(Boolean).join(" ");
+}
+
+/*
+  Put the playlists from a search in best-first order, keeping only the
+  ones whose title matches the genre and era picked. Playlists made by
+  Deezer's own editors, and bigger playlists, go first.
+*/
+export function rankPlaylists(playlists, genreKey, eraKey) {
+  const genre = GENRES[genreKey];
+  const era = ERAS[eraKey];
+
+  return playlists
+    .filter((playlist) => !genre.match || genre.match.test(playlist.title))
+    .filter((playlist) => !era.match || era.match.test(playlist.title))
+    .map((playlist) => {
+      let points = 0;
+      if (/deezer/i.test(playlist.user?.name || "")) points += 2;
+      if (playlist.nb_tracks >= 30) points += 1;
+      return { playlist, points };
+    })
+    .sort((a, b) => b.points - a.points)
+    .map((ranked) => ranked.playlist);
+}
+
+// "80s Rock", "Pop", or "any" when both are General.
+export function describeChoice(genreKey, eraKey) {
+  const words = [ERAS[eraKey], GENRES[genreKey]]
+    .filter((choice) => choice.word)
+    .map((choice) => choice.name);
+  return words.length > 0 ? words.join(" ") : "any";
+}
+
+const pickRandom = (list) => list[Math.floor(Math.random() * list.length)];
+
+// Pick a random song with a preview for the genre and era picked.
+// "General" for both means anything from Deezer's top 100 right now.
+export async function getRandomSong(genreKey = "general", eraKey = "general") {
+  let tracksUrl = `${DEEZER}/chart/0/tracks?limit=100`;
+
+  if (genreKey !== "general" || eraKey !== "general") {
+    const search = await axios.get(`${DEEZER}/search/playlist`, {
+      params: { q: searchText(genreKey, eraKey), limit: 25 },
+    });
+    const playlists = rankPlaylists(search.data.data || [], genreKey, eraKey);
+    if (playlists.length === 0) throw new Error("no playlist found");
+
+    // Pick one of the best 3, so the same playlist isn't used every time.
+    const playlist = pickRandom(playlists.slice(0, 3));
+    tracksUrl = `${DEEZER}/playlist/${playlist.id}/tracks?limit=100`;
+  }
+
+  const response = await axios.get(tracksUrl);
   const songs = response.data.data.filter((track) => track.preview);
-  const track = songs[Math.floor(Math.random() * songs.length)];
+  if (songs.length === 0) throw new Error("no songs with previews");
+  const track = pickRandom(songs);
 
   return {
     title: track.title,
