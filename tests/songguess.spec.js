@@ -1,12 +1,17 @@
 import { expect } from "chai";
 import {
   CLIP_SECONDS,
+  ERAS,
+  GENRES,
   cleanTitle,
   createGame,
   cutClip,
+  describeChoice,
   id3Size,
   isCorrectGuess,
   isLastClip,
+  rankPlaylists,
+  searchText,
   typoDistance,
 } from "../src/games/songguess";
 
@@ -76,5 +81,38 @@ describe("song guesser", () => {
     expect(cutClip(mp3, 1).length).to.equal(30 + 100);
     expect(cutClip(mp3, 0.1).length).to.equal(30 + 10);
     expect(cutClip(mp3, 60).length).to.equal(mp3.length); // never past the end
+  });
+
+  it("has a General option for genre and era", () => {
+    expect(GENRES.general.name).to.equal("General");
+    expect(ERAS.general.name).to.equal("General");
+  });
+
+  it("searches Deezer for the genre and era picked", () => {
+    expect(searchText("rock", "80s")).to.equal("80s rock hits");
+    expect(searchText("pop", "general")).to.equal("pop hits");
+    expect(searchText("general", "90s")).to.equal("90s hits");
+  });
+
+  it("describes the choice for the start message", () => {
+    expect(describeChoice("rock", "80s")).to.equal("80s Rock");
+    expect(describeChoice("general", "2000s")).to.equal("2000s");
+    expect(describeChoice("general", "general")).to.equal("any");
+  });
+
+  it("only keeps playlists that match the genre and era, Deezer's own first", () => {
+    const playlists = [
+      { id: 1, title: "80s Pop", nb_tracks: 80, user: { name: "Deezer Pop Editor" } },
+      { id: 2, title: "Rock Hits 70s 80s 90s", nb_tracks: 150, user: { name: "someone" } },
+      { id: 3, title: "80s Rock", nb_tracks: 50, user: { name: "Deezer Rock Editor" } },
+      { id: 4, title: "2000s Rock", nb_tracks: 50, user: { name: "Deezer Rock Editor" } },
+    ];
+    const ranked = rankPlaylists(playlists, "rock", "80s").map((p) => p.id);
+    expect(ranked).to.deep.equal([3, 2]);
+  });
+
+  it("finds nothing when no playlist matches", () => {
+    const playlists = [{ id: 1, title: "70s Happy Hits", nb_tracks: 70, user: { name: "x" } }];
+    expect(rankPlaylists(playlists, "kpop", "70s")).to.deep.equal([]);
   });
 });
