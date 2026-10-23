@@ -8,7 +8,7 @@ CSS 360, Group 4.
 | Command | Players | How to play | Status |
 | --- | --- | --- | --- |
 | `/hangman` | 1+ | Guess the secret word by typing one letter at a time in the channel. Six wrong guesses and you lose. | Playable |
-| `/songguess` | 1+ | Name the song from a tiny clip. Every miss plays a longer clip: 0.1, 1, 2, 4, 8, then 16 seconds. | Playable |
+| `/songguess` | 1+ | Pick a genre and an era (or General), then name the song from a tiny clip. Type `skip` for a longer clip: 0.1, 1, 2, 4, 8, then 16 seconds. | Playable |
 | Personality test | 1 | Answer quick questions and get a four letter type like ENFJ. | Planned |
 
 New members get a welcome message in `#general` that points them to the games.
@@ -74,7 +74,7 @@ npm test
 | `An invalid token was provided` | Reset the token in the portal and paste the new one into `.env`. |
 | `Used disallowed intents` | Turn on all three Privileged Gateway Intents in the **Bot** tab. |
 | `/hangman` does not show up | Stop the bot with Ctrl+C and run `npm start` again. If it still says it could not add the command, invite the bot again with the link in step 6. |
-| `/songguess` says it couldn't get a song | The bot couldn't reach Deezer. Check your internet connection and try again. |
+| `/songguess` says it couldn't find songs | Try a different genre or era. Some mixes, like 70s K-Pop, have no playlists. If every choice fails, the bot can't reach Deezer. |
 | Song clips don't show up | Give the bot the **Attach Files** permission, or invite it again with the link in step 6. |
 | Typing letters does nothing | Turn on the **Message Content** intent in the **Bot** tab. |
 
