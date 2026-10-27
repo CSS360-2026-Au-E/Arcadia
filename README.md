@@ -9,11 +9,12 @@ CSS 360, Group 4.
 | --- | --- | --- | --- |
 | `/hangman` | 1+ | Guess the secret word by typing one letter at a time in the channel. Six wrong guesses and you lose. | Playable |
 | `/songguess` | 1+ | Pick a genre and an era (or General), then name the song from a tiny clip. Type `skip` for a longer clip: 0.1, 1, 2, 4, 8, then 16 seconds. | Playable |
+| `/minigolf` | 1 to 8 | Turn-based minigolf. Pick **Sabotage** (everyone secretly drops a trap before each hole) or **Chaos Cards** (play cards that bend the rules). Aim with buttons; the bot posts a picture after every shot. 6 holes unless you pick 3 or 9. | Playable |
 | Personality test | 1 | Answer quick questions and get a four letter type like ENFJ. | Planned |
 
 New members get a welcome message in `#general` that points them to the games.
 
-How the code works, file by file: [hangman](docs/how-hangman-works.md), [song guesser](docs/how-songguess-works.md).
+How the code works, file by file: [hangman](docs/how-hangman-works.md), [song guesser](docs/how-songguess-works.md), [minigolf](docs/how-minigolf-works.md).
 
 ## The big idea
 
@@ -54,9 +55,9 @@ in a GitHub Codespace, so nothing is installed on your computer.
    ```
    npm start
    ```
-   It works when you see `Logged in as <your bot>!` and `Added /hangman and /songguess to <your server>`.
+   It works when you see `Logged in as <your bot>!` and `Added /hangman, /songguess and /minigolf to <your server>`.
    Keep the terminal open. Closing it, or the Codespace going to sleep, takes the bot offline.
-8. **Play.** Type `/hangman` or `/songguess` in your server.
+8. **Play.** Type `/hangman`, `/songguess` or `/minigolf` in your server.
 
 Your server needs a text channel named `general` for the welcome message. To use
 a different channel, change `CHANNEL_NAME` in `.env`.
@@ -76,6 +77,7 @@ npm test
 | `/hangman` does not show up | Stop the bot with Ctrl+C and run `npm start` again. If it still says it could not add the command, invite the bot again with the link in step 6. |
 | `/songguess` says it couldn't find songs | Try a different genre or era. Some mixes, like 70s K-Pop, have no playlists. If every choice fails, the bot can't reach Deezer. |
 | Song clips don't show up | Give the bot the **Attach Files** permission, or invite it again with the link in step 6. |
+| Minigolf pictures don't show up | Same as song clips: the bot needs the **Attach Files** permission. |
 | Typing letters does nothing | Turn on the **Message Content** intent in the **Bot** tab. |
 
 ## Credits
