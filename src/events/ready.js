@@ -1,5 +1,6 @@
 import { SlashCommandBuilder } from "discord.js";
 import { ERAS, GENRES } from "../games/songguess";
+import { HOLE_CHOICES, MODES } from "../games/minigolf";
 
 // This is the /hangman command as Discord will show it in the "/" menu.
 const hangmanCommand = new SlashCommandBuilder()
@@ -29,6 +30,24 @@ const songguessCommand = new SlashCommandBuilder()
       .addChoices(...menu(ERAS))
   );
 
+// /minigolf makes the host pick a mode, and optionally how many holes.
+const minigolfCommand = new SlashCommandBuilder()
+  .setName("minigolf")
+  .setDescription("Turn-based minigolf for up to 8 players")
+  .addStringOption((option) =>
+    option
+      .setName("mode")
+      .setDescription("Sabotage: everyone drops traps. Chaos Cards: everyone plays rule-bending cards.")
+      .setRequired(true)
+      .addChoices(...menu(MODES))
+  )
+  .addIntegerOption((option) =>
+    option
+      .setName("holes")
+      .setDescription("How many holes (6 if you skip this)")
+      .addChoices(...HOLE_CHOICES.map((n) => ({ name: `${n} holes`, value: n })))
+  );
+
 // "ready" runs once, when the bot has logged in to Discord.
 const event = {
   name: "ready",
@@ -42,12 +61,12 @@ const event = {
     ############################################################
   `);
 
-    // Tell every server the bot is in that /hangman and /songguess exist.
+    // Tell every server the bot is in that /hangman, /songguess and /minigolf exist.
     // Doing it per server makes the command show up right away.
     for (const guild of client.guilds.cache.values()) {
       try {
-        await guild.commands.set([hangmanCommand.toJSON(), songguessCommand.toJSON()]);
-        console.log(`Added /hangman and /songguess to ${guild.name}`);
+        await guild.commands.set([hangmanCommand.toJSON(), songguessCommand.toJSON(), minigolfCommand.toJSON()]);
+        console.log(`Added /hangman, /songguess and /minigolf to ${guild.name}`);
       } catch (error) {
         console.error(`Could not add commands to ${guild.name}:`, error.message);
       }
