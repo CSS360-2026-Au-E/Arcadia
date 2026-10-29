@@ -10,12 +10,15 @@ CSS 360, Group 4.
 | `/hangman` | 1+ | Guess the secret word by typing one letter at a time in the channel. Six wrong guesses and you lose. | Playable |
 | `/songguess` | 1+ | Pick a genre and an era (or General), then name the song from a tiny clip. Type `skip` for a longer clip: 0.1, 1, 2, 4, 8, then 16 seconds. | Playable |
 | `/minigolf` | 1 to 8 | Turn-based minigolf. Pick **Sabotage** (everyone secretly drops a trap before each hole) or **Chaos Cards** (play cards that bend the rules). Aim with buttons; the bot posts a picture after every shot. 6 holes unless you pick 3 or 9. | Playable |
-| `/hotpotato`     | 2+      | Type **join** to get in, then pass the potato by **@mentioning** another player. A secret timer is running, and whoever holds it when it explodes is out. Last player standing wins. | Playable |
+| `/hotpotato` | 2+ | Type **join** to get in, then pass the potato by **@mentioning** another player. A secret timer is running, and whoever holds it when it explodes is out. Last player standing wins. | Playable |
+| `/tictactoe` | 1 | Play tic tac toe against the bot. Pick easy, medium or hard (hard if you skip it), then click a square to place your X. | Playable |
 | Personality test | 1 | Answer quick questions and get a four letter type like ENFJ. | Planned |
 
 New members get a welcome message in `#general` that points them to the games.
 
-How the code works, file by file: [hangman](docs/how-hangman-works.md), [song guesser](docs/how-songguess-works.md), [minigolf](docs/how-minigolf-works.md).
+What changed in each version: [release notes](CHANGELOG.md).
+
+How the code works, file by file: [hangman](docs/how-hangman-works.md), [song guesser](docs/how-songguess-works.md), [minigolf](docs/how-minigolf-works.md), [hot potato](docs/how-hotpotato-works.md), [tic tac toe](docs/how-tictactoe-works.md).
 
 ## The big idea
 
@@ -24,8 +27,8 @@ Someone starts a session, players join, and the bot picks games that fit how man
 people are playing and how much time they have. Points carry across the circuit
 and the top scorer wins.
 
-Planned games: Quick Draw, Emoji Decode, Lowest Unique Number, Hot Potato,
-Smuggler, Majority Rules and Team Tug.
+Planned games: Quick Draw, Emoji Decode, Lowest Unique Number, Smuggler,
+Majority Rules and Team Tug.
 
 ## Run the bot yourself
 
@@ -56,9 +59,9 @@ in a GitHub Codespace, so nothing is installed on your computer.
    ```
    npm start
    ```
-   It works when you see `Logged in as <your bot>!` and `Added /hangman, /songguess, /minigolf and /hotpotato to <your server>`.
+   It works when you see `Logged in as <your bot>!` and `Added /hangman, /songguess, /minigolf, /hotpotato and /tictactoe to <your server>`.
    Keep the terminal open. Closing it, or the Codespace going to sleep, takes the bot offline.
-8. **Play.** Type `/hangman`, `/songguess`, `/minigolf` or `/hotpotato` in your server.
+8. **Play.** Type `/hangman`, `/songguess`, `/minigolf`, `/hotpotato` or `/tictactoe` in your server.
 
 Your server needs a text channel named `general` for the welcome message. To use
 a different channel, change `CHANNEL_NAME` in `.env`.
