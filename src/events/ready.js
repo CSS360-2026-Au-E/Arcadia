@@ -1,5 +1,7 @@
 import { SlashCommandBuilder } from "discord.js";
 import { ERAS, GENRES } from "../games/songguess";
+
+import { tictactoeCommand } from "../games/tictactoe";
 import { HOLE_CHOICES, MODES } from "../games/minigolf";
 
 // This is the /hangman command as Discord will show it in the "/" menu.
@@ -66,17 +68,20 @@ const event = {
     ############################################################
   `);
 
-    // Tell every server the bot is in that /hangman, /songguess, /minigolf and /hotpotato exist.
+    // Tell every server the bot is in that /hangman, /songguess, /minigolf, /hotpotato, and /tictactoe exist.
     // Doing it per server makes the command show up right away.
     for (const guild of client.guilds.cache.values()) {
       try {
+
         await guild.commands.set([
           hangmanCommand.toJSON(),
           songguessCommand.toJSON(),
           minigolfCommand.toJSON(),
           hotpotatoCommand.toJSON(),
+          tictactoeCommand.toJSON(),
         ]);
-        console.log(`Added /hangman, /songguess, /minigolf and /hotpotato to ${guild.name}`);
+        console.log(`Added /hangman, /songguess, /minigolf, /hotpotato and /tictactoe to ${guild.name}`);
+
       } catch (error) {
         console.error(`Could not add commands to ${guild.name}:`, error.message);
       }
