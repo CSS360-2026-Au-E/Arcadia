@@ -48,6 +48,11 @@ const minigolfCommand = new SlashCommandBuilder()
       .addChoices(...HOLE_CHOICES.map((n) => ({ name: `${n} holes`, value: n })))
   );
 
+// /hotpotato has no options. Players join by typing "join".
+const hotpotatoCommand = new SlashCommandBuilder()
+  .setName("hotpotato")
+  .setDescription("Pass the potato before it explodes! Last player standing wins");
+
 // "ready" runs once, when the bot has logged in to Discord.
 const event = {
   name: "ready",
@@ -61,12 +66,17 @@ const event = {
     ############################################################
   `);
 
-    // Tell every server the bot is in that /hangman, /songguess and /minigolf exist.
+    // Tell every server the bot is in that /hangman, /songguess, /minigolf and /hotpotato exist.
     // Doing it per server makes the command show up right away.
     for (const guild of client.guilds.cache.values()) {
       try {
-        await guild.commands.set([hangmanCommand.toJSON(), songguessCommand.toJSON(), minigolfCommand.toJSON()]);
-        console.log(`Added /hangman, /songguess and /minigolf to ${guild.name}`);
+        await guild.commands.set([
+          hangmanCommand.toJSON(),
+          songguessCommand.toJSON(),
+          minigolfCommand.toJSON(),
+          hotpotatoCommand.toJSON(),
+        ]);
+        console.log(`Added /hangman, /songguess, /minigolf and /hotpotato to ${guild.name}`);
       } catch (error) {
         console.error(`Could not add commands to ${guild.name}:`, error.message);
       }
