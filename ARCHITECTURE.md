@@ -4,10 +4,10 @@ Arcadia is a Discord bot that turns a server into a small arcade. Players type a
 
 ## Contents
 
-1. [Overview and system context](#1-overview-and-system-context) (Ami)
-2. [Code design: minigolf modules, and how to add a new game](#2-code-design-minigolf-modules-and-how-to-add-a-new-game) (Abhiram)
-3. [Game flow: one Hot Potato round](#3-game-flow-one-hot-potato-round) (cpukarma)
-4. [Network and tooling: how the bot connects and runs](#4-network-and-tooling-how-the-bot-connects-and-runs) (ovjason)
+1. [Overview and system context](#1-overview-and-system-context) (Amrit)
+2. [Code design: minigolf modules, and how to add a new game](#2-code-design-minigolf-modules-and-how-to-add-a-new-game) (Abhi)
+3. [Game flow: one Hot Potato round](#3-game-flow-one-hot-potato-round) (Jennifer)
+4. [Network and tooling: how the bot connects and runs](#4-network-and-tooling-how-the-bot-connects-and-runs) (Jason)
 
 ---
 
