@@ -4,25 +4,27 @@
   This file:
     1. Notices when someone types /snailrace and posts the race with bet buttons
     2. Saves a bet when someone clicks a snail's button
-    3. When betting closes, edits the same message over and over so the
-       snails look like they're crawling, then announces the winner
+    3. When betting closes, edits the same message over and over with a new
+       picture each time, so the snails look like they're crawling
+    4. Shows the winner with a crown and @mentions everyone who bet on it
   The rules (how snails move, who wins) live in src/games/snailrace.js.
+  The picture is drawn in src/games/snailracePicture.js.
 */
 
-import { ActionRowBuilder, ButtonBuilder, ButtonStyle } from "discord.js";
+import { ActionRowBuilder, AttachmentBuilder, ButtonBuilder, ButtonStyle } from "discord.js";
 import {
   BET_SECONDS,
   SNAILS,
   STEP_SECONDS,
   betCounts,
   createGame,
-  drawTrack,
   finishers,
   moveSnails,
   pickWinner,
   placeBet,
   winningBettors,
 } from "../games/snailrace";
+import { drawRace } from "../games/snailracePicture";
 
 // Every race running right now, keyed by channel ID, so each channel
 // can only have one race at a time. Races live in memory, so they
@@ -38,6 +40,16 @@ const mention = (userId) => `<@${userId}>`;
 
 // setTimeout counts in milliseconds. 1 second = 1000 milliseconds.
 const toMs = (seconds) => seconds * 1000;
+
+/*
+  Turn the race into a picture Discord can show. "files" sends the new
+  picture, and "attachments: []" removes the old one, so the message only
+  ever has one picture. Pass in the winner's number once there is one.
+*/
+function racePicture(game, winner = null) {
+  const file = new AttachmentBuilder(drawRace(game, winner), { name: "snail-race.png" });
+  return { files: [file], attachments: [] };
+}
 
 // One button per snail. The custom ID "snail:2" tells us which snail
 // was clicked when the button press comes back to the bot.
@@ -55,13 +67,12 @@ function betButtons() {
   return [row]; // Discord wants a list of rows
 }
 
-// The text shown while people are betting: the starting line plus bet counts.
+// The text shown while people are betting: how many bets each snail has.
 function bettingText(game) {
   const counts = betCounts(game);
   const betLines = SNAILS.map((snail, i) => `${snail.lane} ${snail.name}: ${counts[i]} bet(s)`);
   return (
     `🐌 **Snail Race!** Click a snail to bet on it. The race starts in ${BET_SECONDS} seconds.\n\n` +
-    `${drawTrack(game)}\n\n` +
     betLines.join("\n")
   );
 }
@@ -83,7 +94,7 @@ async function runStep(channelId, message, game) {
   // Nobody has crossed the finish line yet: redraw and go again.
   if (finishers(game).length === 0) {
     try {
-      await message.edit({ content: `🐌 **And they're off!**\n\n${drawTrack(game)}` });
+      await message.edit({ content: "🐌 **And they're off!**", ...racePicture(game) });
     } catch {
       // The message was deleted, so there's nothing to show the race on.
       games.delete(channelId);
@@ -108,7 +119,7 @@ async function runStep(channelId, message, game) {
   }
 
   try {
-    await message.edit({ content: `${drawTrack(game)}\n\n${result}` });
+    await message.edit({ content: result, ...racePicture(game, winner) });
   } catch {
     // The message was deleted. Nothing more to do.
   }
@@ -119,7 +130,7 @@ async function startRace(channelId, message, game) {
   if (games.get(channelId) !== game) return;
   try {
     // components: [] removes the buttons so nobody can bet anymore.
-    await message.edit({ content: `🐌 **Betting is closed!**\n\n${drawTrack(game)}`, components: [] });
+    await message.edit({ content: "🐌 **Betting is closed!** On your marks...", components: [] });
   } catch {
     games.delete(channelId);
     return;
@@ -144,7 +155,8 @@ async function startGame(interaction) {
   const game = createGame();
   games.set(interaction.channelId, game);
 
-  await interaction.reply({ content: bettingText(game), components: betButtons() });
+  // The "..." copies the picture's files into this message.
+  await interaction.reply({ content: bettingText(game), components: betButtons(), ...racePicture(game) });
 
   // Remember the race message so we can edit it, and so bet clicks on
   // an old race message don't count for this one.
