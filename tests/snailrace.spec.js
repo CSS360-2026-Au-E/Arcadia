@@ -1,10 +1,8 @@
 import { expect } from "chai";
 import {
-  SNAILS,
   TRACK_LENGTH,
   betCounts,
   createGame,
-  drawTrack,
   finishers,
   moveSnails,
   pickWinner,
@@ -12,6 +10,7 @@ import {
   randomStep,
   winningBettors,
 } from "../src/games/snailrace";
+import { IMAGE_HEIGHT, IMAGE_WIDTH, drawRace } from "../src/games/snailracePicture";
 
 // A "roll" that hands out these steps in order, so the test knows
 // exactly how far each snail moves.
@@ -78,13 +77,25 @@ describe("snail race", () => {
     }
   });
 
-  it("draws one lane per snail with the snail in the right spot", () => {
+  it("remembers each snail's last step for the speed lines", () => {
     const game = createGame();
-    game.positions = [3, 0, 0, 0];
-    const lanes = drawTrack(game).split("\n");
-    expect(lanes).to.have.length(SNAILS.length);
-    expect(lanes[0]).to.equal(
-      `${SNAILS[0].lane} 🏁${"▫️".repeat(TRACK_LENGTH - 3)}🐌${"▫️".repeat(3)} ${SNAILS[0].name}`
-    );
+    moveSnails(game, rollsOf(2, 0, 1, 2));
+    expect(game.lastSteps).to.deep.equal([2, 0, 1, 2]);
+  });
+
+  it("draws the race as a PNG picture", () => {
+    const game = createGame();
+    moveSnails(game, rollsOf(1, 2, 0, 1));
+    const png = drawRace(game);
+    // Every PNG starts with the same 8 bytes, then its width and height.
+    expect([...png.subarray(1, 4)].map((c) => String.fromCharCode(c)).join("")).to.equal("PNG");
+    expect(png.readUInt32BE(16)).to.equal(IMAGE_WIDTH);
+    expect(png.readUInt32BE(20)).to.equal(IMAGE_HEIGHT);
+  });
+
+  it("draws the finished race with a winner", () => {
+    const game = createGame();
+    game.positions = [TRACK_LENGTH, 3, 5, 7];
+    expect(drawRace(game, 0).length).to.be.greaterThan(1000);
   });
 });
