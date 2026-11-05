@@ -55,6 +55,11 @@ const hotpotatoCommand = new SlashCommandBuilder()
   .setName("hotpotato")
   .setDescription("Pass the potato before it explodes! Last player standing wins");
 
+// /snailrace has no options. Players bet by clicking a snail's button.
+const snailraceCommand = new SlashCommandBuilder()
+  .setName("snailrace")
+  .setDescription("Bet on a snail and watch them race to the finish line");
+
 // "ready" runs once, when the bot has logged in to Discord.
 const event = {
   name: "ready",
@@ -68,7 +73,7 @@ const event = {
     ############################################################
   `);
 
-    // Tell every server the bot is in that /hangman, /songguess, /minigolf, /hotpotato, and /tictactoe exist.
+    // Tell every server the bot is in that /hangman, /songguess, /minigolf, /hotpotato, /tictactoe, and /snailrace exist.
     // Doing it per server makes the command show up right away.
     for (const guild of client.guilds.cache.values()) {
       try {
@@ -79,8 +84,9 @@ const event = {
           minigolfCommand.toJSON(),
           hotpotatoCommand.toJSON(),
           tictactoeCommand.toJSON(),
+          snailraceCommand.toJSON(),
         ]);
-        console.log(`Added /hangman, /songguess, /minigolf, /hotpotato and /tictactoe to ${guild.name}`);
+        console.log(`Added /hangman, /songguess, /minigolf, /hotpotato, /tictactoe and /snailrace to ${guild.name}`);
 
       } catch (error) {
         console.error(`Could not add commands to ${guild.name}:`, error.message);
