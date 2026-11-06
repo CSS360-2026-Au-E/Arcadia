@@ -106,7 +106,7 @@ _Abhiram: class/module diagram of the minigolf files, plus the steps for adding 
 
 This section shows what each person and part of the system can do in Hot Potato, then walks through one round. The use-case diagram shows the three actors: the **Host** (the player who types `/hotpotato`), any **Player**, and the bot's **Timer**, which triggers steps on its own. Each oval is something an actor can do. A dashed «include» arrow means one step always happens as part of another (starting a game always adds the host). A dashed «extend» arrow means a step only happens sometimes, under the condition in brackets (the winner is announced only when one player is left).
 
-![Activity diagram of one Hot Potato round](Host.png)
+![Use-case diagram of one Hot Potato round](Host.png)
 
 ```mermaid
 flowchart TD
