@@ -98,9 +98,85 @@ A game starts the same way from the other side. `/hangman` arrives as an `intera
 
 ## 2. Code design: minigolf modules, and how to add a new game
 
-_Abhiram: class/module diagram of the minigolf files, plus the steps for adding a new game._
+Minigolf is the biggest game in Arcadia, with nine files. Like hangman (section 1), it keeps the game rules apart from the Discord code. The rules are split into small files, and each file has one job.
 
----
+### What happens on one shot
+
+This diagram follows one shot, from the player clicking **Shoot** to the new picture showing up in Discord. It uses the same shapes as the hangman diagram: rounded shapes are things outside our code, numbered boxes are our files in the order they run, and cylinders are stored data.
+
+```mermaid
+flowchart TD
+    P([Player]) -- "clicks Shoot" --> D([Discord])
+    D -- "button click event" --> C["1. minigolfControls.js<br/>is this a minigolf button?<br/>is it this player's turn?"]
+    C -- "not minigolf,<br/>or not your turn" --> X[[ignored]]
+    C -- "channel" --> S[("games Map<br/>one game per channel")]
+    S -- "the game:<br/>players, balls, strokes" --> C
+    C -- "game + aim + power" --> G["2. minigolf.js<br/>take the shot, add a stroke,<br/>pick who goes next"]
+    G -- "ball, aim, power,<br/>traps and cards in play" --> PH["3. minigolfPhysics.js<br/>roll the ball across the course"]
+    H[("minigolfCourses.js<br/>the hole maps")] -- "walls, water, slopes" --> PH
+    PH -- "where the ball stopped,<br/>did it go in?" --> G
+    G -- "updated game" --> S
+    G -- "shot result" --> R["4. minigolfRound.js<br/>write the message"]
+    R -- "course + ball path" --> PIC["5. minigolfPicture.js<br/>draw the course picture"]
+    PIC -- "PNG image" --> R
+    R -- "message + picture +<br/>next player's buttons" --> D
+    D -- "shows the shot" --> P
+```
+
+In words:
+
+1. **minigolfControls.js** gets every button click. It ignores clicks that aren't minigolf buttons (their ids start with `mg:`) or that come from someone whose turn it isn't. Then it looks up this channel's game.
+2. **minigolf.js** takes the shot. It counts the stroke and picks who goes next.
+3. **minigolfPhysics.js** rolls the ball. It reads the walls, water and slopes from the hole map in **minigolfCourses.js**, and it uses any traps or cards in play. It reports where the ball stopped and whether it went in.
+4. **minigolfRound.js** writes the message about the shot.
+5. **minigolfPicture.js** draws a new picture of the course with the ball's path on it. The message, the picture and the next player's buttons go back to Discord.
+
+### What each file does
+
+| File | Its job | Uses Discord? |
+|---|---|---|
+| `events/minigolfCommand.js` | Starts a game when someone types `/minigolf` | Yes |
+| `events/minigolfControls.js` | Handles every minigolf button click | Yes |
+| `games/minigolfRound.js` | Writes the messages and buttons, and moves the game from hole to hole | Yes |
+| `games/minigolf.js` | Keeps track of the game: players, turns, strokes, scores | No |
+| `games/minigolfPhysics.js` | Works out where the ball goes | No |
+| `games/minigolfTraps.js` | The traps for Sabotage mode | No |
+| `games/minigolfCards.js` | The cards for Chaos Cards mode | No |
+| `games/minigolfCourses.js` | The 9 holes, drawn as text maps | No |
+| `games/minigolfPicture.js` | Draws the course picture | No |
+
+The six rules files never use Discord. That is why `tests/minigolf.spec.js` can test the physics, traps, cards and scoring without running the bot.
+
+### Ideas worth copying
+
+- **Keep the rules away from Discord.** The rules are plain functions that change a game object. The Discord files only turn clicks into function calls, and results into messages. You can test the rules without a bot, and you can change how messages look without breaking the game.
+- **One list of buttons.** Every minigolf button id starts with `mg:`, like `mg:shoot` or `mg:pow:3`. `minigolfControls.js` has one table with one entry per button. A new button is one new entry, not another `if` statement.
+- **One game per channel.** Games are kept in memory, one per channel. A restart ends every game.
+- **Pass the randomness in.** Anything random (cards, traps, the banana peel's spin) uses a `random` function given to the game. Tests give it fixed numbers, so the results are the same every run.
+- **Holes are data.** Each hole is a small text map (`T` tee, `O` cup, `#` wall, `~` water). Adding a hole means drawing a map, not writing code.
+- **Ignore double clicks.** The game is marked busy while a shot is being worked out, so a double click can't shoot twice.
+
+### How to add a new game
+
+These are the steps we used for minigolf. Say the new game is `/trivia`.
+
+```mermaid
+flowchart TD
+    A["1. Write the rules<br/>src/games/trivia.js"] --> B["2. Test the rules<br/>tests/trivia.spec.js"]
+    B --> C["3. Connect it to Discord<br/>src/events/triviaCommand.js"]
+    C --> D["4. Add /trivia to the command list<br/>src/events/ready.js"]
+    D --> E["5. Play it in the test server"]
+    E --> F["6. Write the docs"]
+    F --> G["7. Open a pull request"]
+```
+
+1. **Write the rules** in `src/games/trivia.js`. Keep them as plain functions, like `createGame()`, `answer(game, player, text)` and `winners(game)`. Don't use `discord.js` in this file.
+2. **Test the rules** in `tests/trivia.spec.js`, using Mocha and Chai like the other tests. `npm test` finds the new file on its own.
+3. **Connect it to Discord** with a new file in `src/events/`. It exports `{ name: "interactionCreate", execute }` and returns right away if the command or button isn't for trivia. The bot loads every file in this folder on its own.
+4. **Add `/trivia` to the command list** in `src/events/ready.js`, or it won't show up in Discord's menu.
+5. **Play it** in the test server with `npm start`. Check what happens when two people click at once, and whether some messages should be seen by only one player.
+6. **Write the docs**: a `docs/how-trivia-works.md` page and a row in the README's game list.
+7. **Open a pull request** to `main`, and a teammate reviews and merges it.
 
 ## 3. Game flow: one Hot Potato round
 
