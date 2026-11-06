@@ -180,7 +180,48 @@ flowchart TD
 
 ## 3. Game flow: one Hot Potato round
 
-_cpukarma: activity diagram of one round, from start to the potato exploding._
+This section shows what each person and part of the system can do in Hot Potato, then walks through one round. The use-case diagram shows the three actors: the **Host** (the player who types `/hotpotato`), any **Player**, and the bot's **Timer**, which triggers steps on its own. Each oval is something an actor can do. A dashed «include» arrow means one step always happens as part of another (starting a game always adds the host). A dashed «extend» arrow means a step only happens sometimes, under the condition in brackets (the winner is announced only when one player is left).
+
+![Use-case diagram of one Hot Potato round](Host.png)
+
+```mermaid
+flowchart TD
+    A([/hotpotato]) --> B{Game already in<br/>this channel?}
+    B -- yes --> B1[Reply only to that player] --> Z([End])
+    B -- no --> C[Create game, add host,<br/>open 30-second join window]
+    C --> D[Players type join]
+    D --> E{At least 2 players<br/>when time is up?}
+    E -- no --> E1[Cancel game] --> Z
+    E -- yes --> F[Give potato to a random player,<br/>start secret 10–30 s fuse]
+    F --> G[Holder @mentions someone]
+    G --> H{Valid pass?}
+    H -- no --> G
+    H -- yes --> I[Potato moves to new holder]
+    I --> J{Fuse ran out?}
+    J -- no --> G
+    J -- yes --> K[Holder is out]
+    K --> L{More than 1<br/>player left?}
+    L -- yes --> F
+    L -- no --> M[Announce winner,<br/>delete game] --> Z
+```
+
+Step by step:
+
+1. **Start.** A player types `/hotpotato`. It arrives as an `interactionCreate` event, and `hotpotatoCommand.js` checks the `games` Map. If the channel already has a game, it replies only to that player (an ephemeral reply) and stops. Otherwise it creates a new game, adds the player who started it, and stores it in the Map.
+2. **Join.** The bot opens a 30-second join window. `hotpotatoMessages.js` watches for messages that say `join` and calls `join()` in `hotpotato.js`, which adds the player and returns `joined`, `already` or `closed`. The bot reacts with 🥔 to each new player. Every other message is ignored, so people can still chat.
+3. **Close joining.** When the 30 seconds are up, `canStart()` checks for at least 2 players. If there are fewer, the game is cancelled and deleted from the Map.
+4. **Hand out the potato.** `startRound()` switches the game to `playing` and gives the potato to a random player. The bot then starts a secret fuse timer. `fuseSeconds()` picks a random length between 10 and 30 seconds, so nobody can predict when it will go off.
+5. **Pass.** While the fuse runs, the player holding the potato passes it by @mentioning someone. `pass()` checks three rules in order: the sender must be holding the potato, they can't pass to themselves, and the target must still be in the game. It returns `passed`, `not-holder`, `self` or `not-playing`, and the bot replies to match. A pass from someone who isn't holding the potato gets no reply, so normal chatting doesn't cause spam.
+6. **Explode.** When the fuse runs out, `explode()` removes whoever is holding the potato and adds them to the `out` list.
+7. **Next round or winner.** If more than one player is left, a new round starts after a 3-second pause (back to step 4). If only one is left, `winner()` returns them, the bot announces the winner, and the game is deleted from the Map so the channel is free for a new one.
+
+### Design choices and their limits
+
+- **Rules and timers are kept apart.** `hotpotato.js` only holds the rules. The timers (`setTimeout`) live in `hotpotatoCommand.js`. That lets the tests call `explode()` directly instead of waiting up to 30 seconds.
+- **Timers check that their game still exists.** Before acting, each timer checks the game is still in the Map, so an old timer can't post into a new game.
+- **Players are stored by user ID.** IDs never change and are what @mentions contain, so passing works even if someone changes their name.
+- **Games live in memory.** Like hangman, a game in progress is lost if the bot restarts.
+- **Players who leave stay in the game.** A player who leaves the server mid-game stays in the player list until the potato explodes on them.
 
 ---
 
