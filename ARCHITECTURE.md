@@ -227,8 +227,7 @@ Step by step:
 
 ## 4. Network and tooling: how the bot connects and runs
 
-_ovjason: network diagram (Codespace, token in `.env`, Discord gateway), plus how npm, esbuild and the Docker deploy workflow fit in._
-I read the code. It doesn't match the quiz I described in my last reply, so I've rewritten section 3 to fit what you built.
+_ovjason: network diagram (Codespace, token in `.env`, Discord gateway), plus how npm, esbuild and the Docker deploy workflow fit in.
 
 ## 5. Game flow: one personality test run
 
