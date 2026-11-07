@@ -227,4 +227,44 @@ Step by step:
 
 ## 4. Network and tooling: how the bot connects and runs
 
-_ovjason: network diagram (Codespace, token in `.env`, Discord gateway), plus how npm, esbuild and the Docker deploy workflow fit in._
+_ovjason: network diagram (Codespace, token in `.env`, Discord gateway), plus how npm, esbuild and the Docker deploy workflow fit ## 3b. Game flow: one Tic Tac Toe game
+
+This section shows what each person and part of the system can do in Tic Tac Toe, then walks through one game. The use-case diagram shows two actors: the **Player** (the person who runs the command) and the **Bot**, which plays the other side. Each oval is something an actor can do. A dashed «include» arrow means one step always happens as part of another (running the command always shows the board prompt). A dashed «extend» arrow means a step only happens sometimes, under a condition (the final result is shown only when someone wins or the board fills up).
+
+![Use-case diagram of one Tic Tac Toe game](TicTacToe.png)
+
+```mermaid
+flowchart TD
+    A([Player runs the<br/>tic tac toe command]) --> B[Create game with<br/>empty 3x3 board]
+    B --> C[Show board prompt]
+    C --> D[Player picks a square]
+    D --> E{Square empty?}
+    E -- no --> C
+    E -- yes --> F[Place player's mark]
+    F --> G{Three in a row<br/>or board full?}
+    G -- yes --> M[Show final result,<br/>delete game]
+    G -- no --> H[Bot picks an empty square<br/>and places its mark]
+    H --> I{Three in a row<br/>or board full?}
+    I -- yes --> M
+    I -- no --> C
+    M --> Z([End])
+```
+
+Step by step:
+
+1. **Start.** A player runs the tic tac toe command. The bot creates a new game with an empty 3x3 board and stores it. This is player vs the bot only, so nobody else joins and there is no waiting period.
+2. **Show the board.** The bot replies with a prompt that shows the current board. Every turn of the game uses this same prompt, updated with the latest marks.
+3. **Player's move.** The player picks one square. The player always moves first.
+4. **Validate the move.** If the square is already taken, the move is rejected, the board stays the same, and the bot does not take a turn. The prompt stays up so the player can pick again.
+5. **Check for a result.** After a mark is placed, the game checks for three matching marks in any row, column or diagonal. If there are none and every square is full, the game is a tie. Either outcome ends the game.
+6. **Bot's move.** If the game is still going, the bot places its mark in one of the empty squares. Then the same result check from step 5 runs again.
+7. **Repeat or finish.** If nobody has won and squares are left, the bot shows the updated board and the game goes back to step 3. Otherwise the bot shows the final result (player wins, bot wins, or tie) and the game is deleted, so the next command starts a fresh board.
+
+### Design choices and their limits
+
+- **Player vs bot only.** There is no player vs player mode. That keeps the turn order simple: the player and the bot alternate, with no joining or waiting for a second person.
+- **One file holds the game.** All tic tac toe code lives in `src/games/tictactoe.js`, so it doesn't interfere with hangman or guess the song.
+- **The board is checked after every mark.** The same result check runs after the player's move and after the bot's move, so there is one place that decides wins and ties.
+- **Invalid moves are free.** A rejected move doesn't pass the turn to the bot, so a misclick can't cost the player a turn.
+- **Games live in memory.** Like the other minigames, a game in progress is lost if the bot restarts.
+- **The bot's strategy is simple.** The bot only needs to choose some empty square, so it may not play perfectly and the player can win.
