@@ -227,7 +227,96 @@ Step by step:
 
 ## 4. Network and tooling: how the bot connects and runs
 
-_ovjason: network diagram (Codespace, token in `.env`, Discord gateway), plus how npm, esbuild and the Docker deploy workflow fit in.
+### How the bot connects to Discord
+
+Arcadia is a client, not a server. Nothing on the internet connects *to* it. When the bot starts, it opens one outgoing connection to Discord and keeps it open. Discord sends events down that connection, and the bot sends replies back up it. Because the bot starts the connection, we don't need a public address or an open port.
+
+```mermaid
+flowchart LR
+    Player([Player in Discord])
+    subgraph Discord["Discord"]
+        GW["Gateway<br/>(WebSocket)"]
+        API["REST API<br/>(HTTPS)"]
+    end
+    subgraph CS["GitHub Codespace"]
+        ENV[".env<br/>bot token"]
+        Bot["Arcadia bot<br/>build/app.js<br/>(Node.js + discord.js)"]
+    end
+
+    Player -- "types /tictactoe, clicks a button" --> GW
+    ENV -- "token read at startup" --> Bot
+    Bot -- "1. logs in with the token,<br/>asks for 4 intents" --> GW
+    GW -- "2. events: messageCreate,<br/>interactionCreate, ready" --> Bot
+    Bot -- "3. replies, edits, buttons,<br/>registers slash commands" --> API
+    API -- "shows the reply" --> Player
+```
+
+| Piece | What it is | What it does for us |
+|---|---|---|
+| **Gateway** | A WebSocket connection that stays open | Carries events from Discord to the bot. discord.js opens it when we call `client.login()`. |
+| **REST API** | Normal HTTPS requests | The bot uses it to send and edit messages and to register slash commands. discord.js makes these calls for us. |
+| **Bot token** | A secret string | Proves to Discord that this program is our bot. |
+| **Intents** | A list of event types the bot asks for | Discord only sends events we asked for: servers, server members, messages, and message content. |
+
+Step by step:
+
+1. **Log in.** `src/app.js` reads the token and calls `client.login()`. discord.js opens the Gateway connection and sends the token and the intents.
+2. **Receive events.** Discord sends an event for each thing that happens: a slash command, a button click, or a message. `loadEvents()` has already hooked each event to the right file in `src/events/`.
+3. **Reply.** The bot answers through Discord's REST API, and Discord shows the reply to the player.
+4. **Stay connected.** discord.js sends regular heartbeats and reconnects on its own if the connection drops. A restart of the bot still ends every game in memory (see section 1).
+
+### Keeping the token secret
+
+The token is a password for the bot. Anyone who has it can act as the bot, so it never goes into the repo.
+
+- The token lives in a `.env` file that is listed in `.gitignore`, so it is never committed.
+- The bot reads it from `process.env` at startup.
+- If the token is ever pushed by mistake, reset it in the Discord Developer Portal. That makes the old token stop working.
+
+### Tools we use
+
+| Tool | What it does here |
+|---|---|
+| **Node.js** | Runs the bot. |
+| **discord.js** | The library that handles the Gateway, the REST calls, and the event objects. |
+| **npm** | Installs the packages in `package.json` and runs our scripts: `npm start` runs the bot and `npm test` runs the tests. |
+| **esbuild** | Bundles everything in `src/` into one file, `build/app.js`. It runs as part of `npm start`. |
+| **Mocha + Chai** | Run the tests in `tests/`. They only test `src/games/`, so no Discord connection is needed. |
+| **GitHub Codespace** | The cloud computer where the bot runs while we develop and demo. |
+| **GitHub** | Holds the code. Every change goes in through a pull request. |
+| **Docker** | [FILL IN: what the Docker image is used for, e.g. packaging the bot so it runs the same way anywhere] |
+
+### From code to a running bot
+
+```mermaid
+flowchart LR
+    Dev([Developer]) -- "git push + pull request" --> GH[(GitHub repo)]
+    GH -- "merged into main" --> CS["Codespace<br/>git pull, npm install"]
+    CS -- "npm start" --> B["esbuild builds<br/>build/app.js"]
+    B --> R["node build/app.js<br/>login to Discord"]
+    R --> RD["ready event:<br/>register the 5 slash commands"]
+```
+
+1. **Change the code.** A teammate works on a branch and opens a pull request. A teammate reviews and merges it into `main`.
+2. **Get the latest code.** In the Codespace, `git pull` gets `main`, and `npm install` adds any new packages.
+3. **Build and run.** `npm start` runs esbuild, which bundles `src/` into `build/app.js`, then starts that file with Node. The build step is why a code change only shows up after the bot restarts.
+4. **Register commands.** After login, Discord fires `ready`, and `ready.js` registers the five slash commands in every server the bot is in.
+
+### Docker deploy workflow
+
+[FILL IN from your repo. Check the `Dockerfile` and `.github/workflows/` and cover:
+- What triggers the workflow (for example, a push to `main`).
+- What it does (for example, build the image from the `Dockerfile`, then push it or run it).
+- Where the bot token comes from when it runs there (a GitHub secret or an environment variable, not the `.env` file in the repo).
+- Where the container runs.]
+
+### Design choices and their limits
+
+- **Outgoing connection only.** The bot needs no public address, so there is nothing for an attacker to connect to. The cost is that the bot stops responding the moment the process stops.
+- **A Codespace is not a server.** A Codespace stops after it has been idle, and the bot goes offline with it. That is fine for development and demos, but not for a bot that should be online all the time.
+- **One bundle.** esbuild makes one file, which is quick to build and easy to run. The cost is an extra build step before every start.
+- **Secrets stay out of the repo.** The `.env` file keeps the token safe, but each developer has to create their own `.env` by hand.
+
 
 ## 5. Game flow: one personality test run
 
