@@ -243,7 +243,7 @@ flowchart LR
         Bot["Arcadia bot<br/>build/app.js<br/>(Node.js + discord.js)"]
     end
 
-    Player -- "types /hangman, clicks a button" --> GW
+    Player -- "types /tictactoe, clicks a button" --> GW
     ENV -- "token read at startup" --> Bot
     Bot -- "1. logs in with the token,<br/>asks for 4 intents" --> GW
     GW -- "2. events: messageCreate,<br/>interactionCreate, ready" --> Bot
@@ -316,6 +316,8 @@ flowchart LR
 - **A Codespace is not a server.** A Codespace stops after it has been idle, and the bot goes offline with it. That is fine for development and demos, but not for a bot that should be online all the time.
 - **One bundle.** esbuild makes one file, which is quick to build and easy to run. The cost is an extra build step before every start.
 - **Secrets stay out of the repo.** The `.env` file keeps the token safe, but each developer has to create their own `.env` by hand.
+
+
 ## 5. Game flow: one personality test run
 
 This section shows what each person and part of the system can do in the personality test, then walks through one full run. The use-case diagram shows two actors: the **Player** (anyone who types `/mbti`) and the **Bot**, which posts questions, records answers, and reveals the result. Each oval is something an actor can do. A dashed «include» arrow means one step always happens as part of another (typing `/mbti` always posts question 1). A dashed «extend» arrow means a step only happens sometimes, under the condition in brackets (the result is revealed only after question 16).
