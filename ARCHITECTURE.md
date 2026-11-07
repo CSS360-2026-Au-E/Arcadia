@@ -227,9 +227,7 @@ Step by step:
 
 ## 4. Network and tooling: how the bot connects and runs
 
-_ovjason: network diagram (Codespace, token in `.env`, Discord gateway), plus how npm, esbuild and the Docker deploy workflow fit in._
-
-## 3. Game flow: one Tic Tac Toe game
+_ovjason: network diagram (Codespace, token in `.env`, Discord gateway), plus how npm, esbuild and the Docker deploy workflow fit ## 3b. Game flow: one Tic Tac Toe game
 
 This section shows what each person and part of the system can do in Tic Tac Toe, then walks through one game. The use-case diagram shows two actors: the **Player** (the person who runs the command) and the **Bot**, which plays the other side. Each oval is something an actor can do. A dashed «include» arrow means one step always happens as part of another (running the command always shows the board prompt). A dashed «extend» arrow means a step only happens sometimes, under a condition (the final result is shown only when someone wins or the board fills up).
 
@@ -270,4 +268,3 @@ Step by step:
 - **Invalid moves are free.** A rejected move doesn't pass the turn to the bot, so a misclick can't cost the player a turn.
 - **Games live in memory.** Like the other minigames, a game in progress is lost if the bot restarts.
 - **The bot's strategy is simple.** The bot only needs to choose some empty square, so it may not play perfectly and the player can win.
-
