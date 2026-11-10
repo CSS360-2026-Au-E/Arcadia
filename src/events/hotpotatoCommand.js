@@ -23,6 +23,8 @@ import {
   startRound,
   winner,
 } from "../games/hotpotato";
+import { hotpotatoPoints } from "../economy/earnings";
+import { awardPoints } from "../economy/bank";
 
 // ---------------------------------------------------------------------------
 // SMALL HELPERS
@@ -69,7 +71,19 @@ function playRound(channel, game) {
     // Is only one player left? Then announce the winner and end the game.
     if (isOver(game)) {
       games.delete(channel.id); // remove the game so the channel can start a new one
-      channel.send(`🏆 ${mention(winner(game))} is the last one standing and **wins Hot Potato!**`);
+
+      // Everyone earns points for the rounds they survived, and the winner
+      // gets a bonus (see src/economy/earnings.js).
+      const earned = hotpotatoPoints(game, winner(game));
+      for (const { id, points } of earned) awardPoints(id, "hotpotato", points, channel.guildId);
+      const pointsLine = earned.map(({ id, points }) => `${mention(id)} +${points}`).join(", ");
+
+      channel.send({
+        content:
+          `🏆 ${mention(winner(game))} is the last one standing and **wins Hot Potato!**\n` +
+          `🪙 Hot potato points: ${pointsLine}. Use \`/convert\` to turn them into dubloons.`,
+        allowedMentions: { users: [winner(game)] }, // only ping the winner
+      });
       return; // stop here, no more rounds
     }
 

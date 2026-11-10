@@ -3,6 +3,9 @@ import { ERAS, GENRES } from "../games/songguess";
 
 import { tictactoeCommand } from "../games/tictactoe";
 import { HOLE_CHOICES, MODES } from "../games/minigolf";
+import { DUBLOON_COMMANDS } from "../economy/commands";
+import { blackjackCommand } from "./blackjackInteraction";
+import { slotsCommand } from "./slotsInteraction";
 
 // This is the /hangman command as Discord will show it in the "/" menu.
 const hangmanCommand = new SlashCommandBuilder()
@@ -58,7 +61,7 @@ const hotpotatoCommand = new SlashCommandBuilder()
 // /horserace has no options. Players bet by clicking a horse's button.
 const horseraceCommand = new SlashCommandBuilder()
   .setName("horserace")
-  .setDescription("Bet coins on a horse at the odds, then watch the race");
+  .setDescription("Bet dubloons on a horse at the odds, then watch the race");
 
 // "ready" runs once, when the bot has logged in to Discord.
 const event = {
@@ -73,7 +76,7 @@ const event = {
     ############################################################
   `);
 
-    // Tell every server the bot is in that /hangman, /songguess, /minigolf, /hotpotato, /tictactoe, and /horserace exist.
+    // Tell every server the bot is in which slash commands exist.
     // Doing it per server makes the command show up right away.
     for (const guild of client.guilds.cache.values()) {
       try {
@@ -85,8 +88,14 @@ const event = {
           hotpotatoCommand.toJSON(),
           tictactoeCommand.toJSON(),
           horseraceCommand.toJSON(),
+          blackjackCommand.toJSON(),
+          slotsCommand.toJSON(),
+          ...DUBLOON_COMMANDS.map((command) => command.toJSON()),
         ]);
-        console.log(`Added /hangman, /songguess, /minigolf, /hotpotato, /tictactoe and /horserace to ${guild.name}`);
+        console.log(
+          `Added /hangman, /songguess, /minigolf, /hotpotato, /tictactoe, /horserace, /blackjack, /slots, ` +
+            `/points, /convert and /leaderboard to ${guild.name}`
+        );
 
       } catch (error) {
         console.error(`Could not add commands to ${guild.name}:`, error.message);

@@ -45,11 +45,12 @@ describe("horse race", () => {
     expect(betTotals(game)).to.deep.equal([2 * BET_SIZE, 0, 0, 0, BET_SIZE]);
   });
 
-  it("gives broke players a bailout", () => {
+  it("won't take a bet from a player who can't cover it", () => {
     const game = createGame();
-    const wallets = new Map([["ana", 0]]);
-    expect(placeBet(game, wallets, "ana", 1)).to.equal("bailout");
-    expect(getCoins(wallets, "ana")).to.equal(STARTING_COINS - BET_SIZE);
+    const wallets = new Map([["ana", BET_SIZE - 1]]);
+    expect(placeBet(game, wallets, "ana", 1)).to.equal("broke");
+    expect(getCoins(wallets, "ana")).to.equal(BET_SIZE - 1);
+    expect(betTotals(game)).to.deep.equal([0, 0, 0, 0, 0]);
   });
 
   it("closes betting once the race starts", () => {

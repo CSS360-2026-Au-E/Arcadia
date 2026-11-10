@@ -6,33 +6,33 @@ Horse race is a betting game for any number of players, like betting at a real r
 
 | File                                 | What it does                                                                                        |
 |--------------------------------------|-----------------------------------------------------------------------------------------------------|
-| `src/games/horserace.js`             | The rules: the horses and their odds, coins, bets, moving the horses, and paying out.               |
+| `src/games/horserace.js`             | The rules: the horses and their odds, bets, moving the horses, and paying out.                      |
 | `src/games/horseracePicture.js`      | Draws the race as a PNG picture: the track, horses and jockeys, dust clouds and the winner's ribbon. |
 | `src/events/horseraceInteraction.js` | The Discord side: the `/horserace` command, the bet buttons, and a new picture each step.           |
 | `src/events/ready.js`                | Adds `/horserace` to every server the bot is in, along with the other commands.                     |
-| `tests/horserace.spec.js`            | Checks coins, betting, the bailout, galloping, the finish line, payouts and the picture.            |
+| `tests/horserace.spec.js`            | Checks betting, not betting more than you have, galloping, the finish line, payouts and the picture. |
 
 ## What happens during one race
 
 1. Someone types `/horserace`. The bot posts the odds board, a picture of the horses at the gate, and one button per horse. The race is saved in `games`, keyed by the channel ID, so each channel has one race at a time.
-2. For 25 seconds, players click horses to bet. Each click calls `placeBet()`, which takes 10 coins from the player's wallet. You can click the same horse again to bet more, or bet on several horses. The **My coins** button shows your bets and coins privately.
+2. For 25 seconds, players click horses to bet. Each click calls `placeBet()`, which takes 10 dubloons from the player. You can click the same horse again to bet more, or bet on several horses. The **My dubloons** button shows your bets and dubloons privately.
 3. When betting closes, the buttons are removed and the race starts.
 4. Every 2 seconds, `moveHorses()` moves each horse forward. The bot edits the same message with a new picture from `drawRace()`, and a line saying who is in front.
 5. When a horse crosses the finish line, `pickWinner()` picks the winner. If more than one horse crossed on the same step, it picks one of them at random (a photo finish).
-6. `payOut()` pays everyone who bet on the winner: their bet times the horse's odds. The bot lists every bettor, what they won, and their new coin total.
+6. `payOut()` pays everyone who bet on the winner: their bet times the horse's odds. The bot lists every bettor, what they won, and their new dubloon total.
 
 ## Odds and speed
 
 Each horse in `HORSES` has an `odds` number and a `speed` number.
 
-- **Odds** are how many times your bet you get back if that horse wins. Bet 10 coins on a horse that pays 4x and you get 40 back.
+- **Odds** are how many times your bet you get back if that horse wins. Bet 10 dubloons on a horse that pays 4x and you get 40 back.
 - **Speed** is the chance of an extra step each turn. Every step, `gallop()` rolls 0, 1 or 2, then adds 1 more if the horse gets a burst of speed. Faster horses get more bursts, so they win more often.
 
 The odds were picked to match how often each horse really wins. Thunderbolt wins about 1 race in 3, and Long Shot Larry about 1 in 13. The odds pay a little less than that on purpose, just like a real racetrack, so the house wins over time.
 
-## Coins
+## Dubloons
 
-Everyone starts with 100 coins. The coins live in the `wallets` Map in `horseraceInteraction.js`, so they carry over from race to race, across every channel. If you run out, your next bet gives you 100 more for free (a "bailout"). The coins are only kept in memory, so everyone goes back to 100 when the bot restarts.
+Bets are dubloons, the same ones blackjack, slots and `/leaderboard` use (see [how dubloons work](how-dubloons-work.md)). The rules in `horserace.js` still talk about a `wallets` Map, so they're easy to test with a plain Map. The bot passes `dubloonWallets()` from `src/economy/bank.js` instead, which works like a Map but reads and saves each player's dubloons, so they survive a restart. If you don't have 10 dubloons, `placeBet()` says `"broke"` and the bot tells you to play games and `/convert` your points.
 
 ## How the picture works
 
@@ -56,8 +56,7 @@ The settings at the top of `src/games/horserace.js` control the game:
 - `HORSES`: names, button emoji, odds and speed. Discord allows 5 buttons in a row, so keep it at 5 horses or fewer.
 - `TRACK_LENGTH`: a longer track makes a longer race.
 - `BET_SECONDS`: how long betting stays open.
-- `BET_SIZE`: how many coins one click bets.
-- `STARTING_COINS`: how many coins everyone starts with.
+- `BET_SIZE`: how many dubloons one click bets.
 
 ## Try it
 

@@ -33,6 +33,8 @@ import { squareName } from "./minigolfCourses";
 import { DIRECTIONS, suggestAim } from "./minigolfPhysics";
 import { drawCourse } from "./minigolfPicture";
 import { TRAPS } from "./minigolfTraps";
+import { minigolfPoints } from "../economy/earnings";
+import { awardPoints } from "../economy/bank";
 
 // How each direction shows up in the aim menu.
 const ARROWS = ["↑", "↑↗", "↗", "→↗", "→", "→↘", "↘", "↓↘", "↓", "↓↙", "↙", "←↙", "←", "←↖", "↖", "↑↖"];
@@ -87,8 +89,21 @@ export async function finishGame(channel, game) {
     best.length > 1
       ? `🏆 **It's a tie! ${names} with ${total(best[0])} strokes!**`
       : `🏆 **${names} wins with ${total(best[0])} strokes!**`;
-  await channel.send(`${headline}\n${scoreboard(game)}`);
+  await channel.send(`${headline}\n${scoreboard(game)}\n\n${awardMinigolfPoints(channel, game)}`);
 }
+
+// Everyone earns points for each hole, plus a bonus for the top finishers
+// (see src/economy/earnings.js). Gives back a line saying who got what.
+function awardMinigolfPoints(channel, game) {
+  const earned = minigolfPoints(game.players);
+  for (const { id, points } of earned) awardPoints(id, "minigolf", points, channel.guildId);
+  const list = earned
+    .map(({ id, points }) => `${playerTag(findById(game, id))} +${points}`)
+    .join(", ");
+  return `🪙 Minigolf points: ${list}. Use \`/convert\` to turn them into dubloons.`;
+}
+
+const findById = (game, id) => game.players.find((p) => p.id === id);
 
 // "1. 🔴 Abhi: 9 (3, 2, 4)"
 export function scoreboard(game) {

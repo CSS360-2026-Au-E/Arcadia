@@ -4,6 +4,8 @@ import {
   ButtonStyle,
   SlashCommandBuilder,
 } from "discord.js";
+import { tictactoePoints } from "../economy/earnings";
+import { awardPoints } from "../economy/bank";
 
 /*
   TIC TAC TOE (player vs bot)
@@ -203,7 +205,15 @@ async function handleMove(interaction) {
 
   const over = status !== "continue";
   if (over) games.delete(interaction.message.id);
-  await interaction.update({ content: MESSAGES[status], components: buildBoard(game, over) });
+
+  // A win or a draw earns tic tac toe points (see src/economy/earnings.js).
+  let content = MESSAGES[status];
+  const points = tictactoePoints(game.difficulty, status);
+  if (points > 0) {
+    awardPoints(game.playerId, "tictactoe", points, interaction.guildId);
+    content += ` 🪙 +${points} tic tac toe points. Use \`/convert\` to turn them into dubloons.`;
+  }
+  await interaction.update({ content, components: buildBoard(game, over) });
 }
 
 // Called for every interaction. Does nothing unless it belongs to tic tac toe.

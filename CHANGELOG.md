@@ -1,5 +1,21 @@
 # Release notes
 
+## v1.1 (dubloons)
+
+Arcadia now has money. Win games to earn points, turn them into dubloons, and bet them.
+
+### New
+
+- **Dubloons.** Every game gives its own points for a win. `/convert` turns them into dubloons at each game's exchange rate, `/points` shows what you have, and `/leaderboard` ranks the server. New players start with 100 dubloons, and dubloons are saved to `data/dubloons.json` so they survive a restart. (abhip1008)
+- `/blackjack`: bet dubloons against the dealer. Hit, stand or double. (abhip1008)
+- `/slots`: a three-reel slot machine that bets dubloons. (abhip1008)
+
+### Changes
+
+- `/horserace` bets dubloons instead of its own coins. The free 100-coin refill when you run out is gone; play games and `/convert` instead.
+- Each game owner sets their game's exchange rate in `src/economy/rates.js` (see [how dubloons work](docs/how-dubloons-work.md#set-your-games-exchange-rate)).
+- New docs: how dubloons, blackjack and slots work.
+
 ## v1.0 (sprint 1)
 
 The first full version of Arcadia: five games you can play in any Discord server the bot is in.

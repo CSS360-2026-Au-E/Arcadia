@@ -1,4 +1,6 @@
-import { games, guess, showGame } from "../games/hangman";
+import { MAX_WRONG, games, guess, showGame } from "../games/hangman";
+import { hangmanPoints } from "../economy/earnings";
+import { awardPoints } from "../economy/bank";
 
 // "messageCreate" runs every time anyone sends a message the bot can see.
 const event = {
@@ -27,8 +29,13 @@ const event = {
 
     if (result === "won") {
       games.delete(message.channelId); // game over, free the channel
+      // Whoever typed the last letter earns hangman points (see src/economy/earnings.js).
+      const points = hangmanPoints(game, MAX_WRONG);
+      awardPoints(message.author.id, "hangman", points, message.guildId);
       await message.reply(
-        showGame(game) + `\n**${message.author} solved it!** The word was **${game.word}**.`
+        showGame(game) +
+          `\n**${message.author} solved it!** The word was **${game.word}**.` +
+          `\n🪙 +${points} hangman points. Use \`/convert\` to turn them into dubloons.`
       );
       return;
     }

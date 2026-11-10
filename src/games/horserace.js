@@ -33,8 +33,9 @@
     }
 
   "wallets" is a Map from user ID to how many coins that person has.
-  The Discord side keeps one wallets Map for everybody, so coins carry
-  over from race to race (until the bot restarts).
+  The tests pass a plain Map. The bot passes dubloonWallets() from
+  src/economy/bank.js, which works like a Map but uses each player's saved
+  dubloons, so the "coins" here are dubloons in the real game.
 */
 
 // ---------------------------------------------------------------------------
@@ -71,11 +72,11 @@ export const BET_SECONDS = 25;
 // message about 5 times every 5 seconds, so don't make this smaller than 1.
 export const STEP_SECONDS = 2;
 
-// How many coins one click of a horse's button bets.
+// How many dubloons one click of a horse's button bets.
 export const BET_SIZE = 10;
 
-// How many coins everyone starts with. If you run out, you get this many
-// again for free (a "bailout") the next time you bet.
+// How many coins a brand new wallet starts with. The bot's real wallets are
+// dubloons (see src/economy/bank.js), which start at STARTING_DUBLOONS.
 export const STARTING_COINS = 100;
 
 // ---------------------------------------------------------------------------
@@ -107,24 +108,19 @@ export function createGame() {
   The coins come out of the player's wallet right away.
   Gives back one of:
     "placed"   - the bet worked
-    "bailout"  - they were broke, so they got STARTING_COINS free, then the bet worked
+    "broke"    - they don't have BET_SIZE coins, so nothing was bet
     "closed"   - too late, the race already started
 */
 export function placeBet(game, wallets, userId, horse) {
   if (game.stage !== "betting") return "closed";
-
-  let status = "placed";
-  if (getCoins(wallets, userId) < BET_SIZE) {
-    wallets.set(userId, STARTING_COINS);
-    status = "bailout";
-  }
+  if (getCoins(wallets, userId) < BET_SIZE) return "broke";
 
   // First bet from this person? Give them an empty bet slip: 0 on every horse.
   if (!game.bets[userId]) game.bets[userId] = HORSES.map(() => 0);
 
   game.bets[userId][horse] += BET_SIZE;
   wallets.set(userId, getCoins(wallets, userId) - BET_SIZE);
-  return status;
+  return "placed";
 }
 
 // How many coins are bet on each horse in total, like [30, 0, 10, 0, 50].
