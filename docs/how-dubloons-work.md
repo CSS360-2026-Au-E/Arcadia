@@ -1,6 +1,6 @@
 # How dubloons work
 
-Dubloons are Arcadia's money. You earn points by playing the normal games, turn them into dubloons with `/convert`, and then bet them on `/blackjack`, `/slots`, `/poker` and `/horserace`. `/leaderboard` ranks everyone in the server by dubloons.
+Dubloons are Arcadia's money. You earn points by playing the normal games, turn them into dubloons with `/convert`, and then bet them on `/slots`, `/poker` and `/horserace`. `/leaderboard` ranks everyone in the server by dubloons.
 
 ## The commands
 

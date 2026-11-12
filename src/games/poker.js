@@ -22,9 +22,24 @@
       held: [false, false, false, false, false],
       result: null,                     // set after the draw, a key of PAYOUTS
     }
-  A card is { rank: "A", suit: "♠" }, the same as blackjack.
+  A card is { rank: "A", suit: "♠" }.
 */
-import { newDeck } from "./blackjack";
+export const SUITS = ["♠", "♥", "♦", "♣"];
+export const RANKS = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
+
+// A fresh 52-card deck, shuffled. "random" is Math.random unless a test passes its own.
+export function newDeck(random = Math.random) {
+  const deck = [];
+  for (const suit of SUITS) {
+    for (const rank of RANKS) deck.push({ rank, suit });
+  }
+  // Fisher-Yates shuffle: swap each card with a random card at or before it.
+  for (let i = deck.length - 1; i > 0; i--) {
+    const j = Math.floor(random() * (i + 1));
+    [deck[i], deck[j]] = [deck[j], deck[i]];
+  }
+  return deck;
+}
 
 // The smallest bet you can make, in dubloons.
 export const MIN_BET = 10;

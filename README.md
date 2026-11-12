@@ -13,14 +13,13 @@ CSS 360, Group 4.
 | `/hotpotato` | 2+ | Type **join** to get in, then pass the potato by **@mentioning** another player. A secret timer is running, and whoever holds it when it explodes is out. Last player standing wins. | Playable |
 | `/tictactoe` | 1 | Play tic tac toe against the bot. Pick easy, medium or hard (hard if you skip it), then click a square to place your X. | Playable |
 | `/horserace` | 1+ | Bet dubloons on five horses at racetrack odds (2x for the favorite up to 10x for the long shot), then watch them race. Winning bets pay out at the odds. | Playable |
-| `/blackjack` | 1 | Bet dubloons and play blackjack against the dealer. Hit, stand or double. Blackjack pays 2.5x. | Playable |
 | `/slots` | 1 | Bet dubloons on a three-reel slot machine. Three sevens pay 100x. | Playable |
 | `/poker` | 1 | Video poker (Jacks or Better). Bet dubloons, get 5 cards, hold the ones you like and draw new ones. A royal flush pays 250x. | Playable |
 | Personality test | 1 | Answer quick questions and get a four letter type like ENFJ. | Planned |
 
 ## Dubloons
 
-Every game gives its own points when you win. Type `/convert` to turn them into dubloons, which you can bet on `/blackjack`, `/slots`, `/poker` and `/horserace`. New players start with 100.
+Every game gives its own points when you win. Type `/convert` to turn them into dubloons, which you can bet on `/slots`, `/poker` and `/horserace`. New players start with 100.
 
 | Command | What it does |
 | --- | --- |
@@ -34,7 +33,7 @@ New members get a welcome message in `#general` that points them to the games.
 
 What changed in each version: [release notes](CHANGELOG.md).
 
-How the code works, file by file: [hangman](docs/how-hangman-works.md), [song guesser](docs/how-songguess-works.md), [minigolf](docs/how-minigolf-works.md), [hot potato](docs/how-hotpotato-works.md), [tic tac toe](docs/how-tictactoe-works.md), [horse race](docs/how-horserace-works.md), [blackjack](docs/how-blackjack-works.md), [slots](docs/how-slots-work.md), [poker](docs/how-poker-works.md), [dubloons](docs/how-dubloons-work.md).
+How the code works, file by file: [hangman](docs/how-hangman-works.md), [song guesser](docs/how-songguess-works.md), [minigolf](docs/how-minigolf-works.md), [hot potato](docs/how-hotpotato-works.md), [tic tac toe](docs/how-tictactoe-works.md), [horse race](docs/how-horserace-works.md), [slots](docs/how-slots-work.md), [poker](docs/how-poker-works.md), [dubloons](docs/how-dubloons-work.md).
 
 ## The big idea
 
@@ -75,9 +74,9 @@ in a GitHub Codespace, so nothing is installed on your computer.
    ```
    npm start
    ```
-   It works when you see `Logged in as <your bot>!` and `Added /hangman, /songguess, /minigolf, /hotpotato, /tictactoe, /horserace, /blackjack, /slots, /poker, /points, /convert and /leaderboard to <your server>`.
+   It works when you see `Logged in as <your bot>!` and `Added /hangman, /songguess, /minigolf, /hotpotato, /tictactoe, /horserace, /slots, /poker, /points, /convert and /leaderboard to <your server>`.
    Keep the terminal open. Closing it, or the Codespace going to sleep, takes the bot offline.
-8. **Play.** Type `/hangman`, `/songguess`, `/minigolf`, `/hotpotato`, `/tictactoe`, `/horserace`, `/blackjack`, `/slots` or `/poker` in your server.
+8. **Play.** Type `/hangman`, `/songguess`, `/minigolf`, `/hotpotato`, `/tictactoe`, `/horserace`, `/slots` or `/poker` in your server.
 
 Your server needs a text channel named `general` for the welcome message. To use
 a different channel, change `CHANNEL_NAME` in `.env`.

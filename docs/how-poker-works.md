@@ -13,7 +13,7 @@
 ## How one hand goes
 
 1. You type `/poker bet:20`. The bet comes out of your dubloons right away. The smallest bet is 10.
-2. `createGame()` shuffles a deck (the same `newDeck()` blackjack uses) and deals you 5 cards. Each card is a button.
+2. `createGame()` shuffles a deck with `newDeck()` and deals you 5 cards. Each card is a button.
 3. Click a card to **hold** it. It turns green and says HELD. Click it again to let it go.
 4. Click **Draw**. `draw()` swaps every card you didn't hold for a new one from the deck.
 5. `scoreHand()` names your final hand and `payout()` pays you from the pay table.

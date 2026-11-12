@@ -36,7 +36,7 @@ import { dubloonWallets } from "../economy/bank";
 const games = new Map();
 
 // Everyone's dubloons. This acts like a Map (wallets.get / wallets.set), but
-// it reads and saves the same dubloons as blackjack, slots and /leaderboard.
+// it reads and saves the same dubloons as slots, poker and /leaderboard.
 const wallets = dubloonWallets();
 
 // ---------------------------------------------------------------------------
