@@ -6,6 +6,7 @@ import { HOLE_CHOICES, MODES } from "../games/minigolf";
 import { DUBLOON_COMMANDS } from "../economy/commands";
 import { blackjackCommand } from "./blackjackInteraction";
 import { slotsCommand } from "./slotsInteraction";
+import { pokerCommand } from "./pokerInteraction";
 
 // This is the /hangman command as Discord will show it in the "/" menu.
 const hangmanCommand = new SlashCommandBuilder()
@@ -90,10 +91,11 @@ const event = {
           horseraceCommand.toJSON(),
           blackjackCommand.toJSON(),
           slotsCommand.toJSON(),
+          pokerCommand.toJSON(),
           ...DUBLOON_COMMANDS.map((command) => command.toJSON()),
         ]);
         console.log(
-          `Added /hangman, /songguess, /minigolf, /hotpotato, /tictactoe, /horserace, /blackjack, /slots, ` +
+          `Added /hangman, /songguess, /minigolf, /hotpotato, /tictactoe, /horserace, /blackjack, /slots, /poker, ` +
             `/points, /convert and /leaderboard to ${guild.name}`
         );
 

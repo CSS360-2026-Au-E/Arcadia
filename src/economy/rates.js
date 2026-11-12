@@ -3,7 +3,7 @@
 
   Every game keeps its own points. When a player types /convert, their game
   points turn into dubloons, and dubloons are what the /leaderboard ranks
-  and what blackjack, slots and horse race bet.
+  and what blackjack, slots, poker and horse race bet.
 
   This file is the one place that says how much each game's points are worth.
   Each line reads like a sentence:

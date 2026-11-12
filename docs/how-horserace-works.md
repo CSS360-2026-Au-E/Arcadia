@@ -32,7 +32,7 @@ The odds were picked to match how often each horse really wins. Thunderbolt wins
 
 ## Dubloons
 
-Bets are dubloons, the same ones blackjack, slots and `/leaderboard` use (see [how dubloons work](how-dubloons-work.md)). The rules in `horserace.js` still talk about a `wallets` Map, so they're easy to test with a plain Map. The bot passes `dubloonWallets()` from `src/economy/bank.js` instead, which works like a Map but reads and saves each player's dubloons, so they survive a restart. If you don't have 10 dubloons, `placeBet()` says `"broke"` and the bot tells you to play games and `/convert` your points.
+Bets are dubloons, the same ones blackjack, slots, poker and `/leaderboard` use (see [how dubloons work](how-dubloons-work.md)). The rules in `horserace.js` still talk about a `wallets` Map, so they're easy to test with a plain Map. The bot passes `dubloonWallets()` from `src/economy/bank.js` instead, which works like a Map but reads and saves each player's dubloons, so they survive a restart. If you don't have 10 dubloons, `placeBet()` says `"broke"` and the bot tells you to play games and `/convert` your points.
 
 ## How the picture works
 
