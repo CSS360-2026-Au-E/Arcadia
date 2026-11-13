@@ -1,5 +1,7 @@
 import { CLIP_SECONDS, games, isCorrectGuess } from "../games/songguess";
 import { describe, endGame, nextClip, secondsText } from "../games/songguessRound";
+import { songguessPoints } from "../economy/earnings";
+import { awardPoints } from "../economy/bank";
 
 // Runs on every message. If a song game is running in the channel,
 // the message counts as a guess. (Hangman guesses are in messageCreate.js.)
@@ -21,8 +23,12 @@ const event = {
     if (isCorrectGuess(game, text)) {
       endGame(message.channel, game);
       const clip = secondsText(CLIP_SECONDS[game.stage]);
+      // Shorter clip, more points (see src/economy/earnings.js).
+      const points = songguessPoints(game.stage);
+      awardPoints(message.author.id, "songguess", points, message.guildId);
       await message.reply(
-        `🎉 **${message.author} got it from ${clip}!** It was ${describe(game.song)}.`
+        `🎉 **${message.author} got it from ${clip}!** It was ${describe(game.song)}.\n` +
+          `🪙 +${points} song guesser points. Use \`/convert\` to turn them into dubloons.`
       );
       return;
     }

@@ -3,11 +3,12 @@
 
   This file:
     1. Notices when someone types /horserace and posts the odds board with bet buttons
-    2. Takes 10 coins from a player each time they click a horse's button
+    2. Takes 10 dubloons from a player each time they click a horse's button
     3. When betting closes, edits the same message over and over with a new
        picture each time, so the horses look like they're galloping
     4. Shows the winner and pays out everyone who bet on it
-  The rules (odds, coins, who wins) live in src/games/horserace.js.
+  The rules (odds, bets, who wins) live in src/games/horserace.js.
+  Bets are dubloons, saved by src/economy/bank.js.
   The picture is drawn in src/games/horseracePicture.js.
 */
 
@@ -16,7 +17,6 @@ import {
   BET_SECONDS,
   BET_SIZE,
   HORSES,
-  STARTING_COINS,
   STEP_SECONDS,
   betTotals,
   createGame,
@@ -29,15 +29,15 @@ import {
   placeBet,
 } from "../games/horserace";
 import { drawRace } from "../games/horseracePicture";
+import { dubloonWallets } from "../economy/bank";
 
 // Every race running right now, keyed by channel ID, so each channel
 // can only have one race at a time.
 const games = new Map();
 
-// Everyone's coins: user ID -> how many coins they have. This is shared by
-// every race in every channel, so your coins carry over between races.
-// It lives in memory, so everyone goes back to the start if the bot restarts.
-const wallets = new Map();
+// Everyone's dubloons. This acts like a Map (wallets.get / wallets.set), but
+// it reads and saves the same dubloons as slots, poker and /leaderboard.
+const wallets = dubloonWallets();
 
 // ---------------------------------------------------------------------------
 // SMALL HELPERS
@@ -60,7 +60,7 @@ function racePicture(game, winner = null) {
   return { files: [file], attachments: [] };
 }
 
-// One button per horse, plus a button to check your coins.
+// One button per horse, plus a button to check your dubloons.
 // The custom ID "horse:2" tells us which horse was clicked.
 function betButtons() {
   const horseRow = new ActionRowBuilder();
@@ -74,7 +74,7 @@ function betButtons() {
     );
   });
   const coinsRow = new ActionRowBuilder().addComponents(
-    new ButtonBuilder().setCustomId("horse:coins").setLabel("My coins").setEmoji("🪙").setStyle(ButtonStyle.Primary)
+    new ButtonBuilder().setCustomId("horse:coins").setLabel("My dubloons").setEmoji("🪙").setStyle(ButtonStyle.Primary)
   );
   return [horseRow, coinsRow]; // Discord wants a list of rows
 }
@@ -83,22 +83,21 @@ function betButtons() {
 function bettingText(game) {
   const totals = betTotals(game);
   const lines = HORSES.map(
-    (horse, i) => `${horse.button} **${horse.name}**: pays ${horse.odds}x, ${totals[i]} coins bet`
+    (horse, i) => `${horse.button} **${horse.name}**: pays ${horse.odds}x, ${totals[i]} dubloons bet`
   );
   return (
     `🏇 **Horse Race!** Betting closes in ${BET_SECONDS} seconds.\n` +
-    `Click a horse to bet ${BET_SIZE} coins on it. Click again to bet more. ` +
-    `Everyone starts with ${STARTING_COINS} coins.\n\n` +
+    `Click a horse to bet ${BET_SIZE} dubloons on it. Click again to bet more.\n\n` +
     lines.join("\n")
   );
 }
 
-// A private note for one player: their bets and how many coins they have left.
+// A private note for one player: their bets and how many dubloons they have left.
 function slipText(game, userId) {
   const slip = game.bets[userId] || [];
   const bets = HORSES.map((horse, i) => (slip[i] ? `${slip[i]} on ${horse.name}` : null)).filter(Boolean);
   const betLine = bets.length ? `Your bets: ${bets.join(", ")}.` : "You haven't bet yet.";
-  return `${betLine} You have **${getCoins(wallets, userId)}** coins left.`;
+  return `${betLine} You have **${getCoins(wallets, userId)}** dubloons left.`;
 }
 
 // ---------------------------------------------------------------------------
@@ -150,7 +149,7 @@ async function runStep(channelId, message, game) {
     text += results
       .map((r) => {
         const result = r.won > 0 ? `won **${r.won}**` : "lost it all";
-        return `${mention(r.userId)} bet ${r.bet}, ${result}. Now has ${r.coins} coins.`;
+        return `${mention(r.userId)} bet ${r.bet}, ${result}. Now has ${r.coins} dubloons.`;
       })
       .join("\n");
   }
@@ -210,7 +209,7 @@ async function handleButton(interaction) {
     return;
   }
 
-  // "My coins" just shows the player their own bets and coins, privately.
+  // "My dubloons" just shows the player their own bets and dubloons, privately.
   if (interaction.customId === "horse:coins") {
     await interaction.reply({ content: slipText(game, interaction.user.id), ephemeral: true });
     return;
@@ -218,18 +217,25 @@ async function handleButton(interaction) {
 
   // "horse:2" -> split at ":" -> ["horse", "2"] -> take "2" -> turn it into the number 2
   const horse = Number(interaction.customId.split(":")[1]);
-  const status = placeBet(game, wallets, interaction.user.id, horse);
+  // Passing the server ID puts the bettor on this server's /leaderboard.
+  const status = placeBet(game, dubloonWallets(interaction.guildId), interaction.user.id, horse);
   if (status === "closed") {
     await interaction.reply({ content: "Too late, the race already started!", ephemeral: true });
+    return;
+  }
+  if (status === "broke") {
+    await interaction.reply({
+      content: `You need ${BET_SIZE} dubloons to bet. Play games and use \`/convert\` to get more.`,
+      ephemeral: true,
+    });
     return;
   }
 
   // update() redraws the odds board with the new totals.
   // followUp() then sends a private note that only the clicker sees.
   await interaction.update({ content: bettingText(game), components: betButtons() });
-  const bailout = status === "bailout" ? `You were out of coins, so here's ${STARTING_COINS} more on the house. ` : "";
   await interaction.followUp({
-    content: `${bailout}You bet ${BET_SIZE} on **${HORSES[horse].name}**. ${slipText(game, interaction.user.id)}`,
+    content: `You bet ${BET_SIZE} on **${HORSES[horse].name}**. ${slipText(game, interaction.user.id)}`,
     ephemeral: true,
   });
 }

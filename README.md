@@ -12,14 +12,28 @@ CSS 360, Group 4.
 | `/minigolf` | 1 to 8 | Turn-based minigolf. Pick **Sabotage** (everyone secretly drops a trap before each hole) or **Chaos Cards** (play cards that bend the rules). Aim with buttons; the bot posts a picture after every shot. 6 holes unless you pick 3 or 9. | Playable |
 | `/hotpotato` | 2+ | Type **join** to get in, then pass the potato by **@mentioning** another player. A secret timer is running, and whoever holds it when it explodes is out. Last player standing wins. | Playable |
 | `/tictactoe` | 1 | Play tic tac toe against the bot. Pick easy, medium or hard (hard if you skip it), then click a square to place your X. | Playable |
-| `/horserace` | 1+ | Bet coins on five horses at racetrack odds (2x for the favorite up to 10x for the long shot), then watch them race. Winning bets pay out at the odds, and your coins carry over between races. | Playable |
+| `/horserace` | 1+ | Bet dubloons on five horses at racetrack odds (2x for the favorite up to 10x for the long shot), then watch them race. Winning bets pay out at the odds. | Playable |
+| `/slots` | 1 | Bet dubloons on a three-reel slot machine. Three sevens pay 100x. | Playable |
+| `/poker` | 1 | Video poker (Jacks or Better). Bet dubloons, get 5 cards, hold the ones you like and draw new ones. A royal flush pays 250x. | Playable |
 | Personality test | 1 | Answer quick questions and get a four letter type like ENFJ. | Planned |
+
+## Dubloons
+
+Every game gives its own points when you win. Type `/convert` to turn them into dubloons, which you can bet on `/slots`, `/poker` and `/horserace`. New players start with 100.
+
+| Command | What it does |
+| --- | --- |
+| `/points` | Your dubloons and your points in each game (only you see it). |
+| `/convert` | Turn your game points into dubloons, all games or just one. |
+| `/leaderboard` | The richest players in this server. |
+
+Each game's exchange rate (like 100 points = 10 dubloons) is set by that game's owner in `src/economy/rates.js`. See [how dubloons work](docs/how-dubloons-work.md#set-your-games-exchange-rate).
 
 New members get a welcome message in `#general` that points them to the games.
 
 What changed in each version: [release notes](CHANGELOG.md).
 
-How the code works, file by file: [hangman](docs/how-hangman-works.md), [song guesser](docs/how-songguess-works.md), [minigolf](docs/how-minigolf-works.md), [hot potato](docs/how-hotpotato-works.md), [tic tac toe](docs/how-tictactoe-works.md), [horse race](docs/how-horserace-works.md).
+How the code works, file by file: [hangman](docs/how-hangman-works.md), [song guesser](docs/how-songguess-works.md), [minigolf](docs/how-minigolf-works.md), [hot potato](docs/how-hotpotato-works.md), [tic tac toe](docs/how-tictactoe-works.md), [horse race](docs/how-horserace-works.md), [slots](docs/how-slots-work.md), [poker](docs/how-poker-works.md), [dubloons](docs/how-dubloons-work.md).
 
 ## The big idea
 
@@ -60,9 +74,9 @@ in a GitHub Codespace, so nothing is installed on your computer.
    ```
    npm start
    ```
-   It works when you see `Logged in as <your bot>!` and `Added /hangman, /songguess, /minigolf, /hotpotato, /tictactoe and /horserace to <your server>`.
+   It works when you see `Logged in as <your bot>!` and `Added /hangman, /songguess, /minigolf, /hotpotato, /tictactoe, /horserace, /slots, /poker, /points, /convert and /leaderboard to <your server>`.
    Keep the terminal open. Closing it, or the Codespace going to sleep, takes the bot offline.
-8. **Play.** Type `/hangman`, `/songguess`, `/minigolf`, `/hotpotato`, `/tictactoe` or `/horserace` in your server.
+8. **Play.** Type `/hangman`, `/songguess`, `/minigolf`, `/hotpotato`, `/tictactoe`, `/horserace`, `/slots` or `/poker` in your server.
 
 Your server needs a text channel named `general` for the welcome message. To use
 a different channel, change `CHANNEL_NAME` in `.env`.
