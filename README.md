@@ -1,78 +1,105 @@
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=542440024)
+# Arcadia
 
-# Javascript Discord Welcome MemeBot with GitHub Codespaces
+A Discord bot that turns your server into an arcade of quick minigames.
+CSS 360, Group 4.
 
-<img src="https://octodex.github.com/images/Robotocat.png" alt="image of robotocat" width="200" style="border:100px solid black"/>
+## Games
 
-Customize and deploy your own welcome memebot for your Discord server! 
+| Command | Players | How to play | Status |
+| --- | --- | --- | --- |
+| `/hangman` | 1+ | Guess the secret word by typing one letter at a time in the channel. Six wrong guesses and you lose. | Playable |
+| `/songguess` | 1+ | Pick a genre and an era (or General), then name the song from a tiny clip. Type `skip` for a longer clip: 0.1, 1, 2, 4, 8, then 16 seconds. | Playable |
+| `/minigolf` | 1 to 8 | Turn-based minigolf. Pick **Sabotage** (everyone secretly drops a trap before each hole) or **Chaos Cards** (play cards that bend the rules). Aim with buttons; the bot posts a picture after every shot. 6 holes unless you pick 3 or 9. | Playable |
+| `/hotpotato` | 2+ | Type **join** to get in, then pass the potato by **@mentioning** another player. A secret timer is running, and whoever holds it when it explodes is out. Last player standing wins. | Playable |
+| `/tictactoe` | 1 | Play tic tac toe against the bot. Pick easy, medium or hard (hard if you skip it), then click a square to place your X. | Playable |
+| `/horserace` | 1+ | Bet dubloons on five horses at racetrack odds (2x for the favorite up to 10x for the long shot), then watch them race. Winning bets pay out at the odds. | Playable |
+| `/slots` | 1 | Bet dubloons on a three-reel slot machine. Three sevens pay 100x. | Playable |
+| `/poker` | 1 | Video poker (Jacks or Better). Bet dubloons, get 5 cards, hold the ones you like and draw new ones. A royal flush pays 250x. | Playable |
+| Personality test | 1 | Answer quick questions and get a four letter type like ENFJ. | Planned |
 
-This template repository has all the code you need, with a preconfigured Codespaces development environment, to send a welcome message along with a meme when a user joins your Discord server.
+## Dubloons
 
-## How to customize your bot
-<img src="https://octodex.github.com/images/manufacturetocat.png" alt="image of manufacturetocat" width="200"/>
+Every game gives its own points when you win. Type `/convert` to turn them into dubloons, which you can bet on `/slots`, `/poker` and `/horserace`. New players start with 100.
 
-### Step 1: Add a .env file
-This template repository requires a `.env` file to pass variables to your application. The `.env` file is used to store data that you want to keep private or hidden like API keys or tokens from external services like Discord. 
+| Command | What it does |
+| --- | --- |
+| `/points` | Your dubloons and your points in each game (only you see it). |
+| `/convert` | Turn your game points into dubloons, all games or just one. |
+| `/leaderboard` | The richest players in this server. |
 
-This template repository has a sample .env file, `.env-sample`, that you can rename to `.env` or copy and paste the variables in `.env-sample` into a new `.env` file. 
+Each game's exchange rate (like 100 points = 10 dubloons) is set by that game's owner in `src/economy/rates.js`. See [how dubloons work](docs/how-dubloons-work.md#set-your-games-exchange-rate).
 
-### Step 2: Add your favorite meme
-In your `.env` file you will find a variable named `MEME_URL` where you can add a URL to your favorite meme. 
+New members get a welcome message in `#general` that points them to the games.
 
-### Step 3: Add a personalized welcome message
-In the `src` directory you will find another directory called `events`. Open the `events` directory and you will find the `guildMemberAdd.js` file. You'll notice that we left helpful comments on where you can update the code to your liking.
+What changed in each version: [release notes](CHANGELOG.md).
 
-To add a welcome message, you can update the `getWelcomeMessage` function after the `content:` keyword.
+How the code works, file by file: [hangman](docs/how-hangman-works.md), [song guesser](docs/how-songguess-works.md), [minigolf](docs/how-minigolf-works.md), [hot potato](docs/how-hotpotato-works.md), [tic tac toe](docs/how-tictactoe-works.md), [horse race](docs/how-horserace-works.md), [slots](docs/how-slots-work.md), [poker](docs/how-poker-works.md), [dubloons](docs/how-dubloons-work.md).
 
-![code block of get welcome message function](https://user-images.githubusercontent.com/10368374/199597840-dd83efa6-8251-4def-868f-cdadb0df6f02.png)
+## The big idea
 
-### Step 4 (optional): Customize even further
-Maybe you want to use an API service to provide random memes or maybe you don't want to share a meme at all. No matter what route you choose, you should take this Discord bot and make it your own. :smiley:
+Arcadia will run a circuit of short minigames, like Mario Party inside Discord.
+Someone starts a session, players join, and the bot picks games that fit how many
+people are playing and how much time they have. Points carry across the circuit
+and the top scorer wins.
 
-We recommend [creating a new branch](https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/making-changes-in-a-branch/managing-branches#creating-a-branch) anytime you tinker so you don't have to worry about making mistakes on your main branch. Once your new branch is in a good state, you can [merge your changes](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/about-pull-request-merges) to your main branch using a pull request. :rocket:
+Planned games: Quick Draw, Emoji Decode, Lowest Unique Number, Smuggler,
+Majority Rules and Team Tug.
 
-## How to deploy your bot
+## Run the bot yourself
 
-<img src="https://octodex.github.com/images/jetpacktocat.png" alt="image of jetpacktocat" width="200"/>
+You need a GitHub account and a Discord account. Everything runs in the cloud
+in a GitHub Codespace, so nothing is installed on your computer.
 
-### Step 1: Create a new application on Discord
-Visit https://discord.com/developers/applications to create a new application on Discord. Once there, click the `new application` button. After you click on the `new application` button, you can then create a new application (Note: That we created a new application called `Bot Developer`):
+1. **Open a Codespace.** On this repo's page click **Code**, then **Codespaces**,
+   then **Create codespace on main**. (Do this on your own fork for a personal test bot.)
+2. **Make your settings file.** In the terminal at the bottom, run:
+   ```
+   cp -n .env-sample .env
+   ```
+3. **Create a Discord app.** Go to the
+   [Discord Developer Portal](https://discord.com/developers/applications) and
+   click **New Application**.
+4. **Get the token.** Open the **Bot** tab and click **Reset Token**, then **Copy**.
+   On the same page, turn on all three **Privileged Gateway Intents** and save.
+5. **Paste the token.** Run `code .env` in the terminal. Replace
+   `put-your-token-here` with your token and save. Never share the token or
+   commit it. `.env` is ignored by git, so it stays on your Codespace.
+6. **Invite the bot.** Copy the **Application ID** from **General Information**
+   and open this link with your ID in it:
+   ```
+   https://discord.com/oauth2/authorize?client_id=YOUR_APPLICATION_ID&scope=bot+applications.commands&permissions=101440
+   ```
+   Pick your server and click **Authorize**.
+7. **Start it.** Run:
+   ```
+   npm start
+   ```
+   It works when you see `Logged in as <your bot>!` and `Added /hangman, /songguess, /minigolf, /hotpotato, /tictactoe, /horserace, /slots, /poker, /points, /convert and /leaderboard to <your server>`.
+   Keep the terminal open. Closing it, or the Codespace going to sleep, takes the bot offline.
+8. **Play.** Type `/hangman`, `/songguess`, `/minigolf`, `/hotpotato`, `/tictactoe`, `/horserace`, `/slots` or `/poker` in your server.
 
-![Screenshot 2022-10-07 at 1 01 38 PM](https://user-images.githubusercontent.com/11372162/194497650-50b0fd9b-da26-4bd4-b106-5a5016f47842.png)
+Your server needs a text channel named `general` for the welcome message. To use
+a different channel, change `CHANNEL_NAME` in `.env`.
 
-### Step 2: Open your application
+## Run the tests
 
-After creating an application you should see the application under `My applications`. Open your newly created application by clicking on it.
+```
+npm test
+```
 
-![Screenshot 2022-10-07 at 1 02 12 PM](https://user-images.githubusercontent.com/11372162/194497723-e57931ef-e25c-4d40-ba73-81b09ecd059e.png)
+## Troubleshooting
 
-### Step 3: Configure your bot user
+| What you see | Fix |
+| --- | --- |
+| `An invalid token was provided` | Reset the token in the portal and paste the new one into `.env`. |
+| `Used disallowed intents` | Turn on all three Privileged Gateway Intents in the **Bot** tab. |
+| `/hangman` does not show up | Stop the bot with Ctrl+C and run `npm start` again. If it still says it could not add the command, invite the bot again with the link in step 6. |
+| `/songguess` says it couldn't find songs | Try a different genre or era. Some mixes, like 70s K-Pop, have no playlists. If every choice fails, the bot can't reach Deezer. |
+| Song clips don't show up | Give the bot the **Attach Files** permission, or invite it again with the link in step 6. |
+| Minigolf pictures don't show up | Same as song clips: the bot needs the **Attach Files** permission. |
+| Typing letters does nothing | Turn on the **Message Content** intent in the **Bot** tab. |
 
-Select the Bot settings to edit the details. First, click on reset token to generate a new token that you will use in your `.env` file. Copy the generated token and set the `TOKEN` variable in your `.env` file with your newly generated token.
+## Credits
 
-Select the public bot option if you want your bot to be publically available.
-Select all the Privileged Gateway Intents like PRESENCE INTENT, SERVER MEMBERS INTENT, MESSAGE CONTENT INTENT if your bot needs those intents.(Note: For this application you'll need all of these intents.)
-
-![image](https://user-images.githubusercontent.com/11372162/194498518-e535b2d0-0b64-4d1d-8527-f49314be16cb.png)
-
-### Step 4: Select your bot permissions
-Open the `OAuth2` setting and then select `URL Generator`.
-
-Select the `bot` checkbox under `SCOPES`. After, select `Send Messages`, `Mention Everyone`, and `Add Reactions`. 
-
-Once you have set your bot permissions copy the generated url below.
-
-![image](https://user-images.githubusercontent.com/11372162/194498853-8ba28265-ab65-4df1-9e25-8d8913decfdb.png)
-
-### Step 5: Choose your Discord Server
-Visit the generated url from the previous step and choose the server that you want to add the bot to. Once you've selected the server click continue.
-
-![image](https://user-images.githubusercontent.com/11372162/194499328-3874ccf5-d099-4f83-b62d-af091b06773a.png)
-
-### Step 6: Run your application
-
-Once the bot is added it will appear on your Discord server in offline mode.
-
-You can now run the code in the repository using the command line by typing the command `npm start`. 
-
-
+Built on the GitHub Education
+[memebot_discord](https://github.com/github-education-resources/memebot_discord) template.

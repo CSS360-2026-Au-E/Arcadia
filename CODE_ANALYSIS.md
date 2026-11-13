@@ -6,6 +6,7 @@ name next to it.
 
 | Job | Topic | Who |
 |---|---|---|
+
 | 1 | Code Examination | Jason and Kristine |
 | 2 | Cyclomatic complexity | Abhi |
 | 4 | Test coverage | (teammate) |
