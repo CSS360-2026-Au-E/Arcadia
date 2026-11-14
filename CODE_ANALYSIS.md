@@ -6,12 +6,44 @@ name next to it.
 
 | Job | Topic | Who |
 |---|---|---|
+
+| 1 | Code Examination | Jason and Kristine |
 | 2 | Cyclomatic complexity | Abhi |
 | 4 | Test coverage | (teammate) |
 | 5 | Threat model | (teammate) |
 | 6 | Fuzzer | Ami |
 | 7 | Unit tests | Abhi |
+
+| 10 | Bot Additions | Jason |
+
+---
+## 1. Code Examination: technical debt and code smells (Jason and Kristine)
+
+### What it covers
+
+Technical debt is code that works today but makes future changes slower, riskier
+or more expensive. A code smell is a pattern in the code that usually points to
+that kind of debt. This section lists the smells and debt we found in the bot,
+why each one matters, and how to fix it.
+
+### How it was examined
+
+- Read through the files in `src/` by hand, looking for long functions,
+  duplicated logic, hardcoded values, unclear names, dead code and shortcuts.
+- Searched for leftover markers: `grep -rn "TODO\|FIXME\|HACK" src`
+  
+### Findings
+
+| # | Smell | Where | Why it matters | Proposed fix |
+|---|---|---|---|---|
+| 1 | **Long method** | `simulateShot`, `src/games/minigolfPhysics.js` (46) | Movement, bounces, traps and stopping are all in one loop. | Split into `moveBall`, `bounceOffWalls`, `applyTrap`, `isStopped`. |
+| 2 | **Long `if`/`else if` chain** | `playCard`, `src/games/minigolfCards.js` (24) | Every new card adds a branch. | Lookup table of card name to handler. |
+| 3 | **Mixed responsibilities** | `hotpotatoMessages.execute`, `messageCreate.execute` | Validation, state and replying are in one function, so it can't be tested without Discord. | Pull logic into pure functions. |
+| 4 | **Code that cannot be tested** | `drawTrap`, `runStep` (not exported) | Complex logic with no direct tests. | Export or extract helpers. |
+| 5 | **Untested complex code** | `shotReport`, `cardHand`, `hotpotatoMessages.execute` | Refactors are risky without tests. | Add tests first. |
+
 | 8 | Smoke test | Ami |
+
 
 ---
 
@@ -151,6 +183,23 @@ _To be added._
 
 _To be added._
 
+
+--- 
+## 10. Bot Additions (Jason)
+
+### What to Add
+
+We need to add more integration with each game within the bot in itself. Our games currently work independently, so a win in one has no connection to the others. The bot feels like separate minigames and not an arcade. In order to make it have a more arcade like experience there should be a point system added where you can win money/points to use in other games or to buy things to potetnailly enhance the experience of other games like power-ups and items.
+
+### Scope
+
+A shared points module that all games call to award points, instead of each game handling scoring itself.
+Persistent storage of each player’s total points so they survive a bot restart.
+A consistent points table across games, for example a win, a draw and participation, with harder bot difficulty earning more.
+A /points command to see your own total and a /leaderboard command for the top players.
+
+---
+
 ## 6. Fuzzer (Ami)
 
 ### What a fuzzer is
@@ -245,3 +294,5 @@ npm test
 
 - Refuse bets on horses that don't exist (fixed in this change)
 - Refund horse race bets when the bot restarts mid-race
+
+---
