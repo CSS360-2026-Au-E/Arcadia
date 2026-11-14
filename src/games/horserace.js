@@ -110,9 +110,13 @@ export function createGame() {
     "placed"   - the bet worked
     "broke"    - they don't have BET_SIZE coins, so nothing was bet
     "closed"   - too late, the race already started
+    "invalid"  - there's no horse with that number, so nothing was bet
 */
 export function placeBet(game, wallets, userId, horse) {
   if (game.stage !== "betting") return "closed";
+  // Only 0 to 4 are real horses. Anything else (5, -1, 2.5, NaN) is ignored,
+  // so a broken button can never take someone's dubloons.
+  if (!Number.isInteger(horse) || horse < 0 || horse >= HORSES.length) return "invalid";
   if (getCoins(wallets, userId) < BET_SIZE) return "broke";
 
   // First bet from this person? Give them an empty bet slip: 0 on every horse.
