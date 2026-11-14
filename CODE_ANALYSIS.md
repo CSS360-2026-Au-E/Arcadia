@@ -8,6 +8,7 @@ name next to it.
 |---|---|---|
 | 1 | Code Examination | Jason and Kristine |
 | 2 | Cyclomatic complexity | Abhi |
+| 3 | Cohesion and coupling | Kristine |
 | 4 | Test coverage | Jennifer |
 | 5 | Threat model | Jennifer |
 | 6 | Fuzzer | Ami |
@@ -478,5 +479,65 @@ npm test
 
 - Refuse bets on horses that don't exist (fixed in this change)
 - Refund horse race bets when the bot restarts mid-race
+
+---
+
+## 1 & 3 Technical debt, cohesion and coupling (Kristine)
+
+### What I measured
+
+- **Technical debt:** read the files that the existing sections didn't cover, and checked for layering problems, duplicated helpers and leftover TODOs.
+- **Cohesion and coupling:** counted the `import` lines in every file under `src/` (fan-out), and counted how many files import each shared module (fan-in). I also checked which files call Discord APIs and which files award points or touch dubloons. I did this with `grep` and by reading the code. I did not run a dependency tool, so the numbers are counts, not standard metrics.
+
+Time spent: [2 HOURS]
+
+### Coupling: the shared hubs
+
+| Module | Fan-in (files that import it) | Why it matters |
+|---|---|---|
+| `src/economy/bank.js` | 8 | Every game that pays out depends on it. It loads and saves the file, awards and spends dubloons, converts points, and formats text (`dubloonText`, line 93). A change to any of those hits all 8 callers. |
+| `src/economy/earnings.js` | 5 | Holds each game's point values. Stable and easy to change. |
+| `src/games/minigolf.js` | 3 | The mini golf entry point. Most mini golf code depends on it indirectly. |
+| `src/games/songguess.js` | 3 | Imported by its own commands, messages and `ready.js`. |
+
+Two of the ARCHITECTURE.md claims don't match the code:
+
+- **"Games never talk to Discord"** (ARCHITECTURE.md, section 1) is false for three files:
+  - `src/games/tictactoe.js` builds Discord buttons (lines 136–160), reads `interaction.options` (line 173) and handles button clicks (`handleInteraction`, line 221). It has 25 Discord-related lines.
+  - `src/games/minigolfRound.js` builds the button rows (lines 335–340) and calls `message.edit` (line 209).
+  - `src/games/songguessRound.js` creates `AttachmentBuilder` clips (line 16).
+- **"Game state lives in games/"** is only partly true. The poker and horse race maps are in the events layer: `src/events/pokerInteraction.js:37` and `src/events/horseraceInteraction.js:36`.
+
+### Cohesion: files that do too much
+
+- **`src/games/minigolfRound.js` (341 lines, 16 exports)** has six jobs: lobby (lines 46–66), point awards (97–107), turn flow (131–207), trap placement (214–297), the card hand (298–334) and the picture (119–130). Each job changes for a different reason, so the file has low cohesion.
+- **`src/economy/bank.js`** handles storage, currency rules and display text in one module (see the table above).
+- **`src/events/minigolfControls.js` (234 lines, 40 Discord-related lines)** imports `displayName` from `src/events/minigolfCommand.js:33`, so one event file depends on another. A small display helper belongs in a shared place.
+
+### Technical debt found
+
+These don't repeat the smells already listed in this report (`simulateShot`, `playCard`, `hotpotatoMessages.execute`, and so on).
+
+1. **Points are awarded from six places.** `awardPoints` is called in `messageCreate.js:34`, `songguessMessages.js:28`, `hotpotatoCommand.js:78`, `minigolfRound.js:99` and `tictactoe.js:213`. Some are in events and some are in games, so there is no single rule for where scoring happens. This is the main reason the bot feels like separate games, which is why the proposed shared points module (job 10) matters.
+2. **Button helpers are copied.** Five files import `ButtonBuilder` directly (`minigolfRound`, `tictactoe`, `horseraceInteraction`, `slotsInteraction`, `pokerInteraction`), and each builds its own rows. `minigolfRound.js` has private `row` and `button` helpers (lines 335–340) that nothing else can reuse.
+3. **The name `games` is reused.** Seven modules each define a `games` Map. That's confusing when reading imports, and it makes it harder to see which game a file means.
+4. **`describe` is exported from `songguessRound.js:57`.** That name is also a Mocha test global, so importing it in a test file can be confusing.
+
+### Proposed fixes
+
+- Move the Discord-specific code (button rows, `interaction` handlers, attachments) out of `src/games/` and into `src/events/`, starting with `tictactoe.js`. This matches ARCHITECTURE.md and makes the rules files fully testable.
+- Have one points module (`src/economy/points.js`) own all scoring, and have games return results instead of calling `awardPoints` directly.
+- Split `minigolfRound.js` into lobby, turn, trap and card files.
+- Move `dubloonText` into a formatting helper so `bank.js` only handles storage and balances.
+- Move `displayName` to a shared helper module.
+
+### What I did not measure
+
+Lack of cohesion (LCOM) and the instability metric were not computed. The fan-in counts come from a text search of `import` lines, so any dynamic `import()` or `require()` call inside a function would be missed.
+
+### User stories from this work
+
+- Keep the mbti test alive across restarts
+- Clear abandoned tests
 
 ---
