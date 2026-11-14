@@ -30,6 +30,7 @@
     "esbuild": "^0.15.9",
     "esbuild-register": "^3.6.0",
     "esbuild-runner": "^2.2.1",
+    "fast-check": "^4.10.2",
     "mocha": "^10.0.0",
     "nodemon": "^2.0.20"
   }
