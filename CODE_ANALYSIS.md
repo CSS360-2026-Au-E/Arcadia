@@ -9,7 +9,9 @@ name next to it.
 | 2 | Cyclomatic complexity | Abhi |
 | 4 | Test coverage | (teammate) |
 | 5 | Threat model | (teammate) |
+| 6 | Fuzzer | Ami |
 | 7 | Unit tests | Abhi |
+| 8 | Smoke test | Ami |
 
 ---
 
@@ -148,3 +150,98 @@ _To be added._
 ## 5. Threat model (teammate)
 
 _To be added._
+
+## 6. Fuzzer (Ami)
+
+### What a fuzzer is
+
+A normal unit test checks one example picked by hand. A fuzzer makes up
+hundreds of random examples and checks that a rule holds for every one of
+them. When a rule breaks, it shrinks the example down to the smallest one
+that still breaks it, which makes the bug easy to see.
+
+### What was fuzzed
+
+`tests/horseraceFuzz.spec.js` uses [fast-check](https://fast-check.dev/) to
+fuzz the horse race rules in `src/games/horserace.js`. Horse race was picked
+because it moves real dubloons, so a bug there costs players money. Each rule
+runs 100 random examples by default.
+
+| Rule (property) | Random input | Result before fix |
+|---|---|---|
+| Betting never creates or destroys dubloons | 4 players with 0 to 200 dubloons, up to 40 clicks | Pass |
+| Nobody's dubloons go below 0 | same | Pass |
+| A horse gallops 0 to 3 steps | any `Math.random` value | Pass |
+| A horse never moves backwards or past the line | 50 steps of random numbers | Pass |
+| Payout = bets on the winner x its odds | up to 40 clicks, then a full race | Pass |
+| A horse that doesn't exist never takes dubloons | horse numbers like 5, -1, 2.5 and NaN | **Fail** |
+| A broken click doesn't change the next real bet | a bad click, then a good one | **Fail** |
+
+### Findings
+
+1. **`placeBet` trusted the horse number.** Given a horse number outside 0 to
+   4 (fast-check shrank it to `placeBet(game, wallets, "ana", 5)`), it still
+   took 10 dubloons, and the bet went on a horse that can't win, so the
+   dubloons were gone for good. A `NaN` horse did the same and also turned the
+   bet totals into `NaN`. The number comes from the button ID (`"horse:2"`),
+   so today only a renamed or broken button would trigger it, but nothing
+   stopped it.
+2. **The money math is solid.** Across every random run, dubloons were never
+   created or lost during betting, no wallet went negative, and payouts
+   always matched the odds exactly.
+3. **`pickWinner` returns `undefined` if no horse has finished.** The Discord
+   code only calls it after someone crosses the line, so it doesn't crash
+   today, but `payOut` would throw if it were ever called early.
+
+### What was fixed
+
+`placeBet` now returns `"invalid"` and takes nothing unless the horse is a
+whole number from 0 to 4, and the button handler replies "That horse isn't
+in this race." Both failing rules pass now.
+
+## 8. Smoke test (Ami)
+
+### What a smoke test is
+
+A quick "does it turn on?" check. It doesn't test every rule; it runs the
+main job of each part of the bot once and makes sure nothing crashes.
+
+### What it covers
+
+`tests/smoke.spec.js` has 10 checks and needs no Discord token or internet:
+
+| Check | What it proves |
+|---|---|
+| Every file in `src/events/` loads with a `name` and `execute` | the bot can start (a typo in any event file would stop `npm start`) |
+| Hangman to a win | guesses and winning work |
+| Hot potato until one player is left | join, start, pass, explode and winner work |
+| One turn of tic tac toe | the player moves and the bot answers |
+| Slot machine spin | three reels and a payout |
+| Poker deal, hold, draw and payout | a full hand works |
+| Song guess check | title matching works (song is made up, no Deezer call) |
+| A hole of minigolf | a player can join, shoot and finish a hole |
+| Horse race from bet to payout | bets, racing, winner and payout work |
+| Points to dubloons | `/convert` math works |
+
+### Findings
+
+1. **Every game's main flow works**, and every event file loads.
+2. **Horse race bets are lost if the bot restarts mid-race.** Bets are taken
+   out of the saved dubloons file right away, but the race itself only lives
+   in memory. If the bot stops during the 25 seconds of betting or the race,
+   nobody gets paid or refunded.
+3. **Song guesser can't be smoke tested end to end without the internet**,
+   because `getRandomSong` always calls Deezer. Passing in the song source
+   would let a test use a fake one.
+
+### How to run
+
+```bash
+npm install
+npm test
+```
+
+### User stories from this work
+
+- Refuse bets on horses that don't exist (fixed in this change)
+- Refund horse race bets when the bot restarts mid-race

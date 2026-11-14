@@ -223,6 +223,10 @@ async function handleButton(interaction) {
     await interaction.reply({ content: "Too late, the race already started!", ephemeral: true });
     return;
   }
+  if (status === "invalid") {
+    await interaction.reply({ content: "That horse isn't in this race.", ephemeral: true });
+    return;
+  }
   if (status === "broke") {
     await interaction.reply({
       content: `You need ${BET_SIZE} dubloons to bet. Play games and use \`/convert\` to get more.`,
