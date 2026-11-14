@@ -1,3 +1,6 @@
 node_modules
 .env
 build
+# Saved dubloons and game points (see src/economy/bank.js)
+data
+coverage
