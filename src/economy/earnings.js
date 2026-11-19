@@ -71,21 +71,23 @@ export function minigolfPoints(players) {
 }
 
 // ---------------------------------------------------------------------------
-// HOT POTATO: 20 points for every round you survive, and 200 for winning.
+// HOT POTATO: 300 points for the winner, 100 for everyone else who played.
+// At the Hot Potato rate (100 points = 10 dubloons) that's 30 dubloons for
+// winning and 10 for playing, no matter which round you went out in.
 // ---------------------------------------------------------------------------
-export const HOTPOTATO_WIN = 200;
-export const HOTPOTATO_PER_ROUND = 20;
+export const HOTPOTATO_WIN = 300;
+export const HOTPOTATO_PLAYED = 100;
 
 /*
-  "game" is the finished game: game.out lists who exploded, in order, and
+  "game" is the finished game: game.out lists everyone who exploded, and
   winnerId is the last one standing.
-  The first player out survived 0 rounds, the second survived 1, and so on.
-  Gives back a list like [{ id: "111", points: 240 }, ...].
+  Gives back the winner first, then everyone else in the order they went out,
+  like [{ id: "111", points: 300 }, { id: "222", points: 100 }, ...].
 */
 export function hotpotatoPoints(game, winnerId) {
-  const losers = game.out.map((id, rounds) => ({ id, points: HOTPOTATO_PER_ROUND * rounds }));
-  const winner = { id: winnerId, points: HOTPOTATO_WIN + HOTPOTATO_PER_ROUND * game.out.length };
-  return [...losers, winner].filter((p) => p.points > 0);
+  const winner = { id: winnerId, points: HOTPOTATO_WIN };
+  const others = game.out.map((id) => ({ id, points: HOTPOTATO_PLAYED }));
+  return [winner, ...others];
 }
 
 // ---------------------------------------------------------------------------

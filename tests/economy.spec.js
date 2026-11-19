@@ -146,13 +146,21 @@ describe("points each game hands out", () => {
     expect(points).to.deep.equal([60 + 300, 60 + 300, 20]);
   });
 
-  it("hot potato: 20 a round survived, 200 for the winner", () => {
+  it("hot potato: 300 for the winner, 100 for everyone else", () => {
     const game = { out: ["ana", "ben", "cat"] };
     expect(hotpotatoPoints(game, "dan")).to.deep.equal([
-      { id: "ben", points: 20 },
-      { id: "cat", points: 40 },
-      { id: "dan", points: 200 + 60 },
+      { id: "dan", points: 300 },
+      { id: "ana", points: 100 },
+      { id: "ben", points: 100 },
+      { id: "cat", points: 100 },
     ]);
+  });
+
+  it("hot potato: at the Hot Potato rate, a win is 30 dubloons and playing is 10", () => {
+    const { points, dubloons } = RATES.hotpotato;
+    const [win, played] = hotpotatoPoints({ out: ["ana"] }, "ben");
+    expect((win.points / points) * dubloons).to.equal(30);
+    expect((played.points / points) * dubloons).to.equal(10);
   });
 
   it("tic tac toe: wins pay more on harder levels", () => {
