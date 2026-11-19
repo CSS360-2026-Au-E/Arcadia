@@ -25,6 +25,7 @@ import {
 } from "../games/hotpotato";
 import { hotpotatoPoints } from "../economy/earnings";
 import { awardPoints } from "../economy/bank";
+import { RATES } from "../economy/rates";
 
 // ---------------------------------------------------------------------------
 // SMALL HELPERS
@@ -38,6 +39,11 @@ const mention = (userId) => `<@${userId}>`;
 // setTimeout (the timer tool) measures time in milliseconds, not seconds.
 // 1 second = 1000 milliseconds, so this converts seconds into milliseconds.
 const toMs = (seconds) => seconds * 1000;
+
+// How many dubloons some Hot Potato points are worth, using the rate in
+// src/economy/rates.js (right now 100 points = 10 dubloons).
+const toDubloons = (points) =>
+  Math.floor((points * RATES.hotpotato.dubloons) / RATES.hotpotato.points);
 
 // ---------------------------------------------------------------------------
 // ONE ROUND OF THE GAME
@@ -72,17 +78,25 @@ function playRound(channel, game) {
     if (isOver(game)) {
       games.delete(channel.id); // remove the game so the channel can start a new one
 
-      // Everyone earns points for the rounds they survived, and the winner
-      // gets a bonus (see src/economy/earnings.js).
-      const earned = hotpotatoPoints(game, winner(game));
-      for (const { id, points } of earned) awardPoints(id, "hotpotato", points, channel.guildId);
-      const pointsLine = earned.map(({ id, points }) => `${mention(id)} +${points}`).join(", ");
+      // Give out the rewards: 300 points (30 dubloons) for the winner and
+      // 100 points (10 dubloons) for everyone else (see src/economy/earnings.js).
+      const [win, ...others] = hotpotatoPoints(game, winner(game));
+      for (const { id, points } of [win, ...others]) {
+        awardPoints(id, "hotpotato", points, channel.guildId);
+      }
+
+      // One line per player, like "@Ben +100 points (10 dubloons)".
+      const rewardLine = ({ id, points }) =>
+        `${mention(id)} +${points} points (${toDubloons(points)} dubloons)`;
 
       channel.send({
         content:
-          `🏆 ${mention(winner(game))} is the last one standing and **wins Hot Potato!**\n` +
-          `🪙 Hot potato points: ${pointsLine}. Use \`/convert\` to turn them into dubloons.`,
-        allowedMentions: { users: [winner(game)] }, // only ping the winner
+          `🏆 ${mention(win.id)} is the last one standing and **wins Hot Potato!**\n` +
+          `🪙 **Winner:** ${rewardLine(win)}\n` +
+          `🥔 **Everyone else:**\n` +
+          others.map(rewardLine).join("\n") +
+          `\nUse \`/convert\` to turn your points into dubloons.`,
+        allowedMentions: { users: [win.id] }, // only ping the winner
       });
       return; // stop here, no more rounds
     }

@@ -30,7 +30,8 @@ export const RATES = {
   // abhip1008's game. One full game can be 500+ points, so the rate is lower.
   minigolf: { name: "Minigolf", points: 100, dubloons: 5 },
 
-  // cpukarma's game. A win is 200 points plus 20 for every round survived.
+  // cpukarma's game. A win is 300 points (30 dubloons), and everyone else
+  // who played gets 100 points (10 dubloons).
   hotpotato: { name: "Hot Potato", points: 100, dubloons: 10 },
 
   // ovjason's game. A win is 50 (easy), 100 (medium) or 300 (hard), a draw is 30.
