@@ -1,0 +1,2058 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.7.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.7",
+  "serialNumber": "urn:uuid:47a79915-5c68-4134-a714-500f7a6cb0c1",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-11-16T20:18:40Z",
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "author": "anchore",
+          "name": "syft",
+          "version": "1.57.2"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "af63bd4c8601b7f1",
+      "type": "file",
+      "name": "arcadia",
+      "version": "1.0.0"
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "pkg:npm/%40discordjs/builders@1.14.1?package-id=23608a933227c5ae",
+      "type": "library",
+      "name": "@discordjs/builders",
+      "version": "1.14.1",
+      "cpe": "cpe:2.3:a:\\@discordjs\\/builders:\\@discordjs\\/builders:1.14.1:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/%40discordjs/builders@1.14.1",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "javascript-lock-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "javascript-npm-package-lock-entry"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/package-lock.json"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/%40discordjs/collection@1.5.3?package-id=57d04422fd938052",
+      "type": "library",
+      "name": "@discordjs/collection",
+      "version": "1.5.3",
+      "cpe": "cpe:2.3:a:\\@discordjs\\/collection:\\@discordjs\\/collection:1.5.3:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/%40discordjs/collection@1.5.3",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "javascript-lock-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "javascript-npm-package-lock-entry"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/package-lock.json"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/%40discordjs/collection@2.1.1?package-id=a6fdd566617b5b01",
+      "type": "library",
+      "name": "@discordjs/collection",
+      "version": "2.1.1",
+      "cpe": "cpe:2.3:a:\\@discordjs\\/collection:\\@discordjs\\/collection:2.1.1:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/%40discordjs/collection@2.1.1",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "javascript-lock-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "javascript-npm-package-lock-entry"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/package-lock.json"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/%40discordjs/formatters@0.5.0?package-id=9bbd6f37c2ffb146",
+      "type": "library",
+      "name": "@discordjs/formatters",
+      "version": "0.5.0",
+      "cpe": "cpe:2.3:a:\\@discordjs\\/formatters:\\@discordjs\\/formatters:0.5.0:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/%40discordjs/formatters@0.5.0",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "javascript-lock-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "javascript-npm-package-lock-entry"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/package-lock.json"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/%40discordjs/formatters@0.6.2?package-id=b0af21709547f001",
+      "type": "library",
+      "name": "@discordjs/formatters",
+      "version": "0.6.2",
+      "cpe": "cpe:2.3:a:\\@discordjs\\/formatters:\\@discordjs\\/formatters:0.6.2:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/%40discordjs/formatters@0.6.2",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "javascript-lock-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "javascript-npm-package-lock-entry"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/package-lock.json"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/%40discordjs/rest@2.6.3?package-id=ed51823b344c4e13",
+      "type": "library",
+      "name": "@discordjs/rest",
+      "version": "2.6.3",
+      "cpe": "cpe:2.3:a:\\@discordjs\\/rest:\\@discordjs\\/rest:2.6.3:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/%40discordjs/rest@2.6.3",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "javascript-lock-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "javascript-npm-package-lock-entry"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/package-lock.json"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/%40discordjs/util@1.2.0?package-id=79c1afffdcabb13a",
+      "type": "library",
+      "name": "@discordjs/util",
+      "version": "1.2.0",
+      "cpe": "cpe:2.3:a:\\@discordjs\\/util:\\@discordjs\\/util:1.2.0:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/%40discordjs/util@1.2.0",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "javascript-lock-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "javascript-npm-package-lock-entry"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/package-lock.json"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/%40discordjs/ws@1.1.1?package-id=3b71769ed8c04d97",
+      "type": "library",
+      "name": "@discordjs/ws",
+      "version": "1.1.1",
+      "cpe": "cpe:2.3:a:\\@discordjs\\/ws:\\@discordjs\\/ws:1.1.1:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/%40discordjs/ws@1.1.1",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "javascript-lock-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "javascript-npm-package-lock-entry"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/package-lock.json"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/%40sapphire/async-queue@1.5.5?package-id=52b14a5c3bad0055",
+      "type": "library",
+      "name": "@sapphire/async-queue",
+      "version": "1.5.5",
+      "cpe": "cpe:2.3:a:\\@sapphire\\/async-queue:\\@sapphire\\/async-queue:1.5.5:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/%40sapphire/async-queue@1.5.5",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "javascript-lock-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "javascript-npm-package-lock-entry"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:\\@sapphire\\/async-queue:\\@sapphire\\/async_queue:1.5.5:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:\\@sapphire\\/async_queue:\\@sapphire\\/async-queue:1.5.5:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:\\@sapphire\\/async_queue:\\@sapphire\\/async_queue:1.5.5:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:\\@sapphire\\/async:\\@sapphire\\/async-queue:1.5.5:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:\\@sapphire\\/async:\\@sapphire\\/async_queue:1.5.5:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/package-lock.json"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/%40sapphire/shapeshift@4.0.0?package-id=4a762c0f66e715e0",
+      "type": "library",
+      "name": "@sapphire/shapeshift",
+      "version": "4.0.0",
+      "cpe": "cpe:2.3:a:\\@sapphire\\/shapeshift:\\@sapphire\\/shapeshift:4.0.0:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/%40sapphire/shapeshift@4.0.0",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "javascript-lock-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "javascript-npm-package-lock-entry"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/package-lock.json"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/%40sapphire/snowflake@3.5.3?package-id=59bdd7614f3127d3",
+      "type": "library",
+      "name": "@sapphire/snowflake",
+      "version": "3.5.3",
+      "cpe": "cpe:2.3:a:\\@sapphire\\/snowflake:\\@sapphire\\/snowflake:3.5.3:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/%40sapphire/snowflake@3.5.3",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "javascript-lock-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "javascript-npm-package-lock-entry"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/package-lock.json"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/%40sapphire/snowflake@3.5.5?package-id=51525d63d83e313d",
+      "type": "library",
+      "name": "@sapphire/snowflake",
+      "version": "3.5.5",
+      "cpe": "cpe:2.3:a:\\@sapphire\\/snowflake:\\@sapphire\\/snowflake:3.5.5:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/%40sapphire/snowflake@3.5.5",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "javascript-lock-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "javascript-npm-package-lock-entry"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/package-lock.json"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/%40types/node@26.6.6?package-id=9f90a32d4fc5e4bd",
+      "type": "library",
+      "name": "@types/node",
+      "version": "26.6.6",
+      "cpe": "cpe:2.3:a:\\@types\\/node:\\@types\\/node:26.6.6:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/%40types/node@26.6.6",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "javascript-lock-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "javascript-npm-package-lock-entry"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/package-lock.json"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/%40types/ws@8.18.2?package-id=c4386f2d094335b4",
+      "type": "library",
+      "name": "@types/ws",
+      "version": "8.18.2",
+      "cpe": "cpe:2.3:a:\\@types\\/ws:\\@types\\/ws:8.18.2:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/%40types/ws@8.18.2",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "javascript-lock-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "javascript-npm-package-lock-entry"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/package-lock.json"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/%40vladfrangu/async_event_emitter@2.4.7?package-id=cbb0c53a98f11d48",
+      "type": "library",
+      "name": "@vladfrangu/async_event_emitter",
+      "version": "2.4.7",
+      "cpe": "cpe:2.3:a:\\@vladfrangu\\/async-event-emitter:\\@vladfrangu\\/async-event-emitter:2.4.7:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/%40vladfrangu/async_event_emitter@2.4.7",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "javascript-lock-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "javascript-npm-package-lock-entry"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:\\@vladfrangu\\/async-event-emitter:\\@vladfrangu\\/async_event_emitter:2.4.7:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:\\@vladfrangu\\/async_event_emitter:\\@vladfrangu\\/async-event-emitter:2.4.7:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:\\@vladfrangu\\/async_event_emitter:\\@vladfrangu\\/async_event_emitter:2.4.7:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:\\@vladfrangu\\/async-event:\\@vladfrangu\\/async-event-emitter:2.4.7:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:\\@vladfrangu\\/async-event:\\@vladfrangu\\/async_event_emitter:2.4.7:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:\\@vladfrangu\\/async_event:\\@vladfrangu\\/async-event-emitter:2.4.7:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:\\@vladfrangu\\/async_event:\\@vladfrangu\\/async_event_emitter:2.4.7:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:\\@vladfrangu\\/async:\\@vladfrangu\\/async-event-emitter:2.4.7:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:\\@vladfrangu\\/async:\\@vladfrangu\\/async_event_emitter:2.4.7:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/package-lock.json"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:github/actions/checkout@v2?package-id=6c6b4648c07f7f27",
+      "type": "library",
+      "name": "actions/checkout",
+      "version": "v2",
+      "cpe": "cpe:2.3:a:actions\\/checkout:actions\\/checkout:v2:*:*:*:*:*:*:*",
+      "purl": "pkg:github/actions/checkout@v2",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "github-actions-usage-cataloger"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "github-action"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "github-actions-use-statement"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/.github/workflows/build-and-deploy.yml"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/ascii-table@0.0.9?package-id=80d2cc80041d86ec",
+      "type": "library",
+      "name": "ascii-table",
+      "version": "0.0.9",
+      "cpe": "cpe:2.3:a:ascii-table:ascii-table:0.0.9:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/ascii-table@0.0.9",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "javascript-lock-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "javascript-npm-package-lock-entry"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:ascii-table:ascii_table:0.0.9:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:ascii_table:ascii-table:0.0.9:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:ascii_table:ascii_table:0.0.9:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:ascii:ascii-table:0.0.9:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:ascii:ascii_table:0.0.9:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/package-lock.json"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/asynckit@0.4.0?package-id=8a3701f173c08a3b",
+      "type": "library",
+      "name": "asynckit",
+      "version": "0.4.0",
+      "cpe": "cpe:2.3:a:asynckit:asynckit:0.4.0:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/asynckit@0.4.0",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "javascript-lock-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "javascript-npm-package-lock-entry"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/package-lock.json"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/axios@0.27.2?package-id=6c0c7ead995192f4",
+      "type": "library",
+      "name": "axios",
+      "version": "0.27.2",
+      "cpe": "cpe:2.3:a:axios:axios:0.27.2:*:*:*:*:node.js:*:*",
+      "purl": "pkg:npm/axios@0.27.2",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "javascript-lock-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "javascript-npm-package-lock-entry"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/package-lock.json"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/combined-stream@1.0.8?package-id=ecba06e036b6afed",
+      "type": "library",
+      "name": "combined-stream",
+      "version": "1.0.8",
+      "cpe": "cpe:2.3:a:combined-stream:combined-stream:1.0.8:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/combined-stream@1.0.8",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "javascript-lock-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "javascript-npm-package-lock-entry"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:combined-stream:combined_stream:1.0.8:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:combined_stream:combined-stream:1.0.8:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:combined_stream:combined_stream:1.0.8:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:combined:combined-stream:1.0.8:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:combined:combined_stream:1.0.8:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/package-lock.json"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/delayed-stream@1.0.0?package-id=cfbc726f0617aa9b",
+      "type": "library",
+      "name": "delayed-stream",
+      "version": "1.0.0",
+      "cpe": "cpe:2.3:a:delayed-stream:delayed-stream:1.0.0:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/delayed-stream@1.0.0",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "javascript-lock-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "javascript-npm-package-lock-entry"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:delayed-stream:delayed_stream:1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:delayed_stream:delayed-stream:1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:delayed_stream:delayed_stream:1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:delayed:delayed-stream:1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:delayed:delayed_stream:1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/package-lock.json"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/discord-api-types@0.37.100?package-id=0b689c3fe0d86bdf",
+      "type": "library",
+      "name": "discord-api-types",
+      "version": "0.37.100",
+      "cpe": "cpe:2.3:a:discord-api-types:discord-api-types:0.37.100:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/discord-api-types@0.37.100",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "javascript-lock-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "javascript-npm-package-lock-entry"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:discord-api-types:discord_api_types:0.37.100:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:discord_api_types:discord-api-types:0.37.100:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:discord_api_types:discord_api_types:0.37.100:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:discord-api:discord-api-types:0.37.100:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:discord-api:discord_api_types:0.37.100:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:discord_api:discord-api-types:0.37.100:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:discord_api:discord_api_types:0.37.100:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:discord:discord-api-types:0.37.100:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:discord:discord_api_types:0.37.100:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/package-lock.json"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/discord-api-types@0.37.83?package-id=3b278a58e5bac17f",
+      "type": "library",
+      "name": "discord-api-types",
+      "version": "0.37.83",
+      "cpe": "cpe:2.3:a:discord-api-types:discord-api-types:0.37.83:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/discord-api-types@0.37.83",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "javascript-lock-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "javascript-npm-package-lock-entry"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:discord-api-types:discord_api_types:0.37.83:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:discord_api_types:discord-api-types:0.37.83:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:discord_api_types:discord_api_types:0.37.83:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:discord-api:discord-api-types:0.37.83:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:discord-api:discord_api_types:0.37.83:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:discord_api:discord-api-types:0.37.83:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:discord_api:discord_api_types:0.37.83:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:discord:discord-api-types:0.37.83:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:discord:discord_api_types:0.37.83:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/package-lock.json"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/discord-api-types@0.37.97?package-id=667f124cedc379b7",
+      "type": "library",
+      "name": "discord-api-types",
+      "version": "0.37.97",
+      "cpe": "cpe:2.3:a:discord-api-types:discord-api-types:0.37.97:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/discord-api-types@0.37.97",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "javascript-lock-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "javascript-npm-package-lock-entry"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:discord-api-types:discord_api_types:0.37.97:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:discord_api_types:discord-api-types:0.37.97:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:discord_api_types:discord_api_types:0.37.97:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:discord-api:discord-api-types:0.37.97:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:discord-api:discord_api_types:0.37.97:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:discord_api:discord-api-types:0.37.97:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:discord_api:discord_api_types:0.37.97:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:discord:discord-api-types:0.37.97:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:discord:discord_api_types:0.37.97:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/package-lock.json"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/discord-api-types@0.38.57?package-id=89751cf6344320d2",
+      "type": "library",
+      "name": "discord-api-types",
+      "version": "0.38.57",
+      "cpe": "cpe:2.3:a:discord-api-types:discord-api-types:0.38.57:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/discord-api-types@0.38.57",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "javascript-lock-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "javascript-npm-package-lock-entry"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:discord-api-types:discord_api_types:0.38.57:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:discord_api_types:discord-api-types:0.38.57:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:discord_api_types:discord_api_types:0.38.57:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:discord-api:discord-api-types:0.38.57:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:discord-api:discord_api_types:0.38.57:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:discord_api:discord-api-types:0.38.57:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:discord_api:discord_api_types:0.38.57:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:discord:discord-api-types:0.38.57:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:discord:discord_api_types:0.38.57:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/package-lock.json"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/discord.js@14.16.3?package-id=7128a1ada79b6beb",
+      "type": "library",
+      "name": "discord.js",
+      "version": "14.16.3",
+      "cpe": "cpe:2.3:a:discord.js:discord.js:14.16.3:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/discord.js@14.16.3",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "javascript-lock-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "javascript-npm-package-lock-entry"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/package-lock.json"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:github/docker/build-push-action@v2?package-id=e52fdfd5bbbba453",
+      "type": "library",
+      "name": "docker/build-push-action",
+      "version": "v2",
+      "cpe": "cpe:2.3:a:docker\\/build-push-action:docker\\/build-push-action:v2:*:*:*:*:*:*:*",
+      "purl": "pkg:github/docker/build-push-action@v2",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "github-actions-usage-cataloger"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "github-action"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "github-actions-use-statement"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:docker\\/build-push-action:docker\\/build_push_action:v2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:docker\\/build_push_action:docker\\/build-push-action:v2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:docker\\/build_push_action:docker\\/build_push_action:v2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:docker\\/build-push:docker\\/build-push-action:v2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:docker\\/build-push:docker\\/build_push_action:v2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:docker\\/build_push:docker\\/build-push-action:v2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:docker\\/build_push:docker\\/build_push_action:v2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:docker\\/build:docker\\/build-push-action:v2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:docker\\/build:docker\\/build_push_action:v2:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/.github/workflows/build-and-deploy.yml"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:github/docker/login-action@v1?package-id=d70a6af7ffbe2f77",
+      "type": "library",
+      "name": "docker/login-action",
+      "version": "v1",
+      "cpe": "cpe:2.3:a:docker\\/login-action:docker\\/login-action:v1:*:*:*:*:*:*:*",
+      "purl": "pkg:github/docker/login-action@v1",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "github-actions-usage-cataloger"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "github-action"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "github-actions-use-statement"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:docker\\/login-action:docker\\/login_action:v1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:docker\\/login_action:docker\\/login-action:v1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:docker\\/login_action:docker\\/login_action:v1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:docker\\/login:docker\\/login-action:v1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:docker\\/login:docker\\/login_action:v1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/.github/workflows/build-and-deploy.yml"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:github/docker/setup-buildx-action@v1?package-id=ee21302d2ce44afc",
+      "type": "library",
+      "name": "docker/setup-buildx-action",
+      "version": "v1",
+      "cpe": "cpe:2.3:a:docker\\/setup-buildx-action:docker\\/setup-buildx-action:v1:*:*:*:*:*:*:*",
+      "purl": "pkg:github/docker/setup-buildx-action@v1",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "github-actions-usage-cataloger"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "github-action"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "github-actions-use-statement"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:docker\\/setup-buildx-action:docker\\/setup_buildx_action:v1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:docker\\/setup_buildx_action:docker\\/setup-buildx-action:v1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:docker\\/setup_buildx_action:docker\\/setup_buildx_action:v1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:docker\\/setup-buildx:docker\\/setup-buildx-action:v1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:docker\\/setup-buildx:docker\\/setup_buildx_action:v1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:docker\\/setup_buildx:docker\\/setup-buildx-action:v1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:docker\\/setup_buildx:docker\\/setup_buildx_action:v1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:docker\\/setup:docker\\/setup-buildx-action:v1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:docker\\/setup:docker\\/setup_buildx_action:v1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/.github/workflows/build-and-deploy.yml"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/fast-deep-equal@3.1.3?package-id=93046d72c3636dc7",
+      "type": "library",
+      "name": "fast-deep-equal",
+      "version": "3.1.3",
+      "cpe": "cpe:2.3:a:fast-deep-equal:fast-deep-equal:3.1.3:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/fast-deep-equal@3.1.3",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "javascript-lock-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "javascript-npm-package-lock-entry"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:fast-deep-equal:fast_deep_equal:3.1.3:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:fast_deep_equal:fast-deep-equal:3.1.3:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:fast_deep_equal:fast_deep_equal:3.1.3:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:fast-deep:fast-deep-equal:3.1.3:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:fast-deep:fast_deep_equal:3.1.3:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:fast_deep:fast-deep-equal:3.1.3:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:fast_deep:fast_deep_equal:3.1.3:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:fast:fast-deep-equal:3.1.3:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:fast:fast_deep_equal:3.1.3:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/package-lock.json"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/follow-redirects@1.15.2?package-id=dc7623ae1813c8e8",
+      "type": "library",
+      "name": "follow-redirects",
+      "version": "1.15.2",
+      "cpe": "cpe:2.3:a:follow-redirects:follow_redirects:1.15.2:*:*:*:*:node.js:*:*",
+      "purl": "pkg:npm/follow-redirects@1.15.2",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "javascript-lock-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "javascript-npm-package-lock-entry"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/package-lock.json"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/form-data@4.0.0?package-id=d2b8e869b46ab834",
+      "type": "library",
+      "name": "form-data",
+      "version": "4.0.0",
+      "cpe": "cpe:2.3:a:form-data:form-data:4.0.0:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/form-data@4.0.0",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "javascript-lock-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "javascript-npm-package-lock-entry"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:form-data:form_data:4.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:form_data:form-data:4.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:form_data:form_data:4.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:form:form-data:4.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:form:form_data:4.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/package-lock.json"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/lodash@4.18.1?package-id=e275bbdb1ece6fdc",
+      "type": "library",
+      "name": "lodash",
+      "version": "4.18.1",
+      "cpe": "cpe:2.3:a:lodash:lodash:4.18.1:*:*:*:*:node.js:*:*",
+      "purl": "pkg:npm/lodash@4.18.1",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "javascript-lock-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "javascript-npm-package-lock-entry"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/package-lock.json"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/lodash.snakecase@4.1.1?package-id=4db93646a56c3897",
+      "type": "library",
+      "name": "lodash.snakecase",
+      "version": "4.1.1",
+      "cpe": "cpe:2.3:a:lodash.snakecase:lodash.snakecase:4.1.1:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/lodash.snakecase@4.1.1",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "javascript-lock-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "javascript-npm-package-lock-entry"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/package-lock.json"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/magic-bytes.js@1.13.1?package-id=0005b17673e4db59",
+      "type": "library",
+      "name": "magic-bytes.js",
+      "version": "1.13.1",
+      "cpe": "cpe:2.3:a:magic-bytes.js:magic-bytes.js:1.13.1:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/magic-bytes.js@1.13.1",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "javascript-lock-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "javascript-npm-package-lock-entry"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:magic-bytes.js:magic_bytes.js:1.13.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:magic_bytes.js:magic-bytes.js:1.13.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:magic_bytes.js:magic_bytes.js:1.13.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:magic:magic-bytes.js:1.13.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:magic:magic_bytes.js:1.13.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/package-lock.json"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/memebot_discord@1.0.0?package-id=74267da08588f87c",
+      "type": "library",
+      "name": "memebot_discord",
+      "version": "1.0.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:memebot-discord:memebot-discord:1.0.0:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/memebot_discord@1.0.0",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "javascript-lock-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "javascript-npm-package-lock-entry"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:memebot-discord:memebot_discord:1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:memebot_discord:memebot-discord:1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:memebot_discord:memebot_discord:1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:memebot:memebot-discord:1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:memebot:memebot_discord:1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/package-lock.json"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/mime-db@1.52.0?package-id=9048a6e7fca67080",
+      "type": "library",
+      "name": "mime-db",
+      "version": "1.52.0",
+      "cpe": "cpe:2.3:a:mime-db:mime-db:1.52.0:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/mime-db@1.52.0",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "javascript-lock-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "javascript-npm-package-lock-entry"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:mime-db:mime_db:1.52.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:mime_db:mime-db:1.52.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:mime_db:mime_db:1.52.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:mime:mime-db:1.52.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:mime:mime_db:1.52.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/package-lock.json"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/mime-types@2.1.35?package-id=1c9ad1eb64c00f9b",
+      "type": "library",
+      "name": "mime-types",
+      "version": "2.1.35",
+      "cpe": "cpe:2.3:a:mime-types:mime-types:2.1.35:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/mime-types@2.1.35",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "javascript-lock-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "javascript-npm-package-lock-entry"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:mime-types:mime_types:2.1.35:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:mime_types:mime-types:2.1.35:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:mime_types:mime_types:2.1.35:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:mime:mime-types:2.1.35:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:mime:mime_types:2.1.35:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/package-lock.json"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/ts-mixer@6.0.4?package-id=cd0aeb1a93c2a04b",
+      "type": "library",
+      "name": "ts-mixer",
+      "version": "6.0.4",
+      "cpe": "cpe:2.3:a:ts-mixer:ts-mixer:6.0.4:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/ts-mixer@6.0.4",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "javascript-lock-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "javascript-npm-package-lock-entry"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:ts-mixer:ts_mixer:6.0.4:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:ts_mixer:ts-mixer:6.0.4:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:ts_mixer:ts_mixer:6.0.4:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:ts:ts-mixer:6.0.4:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:ts:ts_mixer:6.0.4:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/package-lock.json"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/tslib@2.8.1?package-id=e6347e09cb3e6986",
+      "type": "library",
+      "name": "tslib",
+      "version": "2.8.1",
+      "cpe": "cpe:2.3:a:tslib:tslib:2.8.1:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/tslib@2.8.1",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "javascript-lock-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "javascript-npm-package-lock-entry"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/package-lock.json"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/undici@6.19.8?package-id=b24c657e9e4f3a00",
+      "type": "library",
+      "name": "undici",
+      "version": "6.19.8",
+      "cpe": "cpe:2.3:a:nodejs:undici:6.19.8:*:*:*:*:node.js:*:*",
+      "purl": "pkg:npm/undici@6.19.8",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "javascript-lock-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "javascript-npm-package-lock-entry"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/package-lock.json"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/undici@6.29.1?package-id=be9a7b845e056cb2",
+      "type": "library",
+      "name": "undici",
+      "version": "6.29.1",
+      "cpe": "cpe:2.3:a:nodejs:undici:6.29.1:*:*:*:*:node.js:*:*",
+      "purl": "pkg:npm/undici@6.29.1",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "javascript-lock-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "javascript-npm-package-lock-entry"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/package-lock.json"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/undici-types@8.9.0?package-id=6b84657d87ee56b7",
+      "type": "library",
+      "name": "undici-types",
+      "version": "8.9.0",
+      "cpe": "cpe:2.3:a:undici-types:undici-types:8.9.0:*:*:*:*:*:*:*",
+      "purl": "pkg:npm/undici-types@8.9.0",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "javascript-lock-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "javascript-npm-package-lock-entry"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:undici-types:undici_types:8.9.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:undici_types:undici-types:8.9.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:undici_types:undici_types:8.9.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:undici:undici-types:8.9.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:undici:undici_types:8.9.0:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/package-lock.json"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:npm/ws@8.22.0?package-id=a62503d3b01f9ec6",
+      "type": "library",
+      "name": "ws",
+      "version": "8.22.0",
+      "cpe": "cpe:2.3:a:ws_project:ws:8.22.0:*:*:*:*:node.js:*:*",
+      "purl": "pkg:npm/ws@8.22.0",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "javascript-lock-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "javascript"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "npm"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "javascript-npm-package-lock-entry"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/package-lock.json"
+        }
+      ]
+    },
+    {
+      "bom-ref": "8655c0f19474fdc2",
+      "type": "file",
+      "name": "/.github/workflows/build-and-deploy.yml",
+      "hashes": [
+        {
+          "alg": "SHA-1",
+          "content": "e769a1e1bb1e5d9cd9905a1fd74b3e714848f5cc"
+        },
+        {
+          "alg": "SHA-256",
+          "content": "ce0c6170fadd9ebbb4f50eb6511e1d0fb7e6bc23a2c1f03fb8b55c38240e8193"
+        }
+      ]
+    },
+    {
+      "bom-ref": "fd71c2238fc07657",
+      "type": "file",
+      "name": "/package-lock.json",
+      "hashes": [
+        {
+          "alg": "SHA-1",
+          "content": "ee580a63c3284059dca195e07d0081012daa8c01"
+        },
+        {
+          "alg": "SHA-256",
+          "content": "d0fa8364c73696d9ae483d8dbdce371d788f71ec37b0ba713865c105cfa2a679"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "pkg:npm/%40discordjs/builders@1.14.1?package-id=23608a933227c5ae",
+      "dependsOn": [
+        "pkg:npm/%40discordjs/formatters@0.5.0?package-id=9bbd6f37c2ffb146",
+        "pkg:npm/%40discordjs/formatters@0.6.2?package-id=b0af21709547f001",
+        "pkg:npm/%40discordjs/util@1.2.0?package-id=79c1afffdcabb13a",
+        "pkg:npm/%40sapphire/shapeshift@4.0.0?package-id=4a762c0f66e715e0",
+        "pkg:npm/discord-api-types@0.37.100?package-id=0b689c3fe0d86bdf",
+        "pkg:npm/discord-api-types@0.37.83?package-id=3b278a58e5bac17f",
+        "pkg:npm/discord-api-types@0.37.97?package-id=667f124cedc379b7",
+        "pkg:npm/discord-api-types@0.38.57?package-id=89751cf6344320d2",
+        "pkg:npm/fast-deep-equal@3.1.3?package-id=93046d72c3636dc7",
+        "pkg:npm/ts-mixer@6.0.4?package-id=cd0aeb1a93c2a04b",
+        "pkg:npm/tslib@2.8.1?package-id=e6347e09cb3e6986"
+      ]
+    },
+    {
+      "ref": "pkg:npm/%40discordjs/formatters@0.5.0?package-id=9bbd6f37c2ffb146",
+      "dependsOn": [
+        "pkg:npm/discord-api-types@0.37.100?package-id=0b689c3fe0d86bdf",
+        "pkg:npm/discord-api-types@0.37.83?package-id=3b278a58e5bac17f",
+        "pkg:npm/discord-api-types@0.37.97?package-id=667f124cedc379b7",
+        "pkg:npm/discord-api-types@0.38.57?package-id=89751cf6344320d2"
+      ]
+    },
+    {
+      "ref": "pkg:npm/%40discordjs/formatters@0.6.2?package-id=b0af21709547f001",
+      "dependsOn": [
+        "pkg:npm/discord-api-types@0.37.100?package-id=0b689c3fe0d86bdf",
+        "pkg:npm/discord-api-types@0.37.83?package-id=3b278a58e5bac17f",
+        "pkg:npm/discord-api-types@0.37.97?package-id=667f124cedc379b7",
+        "pkg:npm/discord-api-types@0.38.57?package-id=89751cf6344320d2"
+      ]
+    },
+    {
+      "ref": "pkg:npm/%40discordjs/rest@2.6.3?package-id=ed51823b344c4e13",
+      "dependsOn": [
+        "pkg:npm/%40discordjs/collection@1.5.3?package-id=57d04422fd938052",
+        "pkg:npm/%40discordjs/collection@2.1.1?package-id=a6fdd566617b5b01",
+        "pkg:npm/%40discordjs/util@1.2.0?package-id=79c1afffdcabb13a",
+        "pkg:npm/%40sapphire/async-queue@1.5.5?package-id=52b14a5c3bad0055",
+        "pkg:npm/%40sapphire/snowflake@3.5.3?package-id=59bdd7614f3127d3",
+        "pkg:npm/%40sapphire/snowflake@3.5.5?package-id=51525d63d83e313d",
+        "pkg:npm/%40vladfrangu/async_event_emitter@2.4.7?package-id=cbb0c53a98f11d48",
+        "pkg:npm/discord-api-types@0.37.100?package-id=0b689c3fe0d86bdf",
+        "pkg:npm/discord-api-types@0.37.83?package-id=3b278a58e5bac17f",
+        "pkg:npm/discord-api-types@0.37.97?package-id=667f124cedc379b7",
+        "pkg:npm/discord-api-types@0.38.57?package-id=89751cf6344320d2",
+        "pkg:npm/magic-bytes.js@1.13.1?package-id=0005b17673e4db59",
+        "pkg:npm/tslib@2.8.1?package-id=e6347e09cb3e6986",
+        "pkg:npm/undici@6.19.8?package-id=b24c657e9e4f3a00",
+        "pkg:npm/undici@6.29.1?package-id=be9a7b845e056cb2"
+      ]
+    },
+    {
+      "ref": "pkg:npm/%40discordjs/util@1.2.0?package-id=79c1afffdcabb13a",
+      "dependsOn": [
+        "pkg:npm/discord-api-types@0.37.100?package-id=0b689c3fe0d86bdf",
+        "pkg:npm/discord-api-types@0.37.83?package-id=3b278a58e5bac17f",
+        "pkg:npm/discord-api-types@0.37.97?package-id=667f124cedc379b7",
+        "pkg:npm/discord-api-types@0.38.57?package-id=89751cf6344320d2"
+      ]
+    },
+    {
+      "ref": "pkg:npm/%40discordjs/ws@1.1.1?package-id=3b71769ed8c04d97",
+      "dependsOn": [
+        "pkg:npm/%40discordjs/collection@1.5.3?package-id=57d04422fd938052",
+        "pkg:npm/%40discordjs/collection@2.1.1?package-id=a6fdd566617b5b01",
+        "pkg:npm/%40discordjs/rest@2.6.3?package-id=ed51823b344c4e13",
+        "pkg:npm/%40discordjs/util@1.2.0?package-id=79c1afffdcabb13a",
+        "pkg:npm/%40sapphire/async-queue@1.5.5?package-id=52b14a5c3bad0055",
+        "pkg:npm/%40types/ws@8.18.2?package-id=c4386f2d094335b4",
+        "pkg:npm/%40vladfrangu/async_event_emitter@2.4.7?package-id=cbb0c53a98f11d48",
+        "pkg:npm/discord-api-types@0.37.100?package-id=0b689c3fe0d86bdf",
+        "pkg:npm/discord-api-types@0.37.83?package-id=3b278a58e5bac17f",
+        "pkg:npm/discord-api-types@0.37.97?package-id=667f124cedc379b7",
+        "pkg:npm/discord-api-types@0.38.57?package-id=89751cf6344320d2",
+        "pkg:npm/tslib@2.8.1?package-id=e6347e09cb3e6986",
+        "pkg:npm/ws@8.22.0?package-id=a62503d3b01f9ec6"
+      ]
+    },
+    {
+      "ref": "pkg:npm/%40sapphire/shapeshift@4.0.0?package-id=4a762c0f66e715e0",
+      "dependsOn": [
+        "pkg:npm/fast-deep-equal@3.1.3?package-id=93046d72c3636dc7",
+        "pkg:npm/lodash@4.18.1?package-id=e275bbdb1ece6fdc"
+      ]
+    },
+    {
+      "ref": "pkg:npm/%40types/node@26.6.6?package-id=9f90a32d4fc5e4bd",
+      "dependsOn": [
+        "pkg:npm/undici-types@8.9.0?package-id=6b84657d87ee56b7"
+      ]
+    },
+    {
+      "ref": "pkg:npm/%40types/ws@8.18.2?package-id=c4386f2d094335b4",
+      "dependsOn": [
+        "pkg:npm/%40types/node@26.6.6?package-id=9f90a32d4fc5e4bd"
+      ]
+    },
+    {
+      "ref": "pkg:npm/axios@0.27.2?package-id=6c0c7ead995192f4",
+      "dependsOn": [
+        "pkg:npm/follow-redirects@1.15.2?package-id=dc7623ae1813c8e8",
+        "pkg:npm/form-data@4.0.0?package-id=d2b8e869b46ab834"
+      ]
+    },
+    {
+      "ref": "pkg:npm/combined-stream@1.0.8?package-id=ecba06e036b6afed",
+      "dependsOn": [
+        "pkg:npm/delayed-stream@1.0.0?package-id=cfbc726f0617aa9b"
+      ]
+    },
+    {
+      "ref": "pkg:npm/discord.js@14.16.3?package-id=7128a1ada79b6beb",
+      "dependsOn": [
+        "pkg:npm/%40discordjs/builders@1.14.1?package-id=23608a933227c5ae",
+        "pkg:npm/%40discordjs/collection@1.5.3?package-id=57d04422fd938052",
+        "pkg:npm/%40discordjs/collection@2.1.1?package-id=a6fdd566617b5b01",
+        "pkg:npm/%40discordjs/formatters@0.5.0?package-id=9bbd6f37c2ffb146",
+        "pkg:npm/%40discordjs/formatters@0.6.2?package-id=b0af21709547f001",
+        "pkg:npm/%40discordjs/rest@2.6.3?package-id=ed51823b344c4e13",
+        "pkg:npm/%40discordjs/util@1.2.0?package-id=79c1afffdcabb13a",
+        "pkg:npm/%40discordjs/ws@1.1.1?package-id=3b71769ed8c04d97",
+        "pkg:npm/%40sapphire/snowflake@3.5.3?package-id=59bdd7614f3127d3",
+        "pkg:npm/%40sapphire/snowflake@3.5.5?package-id=51525d63d83e313d",
+        "pkg:npm/discord-api-types@0.37.100?package-id=0b689c3fe0d86bdf",
+        "pkg:npm/discord-api-types@0.37.83?package-id=3b278a58e5bac17f",
+        "pkg:npm/discord-api-types@0.37.97?package-id=667f124cedc379b7",
+        "pkg:npm/discord-api-types@0.38.57?package-id=89751cf6344320d2",
+        "pkg:npm/fast-deep-equal@3.1.3?package-id=93046d72c3636dc7",
+        "pkg:npm/lodash.snakecase@4.1.1?package-id=4db93646a56c3897",
+        "pkg:npm/tslib@2.8.1?package-id=e6347e09cb3e6986",
+        "pkg:npm/undici@6.19.8?package-id=b24c657e9e4f3a00",
+        "pkg:npm/undici@6.29.1?package-id=be9a7b845e056cb2"
+      ]
+    },
+    {
+      "ref": "pkg:npm/form-data@4.0.0?package-id=d2b8e869b46ab834",
+      "dependsOn": [
+        "pkg:npm/asynckit@0.4.0?package-id=8a3701f173c08a3b",
+        "pkg:npm/combined-stream@1.0.8?package-id=ecba06e036b6afed",
+        "pkg:npm/mime-types@2.1.35?package-id=1c9ad1eb64c00f9b"
+      ]
+    },
+    {
+      "ref": "pkg:npm/memebot_discord@1.0.0?package-id=74267da08588f87c",
+      "dependsOn": [
+        "pkg:npm/ascii-table@0.0.9?package-id=80d2cc80041d86ec",
+        "pkg:npm/axios@0.27.2?package-id=6c0c7ead995192f4",
+        "pkg:npm/discord.js@14.16.3?package-id=7128a1ada79b6beb"
+      ]
+    },
+    {
+      "ref": "pkg:npm/mime-types@2.1.35?package-id=1c9ad1eb64c00f9b",
+      "dependsOn": [
+        "pkg:npm/mime-db@1.52.0?package-id=9048a6e7fca67080"
+      ]
+    }
+  ]
+}

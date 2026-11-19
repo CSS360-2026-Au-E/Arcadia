@@ -1,0 +1,2719 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "arcadia",
+  "documentNamespace": "https://anchore.com/syft/dir/arcadia-7c2d3a59-f4da-4278-b2b5-de716ac649b7",
+  "creationInfo": {
+    "licenseListVersion": "3.29",
+    "creators": [
+      "Organization: Anchore, Inc",
+      "Tool: syft-1.57.2"
+    ],
+    "created": "2026-11-16T20:18:40Z"
+  },
+  "packages": [
+    {
+      "name": "@discordjs/builders",
+      "SPDXID": "SPDXRef-Package-npm--discordjs-builders-23608a933227c5ae",
+      "versionInfo": "1.14.1",
+      "supplier": "NOASSERTION",
+      "downloadLocation": "https://registry.npmjs.org/@discordjs/builders/-/builders-1.14.1.tgz",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired package info from installed node module manifest file: /package-lock.json",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:\\@discordjs\\/builders:\\@discordjs\\/builders:1.14.1:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40discordjs/builders@1.14.1"
+        }
+      ]
+    },
+    {
+      "name": "@discordjs/collection",
+      "SPDXID": "SPDXRef-Package-npm--discordjs-collection-57d04422fd938052",
+      "versionInfo": "1.5.3",
+      "supplier": "NOASSERTION",
+      "downloadLocation": "https://registry.npmjs.org/@discordjs/collection/-/collection-1.5.3.tgz",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired package info from installed node module manifest file: /package-lock.json",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:\\@discordjs\\/collection:\\@discordjs\\/collection:1.5.3:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40discordjs/collection@1.5.3"
+        }
+      ]
+    },
+    {
+      "name": "@discordjs/collection",
+      "SPDXID": "SPDXRef-Package-npm--discordjs-collection-a6fdd566617b5b01",
+      "versionInfo": "2.1.1",
+      "supplier": "NOASSERTION",
+      "downloadLocation": "https://registry.npmjs.org/@discordjs/collection/-/collection-2.1.1.tgz",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired package info from installed node module manifest file: /package-lock.json",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:\\@discordjs\\/collection:\\@discordjs\\/collection:2.1.1:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40discordjs/collection@2.1.1"
+        }
+      ]
+    },
+    {
+      "name": "@discordjs/formatters",
+      "SPDXID": "SPDXRef-Package-npm--discordjs-formatters-9bbd6f37c2ffb146",
+      "versionInfo": "0.5.0",
+      "supplier": "NOASSERTION",
+      "downloadLocation": "https://registry.npmjs.org/@discordjs/formatters/-/formatters-0.5.0.tgz",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired package info from installed node module manifest file: /package-lock.json",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:\\@discordjs\\/formatters:\\@discordjs\\/formatters:0.5.0:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40discordjs/formatters@0.5.0"
+        }
+      ]
+    },
+    {
+      "name": "@discordjs/formatters",
+      "SPDXID": "SPDXRef-Package-npm--discordjs-formatters-b0af21709547f001",
+      "versionInfo": "0.6.2",
+      "supplier": "NOASSERTION",
+      "downloadLocation": "https://registry.npmjs.org/@discordjs/formatters/-/formatters-0.6.2.tgz",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired package info from installed node module manifest file: /package-lock.json",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:\\@discordjs\\/formatters:\\@discordjs\\/formatters:0.6.2:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40discordjs/formatters@0.6.2"
+        }
+      ]
+    },
+    {
+      "name": "@discordjs/rest",
+      "SPDXID": "SPDXRef-Package-npm--discordjs-rest-ed51823b344c4e13",
+      "versionInfo": "2.6.3",
+      "supplier": "NOASSERTION",
+      "downloadLocation": "https://registry.npmjs.org/@discordjs/rest/-/rest-2.6.3.tgz",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired package info from installed node module manifest file: /package-lock.json",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:\\@discordjs\\/rest:\\@discordjs\\/rest:2.6.3:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40discordjs/rest@2.6.3"
+        }
+      ]
+    },
+    {
+      "name": "@discordjs/util",
+      "SPDXID": "SPDXRef-Package-npm--discordjs-util-79c1afffdcabb13a",
+      "versionInfo": "1.2.0",
+      "supplier": "NOASSERTION",
+      "downloadLocation": "https://registry.npmjs.org/@discordjs/util/-/util-1.2.0.tgz",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired package info from installed node module manifest file: /package-lock.json",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:\\@discordjs\\/util:\\@discordjs\\/util:1.2.0:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40discordjs/util@1.2.0"
+        }
+      ]
+    },
+    {
+      "name": "@discordjs/ws",
+      "SPDXID": "SPDXRef-Package-npm--discordjs-ws-3b71769ed8c04d97",
+      "versionInfo": "1.1.1",
+      "supplier": "NOASSERTION",
+      "downloadLocation": "https://registry.npmjs.org/@discordjs/ws/-/ws-1.1.1.tgz",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired package info from installed node module manifest file: /package-lock.json",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:\\@discordjs\\/ws:\\@discordjs\\/ws:1.1.1:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40discordjs/ws@1.1.1"
+        }
+      ]
+    },
+    {
+      "name": "@sapphire/async-queue",
+      "SPDXID": "SPDXRef-Package-npm--sapphire-async-queue-52b14a5c3bad0055",
+      "versionInfo": "1.5.5",
+      "supplier": "NOASSERTION",
+      "downloadLocation": "https://registry.npmjs.org/@sapphire/async-queue/-/async-queue-1.5.5.tgz",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired package info from installed node module manifest file: /package-lock.json",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:\\@sapphire\\/async-queue:\\@sapphire\\/async-queue:1.5.5:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:\\@sapphire\\/async-queue:\\@sapphire\\/async_queue:1.5.5:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:\\@sapphire\\/async_queue:\\@sapphire\\/async-queue:1.5.5:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:\\@sapphire\\/async_queue:\\@sapphire\\/async_queue:1.5.5:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:\\@sapphire\\/async:\\@sapphire\\/async-queue:1.5.5:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:\\@sapphire\\/async:\\@sapphire\\/async_queue:1.5.5:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40sapphire/async-queue@1.5.5"
+        }
+      ]
+    },
+    {
+      "name": "@sapphire/shapeshift",
+      "SPDXID": "SPDXRef-Package-npm--sapphire-shapeshift-4a762c0f66e715e0",
+      "versionInfo": "4.0.0",
+      "supplier": "NOASSERTION",
+      "downloadLocation": "https://registry.npmjs.org/@sapphire/shapeshift/-/shapeshift-4.0.0.tgz",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired package info from installed node module manifest file: /package-lock.json",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:\\@sapphire\\/shapeshift:\\@sapphire\\/shapeshift:4.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40sapphire/shapeshift@4.0.0"
+        }
+      ]
+    },
+    {
+      "name": "@sapphire/snowflake",
+      "SPDXID": "SPDXRef-Package-npm--sapphire-snowflake-59bdd7614f3127d3",
+      "versionInfo": "3.5.3",
+      "supplier": "NOASSERTION",
+      "downloadLocation": "https://registry.npmjs.org/@sapphire/snowflake/-/snowflake-3.5.3.tgz",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired package info from installed node module manifest file: /package-lock.json",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:\\@sapphire\\/snowflake:\\@sapphire\\/snowflake:3.5.3:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40sapphire/snowflake@3.5.3"
+        }
+      ]
+    },
+    {
+      "name": "@sapphire/snowflake",
+      "SPDXID": "SPDXRef-Package-npm--sapphire-snowflake-51525d63d83e313d",
+      "versionInfo": "3.5.5",
+      "supplier": "NOASSERTION",
+      "downloadLocation": "https://registry.npmjs.org/@sapphire/snowflake/-/snowflake-3.5.5.tgz",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired package info from installed node module manifest file: /package-lock.json",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:\\@sapphire\\/snowflake:\\@sapphire\\/snowflake:3.5.5:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40sapphire/snowflake@3.5.5"
+        }
+      ]
+    },
+    {
+      "name": "@types/node",
+      "SPDXID": "SPDXRef-Package-npm--types-node-9f90a32d4fc5e4bd",
+      "versionInfo": "26.6.6",
+      "supplier": "NOASSERTION",
+      "downloadLocation": "https://registry.npmjs.org/@types/node/-/node-26.6.6.tgz",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired package info from installed node module manifest file: /package-lock.json",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:\\@types\\/node:\\@types\\/node:26.6.6:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40types/node@26.6.6"
+        }
+      ]
+    },
+    {
+      "name": "@types/ws",
+      "SPDXID": "SPDXRef-Package-npm--types-ws-c4386f2d094335b4",
+      "versionInfo": "8.18.2",
+      "supplier": "NOASSERTION",
+      "downloadLocation": "https://registry.npmjs.org/@types/ws/-/ws-8.18.2.tgz",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired package info from installed node module manifest file: /package-lock.json",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:\\@types\\/ws:\\@types\\/ws:8.18.2:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40types/ws@8.18.2"
+        }
+      ]
+    },
+    {
+      "name": "@vladfrangu/async_event_emitter",
+      "SPDXID": "SPDXRef-Package-npm--vladfrangu-async-event-emitter-cbb0c53a98f11d48",
+      "versionInfo": "2.4.7",
+      "supplier": "NOASSERTION",
+      "downloadLocation": "https://registry.npmjs.org/@vladfrangu/async_event_emitter/-/async_event_emitter-2.4.7.tgz",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired package info from installed node module manifest file: /package-lock.json",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:\\@vladfrangu\\/async-event-emitter:\\@vladfrangu\\/async-event-emitter:2.4.7:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:\\@vladfrangu\\/async-event-emitter:\\@vladfrangu\\/async_event_emitter:2.4.7:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:\\@vladfrangu\\/async_event_emitter:\\@vladfrangu\\/async-event-emitter:2.4.7:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:\\@vladfrangu\\/async_event_emitter:\\@vladfrangu\\/async_event_emitter:2.4.7:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:\\@vladfrangu\\/async-event:\\@vladfrangu\\/async-event-emitter:2.4.7:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:\\@vladfrangu\\/async-event:\\@vladfrangu\\/async_event_emitter:2.4.7:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:\\@vladfrangu\\/async_event:\\@vladfrangu\\/async-event-emitter:2.4.7:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:\\@vladfrangu\\/async_event:\\@vladfrangu\\/async_event_emitter:2.4.7:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:\\@vladfrangu\\/async:\\@vladfrangu\\/async-event-emitter:2.4.7:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:\\@vladfrangu\\/async:\\@vladfrangu\\/async_event_emitter:2.4.7:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/%40vladfrangu/async_event_emitter@2.4.7"
+        }
+      ]
+    },
+    {
+      "name": "actions/checkout",
+      "SPDXID": "SPDXRef-Package-github-action-actions-checkout-6c6b4648c07f7f27",
+      "versionInfo": "v2",
+      "supplier": "Organization: GitHub",
+      "originator": "Organization: GitHub",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired package info from GitHub Actions workflow file or composite action file: /.github/workflows/build-and-deploy.yml",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:actions\\/checkout:actions\\/checkout:v2:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/actions/checkout@v2"
+        }
+      ]
+    },
+    {
+      "name": "ascii-table",
+      "SPDXID": "SPDXRef-Package-npm-ascii-table-80d2cc80041d86ec",
+      "versionInfo": "0.0.9",
+      "supplier": "NOASSERTION",
+      "downloadLocation": "https://registry.npmjs.org/ascii-table/-/ascii-table-0.0.9.tgz",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired package info from installed node module manifest file: /package-lock.json",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:ascii-table:ascii-table:0.0.9:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:ascii-table:ascii_table:0.0.9:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:ascii_table:ascii-table:0.0.9:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:ascii_table:ascii_table:0.0.9:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:ascii:ascii-table:0.0.9:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:ascii:ascii_table:0.0.9:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/ascii-table@0.0.9"
+        }
+      ]
+    },
+    {
+      "name": "asynckit",
+      "SPDXID": "SPDXRef-Package-npm-asynckit-8a3701f173c08a3b",
+      "versionInfo": "0.4.0",
+      "supplier": "NOASSERTION",
+      "downloadLocation": "https://registry.npmjs.org/asynckit/-/asynckit-0.4.0.tgz",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired package info from installed node module manifest file: /package-lock.json",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:asynckit:asynckit:0.4.0:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/asynckit@0.4.0"
+        }
+      ]
+    },
+    {
+      "name": "axios",
+      "SPDXID": "SPDXRef-Package-npm-axios-6c0c7ead995192f4",
+      "versionInfo": "0.27.2",
+      "supplier": "NOASSERTION",
+      "downloadLocation": "https://registry.npmjs.org/axios/-/axios-0.27.2.tgz",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired package info from installed node module manifest file: /package-lock.json",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:axios:axios:0.27.2:*:*:*:*:node.js:*:*"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/axios@0.27.2"
+        }
+      ]
+    },
+    {
+      "name": "combined-stream",
+      "SPDXID": "SPDXRef-Package-npm-combined-stream-ecba06e036b6afed",
+      "versionInfo": "1.0.8",
+      "supplier": "NOASSERTION",
+      "downloadLocation": "https://registry.npmjs.org/combined-stream/-/combined-stream-1.0.8.tgz",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired package info from installed node module manifest file: /package-lock.json",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:combined-stream:combined-stream:1.0.8:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:combined-stream:combined_stream:1.0.8:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:combined_stream:combined-stream:1.0.8:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:combined_stream:combined_stream:1.0.8:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:combined:combined-stream:1.0.8:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:combined:combined_stream:1.0.8:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/combined-stream@1.0.8"
+        }
+      ]
+    },
+    {
+      "name": "delayed-stream",
+      "SPDXID": "SPDXRef-Package-npm-delayed-stream-cfbc726f0617aa9b",
+      "versionInfo": "1.0.0",
+      "supplier": "NOASSERTION",
+      "downloadLocation": "https://registry.npmjs.org/delayed-stream/-/delayed-stream-1.0.0.tgz",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired package info from installed node module manifest file: /package-lock.json",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:delayed-stream:delayed-stream:1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:delayed-stream:delayed_stream:1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:delayed_stream:delayed-stream:1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:delayed_stream:delayed_stream:1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:delayed:delayed-stream:1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:delayed:delayed_stream:1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/delayed-stream@1.0.0"
+        }
+      ]
+    },
+    {
+      "name": "discord-api-types",
+      "SPDXID": "SPDXRef-Package-npm-discord-api-types-0b689c3fe0d86bdf",
+      "versionInfo": "0.37.100",
+      "supplier": "NOASSERTION",
+      "downloadLocation": "https://registry.npmjs.org/discord-api-types/-/discord-api-types-0.37.100.tgz",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired package info from installed node module manifest file: /package-lock.json",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:discord-api-types:discord-api-types:0.37.100:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:discord-api-types:discord_api_types:0.37.100:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:discord_api_types:discord-api-types:0.37.100:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:discord_api_types:discord_api_types:0.37.100:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:discord-api:discord-api-types:0.37.100:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:discord-api:discord_api_types:0.37.100:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:discord_api:discord-api-types:0.37.100:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:discord_api:discord_api_types:0.37.100:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:discord:discord-api-types:0.37.100:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:discord:discord_api_types:0.37.100:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/discord-api-types@0.37.100"
+        }
+      ]
+    },
+    {
+      "name": "discord-api-types",
+      "SPDXID": "SPDXRef-Package-npm-discord-api-types-3b278a58e5bac17f",
+      "versionInfo": "0.37.83",
+      "supplier": "NOASSERTION",
+      "downloadLocation": "https://registry.npmjs.org/discord-api-types/-/discord-api-types-0.37.83.tgz",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired package info from installed node module manifest file: /package-lock.json",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:discord-api-types:discord-api-types:0.37.83:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:discord-api-types:discord_api_types:0.37.83:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:discord_api_types:discord-api-types:0.37.83:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:discord_api_types:discord_api_types:0.37.83:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:discord-api:discord-api-types:0.37.83:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:discord-api:discord_api_types:0.37.83:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:discord_api:discord-api-types:0.37.83:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:discord_api:discord_api_types:0.37.83:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:discord:discord-api-types:0.37.83:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:discord:discord_api_types:0.37.83:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/discord-api-types@0.37.83"
+        }
+      ]
+    },
+    {
+      "name": "discord-api-types",
+      "SPDXID": "SPDXRef-Package-npm-discord-api-types-667f124cedc379b7",
+      "versionInfo": "0.37.97",
+      "supplier": "NOASSERTION",
+      "downloadLocation": "https://registry.npmjs.org/discord-api-types/-/discord-api-types-0.37.97.tgz",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired package info from installed node module manifest file: /package-lock.json",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:discord-api-types:discord-api-types:0.37.97:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:discord-api-types:discord_api_types:0.37.97:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:discord_api_types:discord-api-types:0.37.97:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:discord_api_types:discord_api_types:0.37.97:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:discord-api:discord-api-types:0.37.97:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:discord-api:discord_api_types:0.37.97:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:discord_api:discord-api-types:0.37.97:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:discord_api:discord_api_types:0.37.97:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:discord:discord-api-types:0.37.97:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:discord:discord_api_types:0.37.97:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/discord-api-types@0.37.97"
+        }
+      ]
+    },
+    {
+      "name": "discord-api-types",
+      "SPDXID": "SPDXRef-Package-npm-discord-api-types-89751cf6344320d2",
+      "versionInfo": "0.38.57",
+      "supplier": "NOASSERTION",
+      "downloadLocation": "https://registry.npmjs.org/discord-api-types/-/discord-api-types-0.38.57.tgz",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired package info from installed node module manifest file: /package-lock.json",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:discord-api-types:discord-api-types:0.38.57:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:discord-api-types:discord_api_types:0.38.57:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:discord_api_types:discord-api-types:0.38.57:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:discord_api_types:discord_api_types:0.38.57:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:discord-api:discord-api-types:0.38.57:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:discord-api:discord_api_types:0.38.57:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:discord_api:discord-api-types:0.38.57:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:discord_api:discord_api_types:0.38.57:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:discord:discord-api-types:0.38.57:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:discord:discord_api_types:0.38.57:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/discord-api-types@0.38.57"
+        }
+      ]
+    },
+    {
+      "name": "discord.js",
+      "SPDXID": "SPDXRef-Package-npm-discord.js-7128a1ada79b6beb",
+      "versionInfo": "14.16.3",
+      "supplier": "NOASSERTION",
+      "downloadLocation": "https://registry.npmjs.org/discord.js/-/discord.js-14.16.3.tgz",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired package info from installed node module manifest file: /package-lock.json",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:discord.js:discord.js:14.16.3:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/discord.js@14.16.3"
+        }
+      ]
+    },
+    {
+      "name": "docker/build-push-action",
+      "SPDXID": "SPDXRef-Package-github-action-docker-build-push-action-e52fdfd5bbbba453",
+      "versionInfo": "v2",
+      "supplier": "Organization: docker",
+      "originator": "Organization: docker",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired package info from GitHub Actions workflow file or composite action file: /.github/workflows/build-and-deploy.yml",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:docker\\/build-push-action:docker\\/build-push-action:v2:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:docker\\/build-push-action:docker\\/build_push_action:v2:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:docker\\/build_push_action:docker\\/build-push-action:v2:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:docker\\/build_push_action:docker\\/build_push_action:v2:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:docker\\/build-push:docker\\/build-push-action:v2:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:docker\\/build-push:docker\\/build_push_action:v2:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:docker\\/build_push:docker\\/build-push-action:v2:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:docker\\/build_push:docker\\/build_push_action:v2:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:docker\\/build:docker\\/build-push-action:v2:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:docker\\/build:docker\\/build_push_action:v2:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/docker/build-push-action@v2"
+        }
+      ]
+    },
+    {
+      "name": "docker/login-action",
+      "SPDXID": "SPDXRef-Package-github-action-docker-login-action-d70a6af7ffbe2f77",
+      "versionInfo": "v1",
+      "supplier": "Organization: docker",
+      "originator": "Organization: docker",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired package info from GitHub Actions workflow file or composite action file: /.github/workflows/build-and-deploy.yml",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:docker\\/login-action:docker\\/login-action:v1:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:docker\\/login-action:docker\\/login_action:v1:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:docker\\/login_action:docker\\/login-action:v1:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:docker\\/login_action:docker\\/login_action:v1:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:docker\\/login:docker\\/login-action:v1:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:docker\\/login:docker\\/login_action:v1:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/docker/login-action@v1"
+        }
+      ]
+    },
+    {
+      "name": "docker/setup-buildx-action",
+      "SPDXID": "SPDXRef-Package-github-action-docker-setup-buildx-action-ee21302d2ce44afc",
+      "versionInfo": "v1",
+      "supplier": "Organization: docker",
+      "originator": "Organization: docker",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired package info from GitHub Actions workflow file or composite action file: /.github/workflows/build-and-deploy.yml",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:docker\\/setup-buildx-action:docker\\/setup-buildx-action:v1:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:docker\\/setup-buildx-action:docker\\/setup_buildx_action:v1:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:docker\\/setup_buildx_action:docker\\/setup-buildx-action:v1:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:docker\\/setup_buildx_action:docker\\/setup_buildx_action:v1:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:docker\\/setup-buildx:docker\\/setup-buildx-action:v1:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:docker\\/setup-buildx:docker\\/setup_buildx_action:v1:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:docker\\/setup_buildx:docker\\/setup-buildx-action:v1:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:docker\\/setup_buildx:docker\\/setup_buildx_action:v1:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:docker\\/setup:docker\\/setup-buildx-action:v1:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:docker\\/setup:docker\\/setup_buildx_action:v1:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:github/docker/setup-buildx-action@v1"
+        }
+      ]
+    },
+    {
+      "name": "fast-deep-equal",
+      "SPDXID": "SPDXRef-Package-npm-fast-deep-equal-93046d72c3636dc7",
+      "versionInfo": "3.1.3",
+      "supplier": "NOASSERTION",
+      "downloadLocation": "https://registry.npmjs.org/fast-deep-equal/-/fast-deep-equal-3.1.3.tgz",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired package info from installed node module manifest file: /package-lock.json",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:fast-deep-equal:fast-deep-equal:3.1.3:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:fast-deep-equal:fast_deep_equal:3.1.3:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:fast_deep_equal:fast-deep-equal:3.1.3:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:fast_deep_equal:fast_deep_equal:3.1.3:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:fast-deep:fast-deep-equal:3.1.3:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:fast-deep:fast_deep_equal:3.1.3:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:fast_deep:fast-deep-equal:3.1.3:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:fast_deep:fast_deep_equal:3.1.3:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:fast:fast-deep-equal:3.1.3:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:fast:fast_deep_equal:3.1.3:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/fast-deep-equal@3.1.3"
+        }
+      ]
+    },
+    {
+      "name": "follow-redirects",
+      "SPDXID": "SPDXRef-Package-npm-follow-redirects-dc7623ae1813c8e8",
+      "versionInfo": "1.15.2",
+      "supplier": "NOASSERTION",
+      "downloadLocation": "https://registry.npmjs.org/follow-redirects/-/follow-redirects-1.15.2.tgz",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired package info from installed node module manifest file: /package-lock.json",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:follow-redirects:follow_redirects:1.15.2:*:*:*:*:node.js:*:*"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/follow-redirects@1.15.2"
+        }
+      ]
+    },
+    {
+      "name": "form-data",
+      "SPDXID": "SPDXRef-Package-npm-form-data-d2b8e869b46ab834",
+      "versionInfo": "4.0.0",
+      "supplier": "NOASSERTION",
+      "downloadLocation": "https://registry.npmjs.org/form-data/-/form-data-4.0.0.tgz",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired package info from installed node module manifest file: /package-lock.json",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:form-data:form-data:4.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:form-data:form_data:4.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:form_data:form-data:4.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:form_data:form_data:4.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:form:form-data:4.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:form:form_data:4.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/form-data@4.0.0"
+        }
+      ]
+    },
+    {
+      "name": "lodash",
+      "SPDXID": "SPDXRef-Package-npm-lodash-e275bbdb1ece6fdc",
+      "versionInfo": "4.18.1",
+      "supplier": "NOASSERTION",
+      "downloadLocation": "https://registry.npmjs.org/lodash/-/lodash-4.18.1.tgz",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired package info from installed node module manifest file: /package-lock.json",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:lodash:lodash:4.18.1:*:*:*:*:node.js:*:*"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/lodash@4.18.1"
+        }
+      ]
+    },
+    {
+      "name": "lodash.snakecase",
+      "SPDXID": "SPDXRef-Package-npm-lodash.snakecase-4db93646a56c3897",
+      "versionInfo": "4.1.1",
+      "supplier": "NOASSERTION",
+      "downloadLocation": "https://registry.npmjs.org/lodash.snakecase/-/lodash.snakecase-4.1.1.tgz",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired package info from installed node module manifest file: /package-lock.json",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:lodash.snakecase:lodash.snakecase:4.1.1:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/lodash.snakecase@4.1.1"
+        }
+      ]
+    },
+    {
+      "name": "magic-bytes.js",
+      "SPDXID": "SPDXRef-Package-npm-magic-bytes.js-0005b17673e4db59",
+      "versionInfo": "1.13.1",
+      "supplier": "NOASSERTION",
+      "downloadLocation": "https://registry.npmjs.org/magic-bytes.js/-/magic-bytes.js-1.13.1.tgz",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired package info from installed node module manifest file: /package-lock.json",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:magic-bytes.js:magic-bytes.js:1.13.1:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:magic-bytes.js:magic_bytes.js:1.13.1:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:magic_bytes.js:magic-bytes.js:1.13.1:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:magic_bytes.js:magic_bytes.js:1.13.1:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:magic:magic-bytes.js:1.13.1:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:magic:magic_bytes.js:1.13.1:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/magic-bytes.js@1.13.1"
+        }
+      ]
+    },
+    {
+      "name": "memebot_discord",
+      "SPDXID": "SPDXRef-Package-npm-memebot-discord-74267da08588f87c",
+      "versionInfo": "1.0.0",
+      "supplier": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired package info from installed node module manifest file: /package-lock.json",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "MIT",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:memebot-discord:memebot-discord:1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:memebot-discord:memebot_discord:1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:memebot_discord:memebot-discord:1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:memebot_discord:memebot_discord:1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:memebot:memebot-discord:1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:memebot:memebot_discord:1.0.0:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/memebot_discord@1.0.0"
+        }
+      ]
+    },
+    {
+      "name": "mime-db",
+      "SPDXID": "SPDXRef-Package-npm-mime-db-9048a6e7fca67080",
+      "versionInfo": "1.52.0",
+      "supplier": "NOASSERTION",
+      "downloadLocation": "https://registry.npmjs.org/mime-db/-/mime-db-1.52.0.tgz",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired package info from installed node module manifest file: /package-lock.json",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:mime-db:mime-db:1.52.0:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:mime-db:mime_db:1.52.0:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:mime_db:mime-db:1.52.0:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:mime_db:mime_db:1.52.0:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:mime:mime-db:1.52.0:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:mime:mime_db:1.52.0:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/mime-db@1.52.0"
+        }
+      ]
+    },
+    {
+      "name": "mime-types",
+      "SPDXID": "SPDXRef-Package-npm-mime-types-1c9ad1eb64c00f9b",
+      "versionInfo": "2.1.35",
+      "supplier": "NOASSERTION",
+      "downloadLocation": "https://registry.npmjs.org/mime-types/-/mime-types-2.1.35.tgz",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired package info from installed node module manifest file: /package-lock.json",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:mime-types:mime-types:2.1.35:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:mime-types:mime_types:2.1.35:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:mime_types:mime-types:2.1.35:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:mime_types:mime_types:2.1.35:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:mime:mime-types:2.1.35:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:mime:mime_types:2.1.35:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/mime-types@2.1.35"
+        }
+      ]
+    },
+    {
+      "name": "ts-mixer",
+      "SPDXID": "SPDXRef-Package-npm-ts-mixer-cd0aeb1a93c2a04b",
+      "versionInfo": "6.0.4",
+      "supplier": "NOASSERTION",
+      "downloadLocation": "https://registry.npmjs.org/ts-mixer/-/ts-mixer-6.0.4.tgz",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired package info from installed node module manifest file: /package-lock.json",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:ts-mixer:ts-mixer:6.0.4:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:ts-mixer:ts_mixer:6.0.4:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:ts_mixer:ts-mixer:6.0.4:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:ts_mixer:ts_mixer:6.0.4:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:ts:ts-mixer:6.0.4:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:ts:ts_mixer:6.0.4:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/ts-mixer@6.0.4"
+        }
+      ]
+    },
+    {
+      "name": "tslib",
+      "SPDXID": "SPDXRef-Package-npm-tslib-e6347e09cb3e6986",
+      "versionInfo": "2.8.1",
+      "supplier": "NOASSERTION",
+      "downloadLocation": "https://registry.npmjs.org/tslib/-/tslib-2.8.1.tgz",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired package info from installed node module manifest file: /package-lock.json",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:tslib:tslib:2.8.1:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/tslib@2.8.1"
+        }
+      ]
+    },
+    {
+      "name": "undici",
+      "SPDXID": "SPDXRef-Package-npm-undici-b24c657e9e4f3a00",
+      "versionInfo": "6.19.8",
+      "supplier": "NOASSERTION",
+      "downloadLocation": "https://registry.npmjs.org/undici/-/undici-6.19.8.tgz",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired package info from installed node module manifest file: /package-lock.json",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:nodejs:undici:6.19.8:*:*:*:*:node.js:*:*"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/undici@6.19.8"
+        }
+      ]
+    },
+    {
+      "name": "undici",
+      "SPDXID": "SPDXRef-Package-npm-undici-be9a7b845e056cb2",
+      "versionInfo": "6.29.1",
+      "supplier": "NOASSERTION",
+      "downloadLocation": "https://registry.npmjs.org/undici/-/undici-6.29.1.tgz",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired package info from installed node module manifest file: /package-lock.json",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:nodejs:undici:6.29.1:*:*:*:*:node.js:*:*"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/undici@6.29.1"
+        }
+      ]
+    },
+    {
+      "name": "undici-types",
+      "SPDXID": "SPDXRef-Package-npm-undici-types-6b84657d87ee56b7",
+      "versionInfo": "8.9.0",
+      "supplier": "NOASSERTION",
+      "downloadLocation": "https://registry.npmjs.org/undici-types/-/undici-types-8.9.0.tgz",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired package info from installed node module manifest file: /package-lock.json",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:undici-types:undici-types:8.9.0:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:undici-types:undici_types:8.9.0:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:undici_types:undici-types:8.9.0:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:undici_types:undici_types:8.9.0:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:undici:undici-types:8.9.0:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:undici:undici_types:8.9.0:*:*:*:*:*:*:*"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/undici-types@8.9.0"
+        }
+      ]
+    },
+    {
+      "name": "ws",
+      "SPDXID": "SPDXRef-Package-npm-ws-a62503d3b01f9ec6",
+      "versionInfo": "8.22.0",
+      "supplier": "NOASSERTION",
+      "downloadLocation": "https://registry.npmjs.org/ws/-/ws-8.22.0.tgz",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired package info from installed node module manifest file: /package-lock.json",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "SECURITY",
+          "referenceType": "cpe23Type",
+          "referenceLocator": "cpe:2.3:a:ws_project:ws:8.22.0:*:*:*:*:node.js:*:*"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/ws@8.22.0"
+        }
+      ]
+    },
+    {
+      "name": "arcadia",
+      "SPDXID": "SPDXRef-DocumentRoot-Directory-arcadia",
+      "versionInfo": "1.0.0",
+      "supplier": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "filesAnalyzed": true,
+      "packageVerificationCode": {
+        "packageVerificationCodeValue": "19bf0bd26ae1517613f5b3d97fa124754115205d"
+      },
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "primaryPackagePurpose": "FILE"
+    }
+  ],
+  "files": [
+    {
+      "fileName": ".github/workflows/build-and-deploy.yml",
+      "SPDXID": "SPDXRef-File-.github-workflows-build-and-deploy.yml-8655c0f19474fdc2",
+      "fileTypes": [
+        "TEXT"
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA1",
+          "checksumValue": "e769a1e1bb1e5d9cd9905a1fd74b3e714848f5cc"
+        },
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "ce0c6170fadd9ebbb4f50eb6511e1d0fb7e6bc23a2c1f03fb8b55c38240e8193"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "licenseInfoInFiles": [
+        "NOASSERTION"
+      ],
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "package-lock.json",
+      "SPDXID": "SPDXRef-File-package-lock.json-fd71c2238fc07657",
+      "fileTypes": [
+        "APPLICATION"
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA1",
+          "checksumValue": "ee580a63c3284059dca195e07d0081012daa8c01"
+        },
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "d0fa8364c73696d9ae483d8dbdce371d788f71ec37b0ba713865c105cfa2a679"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "licenseInfoInFiles": [
+        "NOASSERTION"
+      ],
+      "copyrightText": "NOASSERTION"
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-Package-npm-magic-bytes.js-0005b17673e4db59",
+      "relatedSpdxElement": "SPDXRef-Package-npm--discordjs-rest-ed51823b344c4e13",
+      "relationshipType": "DEPENDENCY_OF"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm-discord-api-types-0b689c3fe0d86bdf",
+      "relatedSpdxElement": "SPDXRef-Package-npm--discordjs-builders-23608a933227c5ae",
+      "relationshipType": "DEPENDENCY_OF"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm-discord-api-types-0b689c3fe0d86bdf",
+      "relatedSpdxElement": "SPDXRef-Package-npm--discordjs-ws-3b71769ed8c04d97",
+      "relationshipType": "DEPENDENCY_OF"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm-discord-api-types-0b689c3fe0d86bdf",
+      "relatedSpdxElement": "SPDXRef-Package-npm-discord.js-7128a1ada79b6beb",
+      "relationshipType": "DEPENDENCY_OF"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm-discord-api-types-0b689c3fe0d86bdf",
+      "relatedSpdxElement": "SPDXRef-Package-npm--discordjs-util-79c1afffdcabb13a",
+      "relationshipType": "DEPENDENCY_OF"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm-discord-api-types-0b689c3fe0d86bdf",
+      "relatedSpdxElement": "SPDXRef-Package-npm--discordjs-formatters-9bbd6f37c2ffb146",
+      "relationshipType": "DEPENDENCY_OF"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm-discord-api-types-0b689c3fe0d86bdf",
+      "relatedSpdxElement": "SPDXRef-Package-npm--discordjs-formatters-b0af21709547f001",
+      "relationshipType": "DEPENDENCY_OF"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm-discord-api-types-0b689c3fe0d86bdf",
+      "relatedSpdxElement": "SPDXRef-Package-npm--discordjs-rest-ed51823b344c4e13",
+      "relationshipType": "DEPENDENCY_OF"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm-mime-types-1c9ad1eb64c00f9b",
+      "relatedSpdxElement": "SPDXRef-Package-npm-form-data-d2b8e869b46ab834",
+      "relationshipType": "DEPENDENCY_OF"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm--discordjs-builders-23608a933227c5ae",
+      "relatedSpdxElement": "SPDXRef-Package-npm-discord.js-7128a1ada79b6beb",
+      "relationshipType": "DEPENDENCY_OF"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm-discord-api-types-3b278a58e5bac17f",
+      "relatedSpdxElement": "SPDXRef-Package-npm--discordjs-builders-23608a933227c5ae",
+      "relationshipType": "DEPENDENCY_OF"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm-discord-api-types-3b278a58e5bac17f",
+      "relatedSpdxElement": "SPDXRef-Package-npm--discordjs-ws-3b71769ed8c04d97",
+      "relationshipType": "DEPENDENCY_OF"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm-discord-api-types-3b278a58e5bac17f",
+      "relatedSpdxElement": "SPDXRef-Package-npm-discord.js-7128a1ada79b6beb",
+      "relationshipType": "DEPENDENCY_OF"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm-discord-api-types-3b278a58e5bac17f",
+      "relatedSpdxElement": "SPDXRef-Package-npm--discordjs-util-79c1afffdcabb13a",
+      "relationshipType": "DEPENDENCY_OF"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm-discord-api-types-3b278a58e5bac17f",
+      "relatedSpdxElement": "SPDXRef-Package-npm--discordjs-formatters-9bbd6f37c2ffb146",
+      "relationshipType": "DEPENDENCY_OF"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm-discord-api-types-3b278a58e5bac17f",
+      "relatedSpdxElement": "SPDXRef-Package-npm--discordjs-formatters-b0af21709547f001",
+      "relationshipType": "DEPENDENCY_OF"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm-discord-api-types-3b278a58e5bac17f",
+      "relatedSpdxElement": "SPDXRef-Package-npm--discordjs-rest-ed51823b344c4e13",
+      "relationshipType": "DEPENDENCY_OF"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm--discordjs-ws-3b71769ed8c04d97",
+      "relatedSpdxElement": "SPDXRef-Package-npm-discord.js-7128a1ada79b6beb",
+      "relationshipType": "DEPENDENCY_OF"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm--sapphire-shapeshift-4a762c0f66e715e0",
+      "relatedSpdxElement": "SPDXRef-Package-npm--discordjs-builders-23608a933227c5ae",
+      "relationshipType": "DEPENDENCY_OF"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm-lodash.snakecase-4db93646a56c3897",
+      "relatedSpdxElement": "SPDXRef-Package-npm-discord.js-7128a1ada79b6beb",
+      "relationshipType": "DEPENDENCY_OF"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm--sapphire-snowflake-51525d63d83e313d",
+      "relatedSpdxElement": "SPDXRef-Package-npm-discord.js-7128a1ada79b6beb",
+      "relationshipType": "DEPENDENCY_OF"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm--sapphire-snowflake-51525d63d83e313d",
+      "relatedSpdxElement": "SPDXRef-Package-npm--discordjs-rest-ed51823b344c4e13",
+      "relationshipType": "DEPENDENCY_OF"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm--sapphire-async-queue-52b14a5c3bad0055",
+      "relatedSpdxElement": "SPDXRef-Package-npm--discordjs-ws-3b71769ed8c04d97",
+      "relationshipType": "DEPENDENCY_OF"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm--sapphire-async-queue-52b14a5c3bad0055",
+      "relatedSpdxElement": "SPDXRef-Package-npm--discordjs-rest-ed51823b344c4e13",
+      "relationshipType": "DEPENDENCY_OF"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm--discordjs-collection-57d04422fd938052",
+      "relatedSpdxElement": "SPDXRef-Package-npm--discordjs-ws-3b71769ed8c04d97",
+      "relationshipType": "DEPENDENCY_OF"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm--discordjs-collection-57d04422fd938052",
+      "relatedSpdxElement": "SPDXRef-Package-npm-discord.js-7128a1ada79b6beb",
+      "relationshipType": "DEPENDENCY_OF"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm--discordjs-collection-57d04422fd938052",
+      "relatedSpdxElement": "SPDXRef-Package-npm--discordjs-rest-ed51823b344c4e13",
+      "relationshipType": "DEPENDENCY_OF"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm--sapphire-snowflake-59bdd7614f3127d3",
+      "relatedSpdxElement": "SPDXRef-Package-npm-discord.js-7128a1ada79b6beb",
+      "relationshipType": "DEPENDENCY_OF"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm--sapphire-snowflake-59bdd7614f3127d3",
+      "relatedSpdxElement": "SPDXRef-Package-npm--discordjs-rest-ed51823b344c4e13",
+      "relationshipType": "DEPENDENCY_OF"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm-discord-api-types-667f124cedc379b7",
+      "relatedSpdxElement": "SPDXRef-Package-npm--discordjs-builders-23608a933227c5ae",
+      "relationshipType": "DEPENDENCY_OF"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm-discord-api-types-667f124cedc379b7",
+      "relatedSpdxElement": "SPDXRef-Package-npm--discordjs-ws-3b71769ed8c04d97",
+      "relationshipType": "DEPENDENCY_OF"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm-discord-api-types-667f124cedc379b7",
+      "relatedSpdxElement": "SPDXRef-Package-npm-discord.js-7128a1ada79b6beb",
+      "relationshipType": "DEPENDENCY_OF"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm-discord-api-types-667f124cedc379b7",
+      "relatedSpdxElement": "SPDXRef-Package-npm--discordjs-util-79c1afffdcabb13a",
+      "relationshipType": "DEPENDENCY_OF"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm-discord-api-types-667f124cedc379b7",
+      "relatedSpdxElement": "SPDXRef-Package-npm--discordjs-formatters-9bbd6f37c2ffb146",
+      "relationshipType": "DEPENDENCY_OF"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm-discord-api-types-667f124cedc379b7",
+      "relatedSpdxElement": "SPDXRef-Package-npm--discordjs-formatters-b0af21709547f001",
+      "relationshipType": "DEPENDENCY_OF"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm-discord-api-types-667f124cedc379b7",
+      "relatedSpdxElement": "SPDXRef-Package-npm--discordjs-rest-ed51823b344c4e13",
+      "relationshipType": "DEPENDENCY_OF"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm-undici-types-6b84657d87ee56b7",
+      "relatedSpdxElement": "SPDXRef-Package-npm--types-node-9f90a32d4fc5e4bd",
+      "relationshipType": "DEPENDENCY_OF"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm-axios-6c0c7ead995192f4",
+      "relatedSpdxElement": "SPDXRef-Package-npm-memebot-discord-74267da08588f87c",
+      "relationshipType": "DEPENDENCY_OF"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm-discord.js-7128a1ada79b6beb",
+      "relatedSpdxElement": "SPDXRef-Package-npm-memebot-discord-74267da08588f87c",
+      "relationshipType": "DEPENDENCY_OF"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm--discordjs-util-79c1afffdcabb13a",
+      "relatedSpdxElement": "SPDXRef-Package-npm--discordjs-builders-23608a933227c5ae",
+      "relationshipType": "DEPENDENCY_OF"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm--discordjs-util-79c1afffdcabb13a",
+      "relatedSpdxElement": "SPDXRef-Package-npm--discordjs-ws-3b71769ed8c04d97",
+      "relationshipType": "DEPENDENCY_OF"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm--discordjs-util-79c1afffdcabb13a",
+      "relatedSpdxElement": "SPDXRef-Package-npm-discord.js-7128a1ada79b6beb",
+      "relationshipType": "DEPENDENCY_OF"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm--discordjs-util-79c1afffdcabb13a",
+      "relatedSpdxElement": "SPDXRef-Package-npm--discordjs-rest-ed51823b344c4e13",
+      "relationshipType": "DEPENDENCY_OF"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm-ascii-table-80d2cc80041d86ec",
+      "relatedSpdxElement": "SPDXRef-Package-npm-memebot-discord-74267da08588f87c",
+      "relationshipType": "DEPENDENCY_OF"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm-discord-api-types-89751cf6344320d2",
+      "relatedSpdxElement": "SPDXRef-Package-npm--discordjs-builders-23608a933227c5ae",
+      "relationshipType": "DEPENDENCY_OF"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm-discord-api-types-89751cf6344320d2",
+      "relatedSpdxElement": "SPDXRef-Package-npm--discordjs-ws-3b71769ed8c04d97",
+      "relationshipType": "DEPENDENCY_OF"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm-discord-api-types-89751cf6344320d2",
+      "relatedSpdxElement": "SPDXRef-Package-npm-discord.js-7128a1ada79b6beb",
+      "relationshipType": "DEPENDENCY_OF"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm-discord-api-types-89751cf6344320d2",
+      "relatedSpdxElement": "SPDXRef-Package-npm--discordjs-util-79c1afffdcabb13a",
+      "relationshipType": "DEPENDENCY_OF"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm-discord-api-types-89751cf6344320d2",
+      "relatedSpdxElement": "SPDXRef-Package-npm--discordjs-formatters-9bbd6f37c2ffb146",
+      "relationshipType": "DEPENDENCY_OF"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm-discord-api-types-89751cf6344320d2",
+      "relatedSpdxElement": "SPDXRef-Package-npm--discordjs-formatters-b0af21709547f001",
+      "relationshipType": "DEPENDENCY_OF"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm-discord-api-types-89751cf6344320d2",
+      "relatedSpdxElement": "SPDXRef-Package-npm--discordjs-rest-ed51823b344c4e13",
+      "relationshipType": "DEPENDENCY_OF"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm-asynckit-8a3701f173c08a3b",
+      "relatedSpdxElement": "SPDXRef-Package-npm-form-data-d2b8e869b46ab834",
+      "relationshipType": "DEPENDENCY_OF"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm-mime-db-9048a6e7fca67080",
+      "relatedSpdxElement": "SPDXRef-Package-npm-mime-types-1c9ad1eb64c00f9b",
+      "relationshipType": "DEPENDENCY_OF"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm-fast-deep-equal-93046d72c3636dc7",
+      "relatedSpdxElement": "SPDXRef-Package-npm--discordjs-builders-23608a933227c5ae",
+      "relationshipType": "DEPENDENCY_OF"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm-fast-deep-equal-93046d72c3636dc7",
+      "relatedSpdxElement": "SPDXRef-Package-npm--sapphire-shapeshift-4a762c0f66e715e0",
+      "relationshipType": "DEPENDENCY_OF"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm-fast-deep-equal-93046d72c3636dc7",
+      "relatedSpdxElement": "SPDXRef-Package-npm-discord.js-7128a1ada79b6beb",
+      "relationshipType": "DEPENDENCY_OF"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm--discordjs-formatters-9bbd6f37c2ffb146",
+      "relatedSpdxElement": "SPDXRef-Package-npm--discordjs-builders-23608a933227c5ae",
+      "relationshipType": "DEPENDENCY_OF"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm--discordjs-formatters-9bbd6f37c2ffb146",
+      "relatedSpdxElement": "SPDXRef-Package-npm-discord.js-7128a1ada79b6beb",
+      "relationshipType": "DEPENDENCY_OF"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm--types-node-9f90a32d4fc5e4bd",
+      "relatedSpdxElement": "SPDXRef-Package-npm--types-ws-c4386f2d094335b4",
+      "relationshipType": "DEPENDENCY_OF"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm-ws-a62503d3b01f9ec6",
+      "relatedSpdxElement": "SPDXRef-Package-npm--discordjs-ws-3b71769ed8c04d97",
+      "relationshipType": "DEPENDENCY_OF"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm--discordjs-collection-a6fdd566617b5b01",
+      "relatedSpdxElement": "SPDXRef-Package-npm--discordjs-ws-3b71769ed8c04d97",
+      "relationshipType": "DEPENDENCY_OF"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm--discordjs-collection-a6fdd566617b5b01",
+      "relatedSpdxElement": "SPDXRef-Package-npm-discord.js-7128a1ada79b6beb",
+      "relationshipType": "DEPENDENCY_OF"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm--discordjs-collection-a6fdd566617b5b01",
+      "relatedSpdxElement": "SPDXRef-Package-npm--discordjs-rest-ed51823b344c4e13",
+      "relationshipType": "DEPENDENCY_OF"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm--discordjs-formatters-b0af21709547f001",
+      "relatedSpdxElement": "SPDXRef-Package-npm--discordjs-builders-23608a933227c5ae",
+      "relationshipType": "DEPENDENCY_OF"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm--discordjs-formatters-b0af21709547f001",
+      "relatedSpdxElement": "SPDXRef-Package-npm-discord.js-7128a1ada79b6beb",
+      "relationshipType": "DEPENDENCY_OF"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm-undici-b24c657e9e4f3a00",
+      "relatedSpdxElement": "SPDXRef-Package-npm-discord.js-7128a1ada79b6beb",
+      "relationshipType": "DEPENDENCY_OF"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm-undici-b24c657e9e4f3a00",
+      "relatedSpdxElement": "SPDXRef-Package-npm--discordjs-rest-ed51823b344c4e13",
+      "relationshipType": "DEPENDENCY_OF"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm-undici-be9a7b845e056cb2",
+      "relatedSpdxElement": "SPDXRef-Package-npm-discord.js-7128a1ada79b6beb",
+      "relationshipType": "DEPENDENCY_OF"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm-undici-be9a7b845e056cb2",
+      "relatedSpdxElement": "SPDXRef-Package-npm--discordjs-rest-ed51823b344c4e13",
+      "relationshipType": "DEPENDENCY_OF"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm--types-ws-c4386f2d094335b4",
+      "relatedSpdxElement": "SPDXRef-Package-npm--discordjs-ws-3b71769ed8c04d97",
+      "relationshipType": "DEPENDENCY_OF"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm--vladfrangu-async-event-emitter-cbb0c53a98f11d48",
+      "relatedSpdxElement": "SPDXRef-Package-npm--discordjs-ws-3b71769ed8c04d97",
+      "relationshipType": "DEPENDENCY_OF"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm--vladfrangu-async-event-emitter-cbb0c53a98f11d48",
+      "relatedSpdxElement": "SPDXRef-Package-npm--discordjs-rest-ed51823b344c4e13",
+      "relationshipType": "DEPENDENCY_OF"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm-ts-mixer-cd0aeb1a93c2a04b",
+      "relatedSpdxElement": "SPDXRef-Package-npm--discordjs-builders-23608a933227c5ae",
+      "relationshipType": "DEPENDENCY_OF"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm-delayed-stream-cfbc726f0617aa9b",
+      "relatedSpdxElement": "SPDXRef-Package-npm-combined-stream-ecba06e036b6afed",
+      "relationshipType": "DEPENDENCY_OF"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm-form-data-d2b8e869b46ab834",
+      "relatedSpdxElement": "SPDXRef-Package-npm-axios-6c0c7ead995192f4",
+      "relationshipType": "DEPENDENCY_OF"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm-follow-redirects-dc7623ae1813c8e8",
+      "relatedSpdxElement": "SPDXRef-Package-npm-axios-6c0c7ead995192f4",
+      "relationshipType": "DEPENDENCY_OF"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm-lodash-e275bbdb1ece6fdc",
+      "relatedSpdxElement": "SPDXRef-Package-npm--sapphire-shapeshift-4a762c0f66e715e0",
+      "relationshipType": "DEPENDENCY_OF"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm-tslib-e6347e09cb3e6986",
+      "relatedSpdxElement": "SPDXRef-Package-npm--discordjs-builders-23608a933227c5ae",
+      "relationshipType": "DEPENDENCY_OF"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm-tslib-e6347e09cb3e6986",
+      "relatedSpdxElement": "SPDXRef-Package-npm--discordjs-ws-3b71769ed8c04d97",
+      "relationshipType": "DEPENDENCY_OF"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm-tslib-e6347e09cb3e6986",
+      "relatedSpdxElement": "SPDXRef-Package-npm-discord.js-7128a1ada79b6beb",
+      "relationshipType": "DEPENDENCY_OF"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm-tslib-e6347e09cb3e6986",
+      "relatedSpdxElement": "SPDXRef-Package-npm--discordjs-rest-ed51823b344c4e13",
+      "relationshipType": "DEPENDENCY_OF"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm-combined-stream-ecba06e036b6afed",
+      "relatedSpdxElement": "SPDXRef-Package-npm-form-data-d2b8e869b46ab834",
+      "relationshipType": "DEPENDENCY_OF"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm--discordjs-rest-ed51823b344c4e13",
+      "relatedSpdxElement": "SPDXRef-Package-npm--discordjs-ws-3b71769ed8c04d97",
+      "relationshipType": "DEPENDENCY_OF"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm--discordjs-rest-ed51823b344c4e13",
+      "relatedSpdxElement": "SPDXRef-Package-npm-discord.js-7128a1ada79b6beb",
+      "relationshipType": "DEPENDENCY_OF"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm-magic-bytes.js-0005b17673e4db59",
+      "relatedSpdxElement": "SPDXRef-File-package-lock.json-fd71c2238fc07657",
+      "relationshipType": "OTHER",
+      "comment": "evident-by: indicates the package's existence is evident by the given file"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm-discord-api-types-0b689c3fe0d86bdf",
+      "relatedSpdxElement": "SPDXRef-File-package-lock.json-fd71c2238fc07657",
+      "relationshipType": "OTHER",
+      "comment": "evident-by: indicates the package's existence is evident by the given file"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm-mime-types-1c9ad1eb64c00f9b",
+      "relatedSpdxElement": "SPDXRef-File-package-lock.json-fd71c2238fc07657",
+      "relationshipType": "OTHER",
+      "comment": "evident-by: indicates the package's existence is evident by the given file"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm--discordjs-builders-23608a933227c5ae",
+      "relatedSpdxElement": "SPDXRef-File-package-lock.json-fd71c2238fc07657",
+      "relationshipType": "OTHER",
+      "comment": "evident-by: indicates the package's existence is evident by the given file"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm-discord-api-types-3b278a58e5bac17f",
+      "relatedSpdxElement": "SPDXRef-File-package-lock.json-fd71c2238fc07657",
+      "relationshipType": "OTHER",
+      "comment": "evident-by: indicates the package's existence is evident by the given file"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm--discordjs-ws-3b71769ed8c04d97",
+      "relatedSpdxElement": "SPDXRef-File-package-lock.json-fd71c2238fc07657",
+      "relationshipType": "OTHER",
+      "comment": "evident-by: indicates the package's existence is evident by the given file"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm--sapphire-shapeshift-4a762c0f66e715e0",
+      "relatedSpdxElement": "SPDXRef-File-package-lock.json-fd71c2238fc07657",
+      "relationshipType": "OTHER",
+      "comment": "evident-by: indicates the package's existence is evident by the given file"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm-lodash.snakecase-4db93646a56c3897",
+      "relatedSpdxElement": "SPDXRef-File-package-lock.json-fd71c2238fc07657",
+      "relationshipType": "OTHER",
+      "comment": "evident-by: indicates the package's existence is evident by the given file"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm--sapphire-snowflake-51525d63d83e313d",
+      "relatedSpdxElement": "SPDXRef-File-package-lock.json-fd71c2238fc07657",
+      "relationshipType": "OTHER",
+      "comment": "evident-by: indicates the package's existence is evident by the given file"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm--sapphire-async-queue-52b14a5c3bad0055",
+      "relatedSpdxElement": "SPDXRef-File-package-lock.json-fd71c2238fc07657",
+      "relationshipType": "OTHER",
+      "comment": "evident-by: indicates the package's existence is evident by the given file"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm--discordjs-collection-57d04422fd938052",
+      "relatedSpdxElement": "SPDXRef-File-package-lock.json-fd71c2238fc07657",
+      "relationshipType": "OTHER",
+      "comment": "evident-by: indicates the package's existence is evident by the given file"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm--sapphire-snowflake-59bdd7614f3127d3",
+      "relatedSpdxElement": "SPDXRef-File-package-lock.json-fd71c2238fc07657",
+      "relationshipType": "OTHER",
+      "comment": "evident-by: indicates the package's existence is evident by the given file"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm-discord-api-types-667f124cedc379b7",
+      "relatedSpdxElement": "SPDXRef-File-package-lock.json-fd71c2238fc07657",
+      "relationshipType": "OTHER",
+      "comment": "evident-by: indicates the package's existence is evident by the given file"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm-undici-types-6b84657d87ee56b7",
+      "relatedSpdxElement": "SPDXRef-File-package-lock.json-fd71c2238fc07657",
+      "relationshipType": "OTHER",
+      "comment": "evident-by: indicates the package's existence is evident by the given file"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm-axios-6c0c7ead995192f4",
+      "relatedSpdxElement": "SPDXRef-File-package-lock.json-fd71c2238fc07657",
+      "relationshipType": "OTHER",
+      "comment": "evident-by: indicates the package's existence is evident by the given file"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-github-action-actions-checkout-6c6b4648c07f7f27",
+      "relatedSpdxElement": "SPDXRef-File-.github-workflows-build-and-deploy.yml-8655c0f19474fdc2",
+      "relationshipType": "OTHER",
+      "comment": "evident-by: indicates the package's existence is evident by the given file"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm-discord.js-7128a1ada79b6beb",
+      "relatedSpdxElement": "SPDXRef-File-package-lock.json-fd71c2238fc07657",
+      "relationshipType": "OTHER",
+      "comment": "evident-by: indicates the package's existence is evident by the given file"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm-memebot-discord-74267da08588f87c",
+      "relatedSpdxElement": "SPDXRef-File-package-lock.json-fd71c2238fc07657",
+      "relationshipType": "OTHER",
+      "comment": "evident-by: indicates the package's existence is evident by the given file"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm--discordjs-util-79c1afffdcabb13a",
+      "relatedSpdxElement": "SPDXRef-File-package-lock.json-fd71c2238fc07657",
+      "relationshipType": "OTHER",
+      "comment": "evident-by: indicates the package's existence is evident by the given file"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm-ascii-table-80d2cc80041d86ec",
+      "relatedSpdxElement": "SPDXRef-File-package-lock.json-fd71c2238fc07657",
+      "relationshipType": "OTHER",
+      "comment": "evident-by: indicates the package's existence is evident by the given file"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm-discord-api-types-89751cf6344320d2",
+      "relatedSpdxElement": "SPDXRef-File-package-lock.json-fd71c2238fc07657",
+      "relationshipType": "OTHER",
+      "comment": "evident-by: indicates the package's existence is evident by the given file"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm-asynckit-8a3701f173c08a3b",
+      "relatedSpdxElement": "SPDXRef-File-package-lock.json-fd71c2238fc07657",
+      "relationshipType": "OTHER",
+      "comment": "evident-by: indicates the package's existence is evident by the given file"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm-mime-db-9048a6e7fca67080",
+      "relatedSpdxElement": "SPDXRef-File-package-lock.json-fd71c2238fc07657",
+      "relationshipType": "OTHER",
+      "comment": "evident-by: indicates the package's existence is evident by the given file"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm-fast-deep-equal-93046d72c3636dc7",
+      "relatedSpdxElement": "SPDXRef-File-package-lock.json-fd71c2238fc07657",
+      "relationshipType": "OTHER",
+      "comment": "evident-by: indicates the package's existence is evident by the given file"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm--discordjs-formatters-9bbd6f37c2ffb146",
+      "relatedSpdxElement": "SPDXRef-File-package-lock.json-fd71c2238fc07657",
+      "relationshipType": "OTHER",
+      "comment": "evident-by: indicates the package's existence is evident by the given file"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm--types-node-9f90a32d4fc5e4bd",
+      "relatedSpdxElement": "SPDXRef-File-package-lock.json-fd71c2238fc07657",
+      "relationshipType": "OTHER",
+      "comment": "evident-by: indicates the package's existence is evident by the given file"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm-ws-a62503d3b01f9ec6",
+      "relatedSpdxElement": "SPDXRef-File-package-lock.json-fd71c2238fc07657",
+      "relationshipType": "OTHER",
+      "comment": "evident-by: indicates the package's existence is evident by the given file"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm--discordjs-collection-a6fdd566617b5b01",
+      "relatedSpdxElement": "SPDXRef-File-package-lock.json-fd71c2238fc07657",
+      "relationshipType": "OTHER",
+      "comment": "evident-by: indicates the package's existence is evident by the given file"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm--discordjs-formatters-b0af21709547f001",
+      "relatedSpdxElement": "SPDXRef-File-package-lock.json-fd71c2238fc07657",
+      "relationshipType": "OTHER",
+      "comment": "evident-by: indicates the package's existence is evident by the given file"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm-undici-b24c657e9e4f3a00",
+      "relatedSpdxElement": "SPDXRef-File-package-lock.json-fd71c2238fc07657",
+      "relationshipType": "OTHER",
+      "comment": "evident-by: indicates the package's existence is evident by the given file"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm-undici-be9a7b845e056cb2",
+      "relatedSpdxElement": "SPDXRef-File-package-lock.json-fd71c2238fc07657",
+      "relationshipType": "OTHER",
+      "comment": "evident-by: indicates the package's existence is evident by the given file"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm--types-ws-c4386f2d094335b4",
+      "relatedSpdxElement": "SPDXRef-File-package-lock.json-fd71c2238fc07657",
+      "relationshipType": "OTHER",
+      "comment": "evident-by: indicates the package's existence is evident by the given file"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm--vladfrangu-async-event-emitter-cbb0c53a98f11d48",
+      "relatedSpdxElement": "SPDXRef-File-package-lock.json-fd71c2238fc07657",
+      "relationshipType": "OTHER",
+      "comment": "evident-by: indicates the package's existence is evident by the given file"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm-ts-mixer-cd0aeb1a93c2a04b",
+      "relatedSpdxElement": "SPDXRef-File-package-lock.json-fd71c2238fc07657",
+      "relationshipType": "OTHER",
+      "comment": "evident-by: indicates the package's existence is evident by the given file"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm-delayed-stream-cfbc726f0617aa9b",
+      "relatedSpdxElement": "SPDXRef-File-package-lock.json-fd71c2238fc07657",
+      "relationshipType": "OTHER",
+      "comment": "evident-by: indicates the package's existence is evident by the given file"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm-form-data-d2b8e869b46ab834",
+      "relatedSpdxElement": "SPDXRef-File-package-lock.json-fd71c2238fc07657",
+      "relationshipType": "OTHER",
+      "comment": "evident-by: indicates the package's existence is evident by the given file"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-github-action-docker-login-action-d70a6af7ffbe2f77",
+      "relatedSpdxElement": "SPDXRef-File-.github-workflows-build-and-deploy.yml-8655c0f19474fdc2",
+      "relationshipType": "OTHER",
+      "comment": "evident-by: indicates the package's existence is evident by the given file"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm-follow-redirects-dc7623ae1813c8e8",
+      "relatedSpdxElement": "SPDXRef-File-package-lock.json-fd71c2238fc07657",
+      "relationshipType": "OTHER",
+      "comment": "evident-by: indicates the package's existence is evident by the given file"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm-lodash-e275bbdb1ece6fdc",
+      "relatedSpdxElement": "SPDXRef-File-package-lock.json-fd71c2238fc07657",
+      "relationshipType": "OTHER",
+      "comment": "evident-by: indicates the package's existence is evident by the given file"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-github-action-docker-build-push-action-e52fdfd5bbbba453",
+      "relatedSpdxElement": "SPDXRef-File-.github-workflows-build-and-deploy.yml-8655c0f19474fdc2",
+      "relationshipType": "OTHER",
+      "comment": "evident-by: indicates the package's existence is evident by the given file"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm-tslib-e6347e09cb3e6986",
+      "relatedSpdxElement": "SPDXRef-File-package-lock.json-fd71c2238fc07657",
+      "relationshipType": "OTHER",
+      "comment": "evident-by: indicates the package's existence is evident by the given file"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm-combined-stream-ecba06e036b6afed",
+      "relatedSpdxElement": "SPDXRef-File-package-lock.json-fd71c2238fc07657",
+      "relationshipType": "OTHER",
+      "comment": "evident-by: indicates the package's existence is evident by the given file"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-npm--discordjs-rest-ed51823b344c4e13",
+      "relatedSpdxElement": "SPDXRef-File-package-lock.json-fd71c2238fc07657",
+      "relationshipType": "OTHER",
+      "comment": "evident-by: indicates the package's existence is evident by the given file"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-github-action-docker-setup-buildx-action-ee21302d2ce44afc",
+      "relatedSpdxElement": "SPDXRef-File-.github-workflows-build-and-deploy.yml-8655c0f19474fdc2",
+      "relationshipType": "OTHER",
+      "comment": "evident-by: indicates the package's existence is evident by the given file"
+    },
+    {
+      "spdxElementId": "SPDXRef-DocumentRoot-Directory-arcadia",
+      "relatedSpdxElement": "SPDXRef-Package-npm--discordjs-builders-23608a933227c5ae",
+      "relationshipType": "CONTAINS"
+    },
+    {
+      "spdxElementId": "SPDXRef-DocumentRoot-Directory-arcadia",
+      "relatedSpdxElement": "SPDXRef-Package-npm--discordjs-collection-57d04422fd938052",
+      "relationshipType": "CONTAINS"
+    },
+    {
+      "spdxElementId": "SPDXRef-DocumentRoot-Directory-arcadia",
+      "relatedSpdxElement": "SPDXRef-Package-npm--discordjs-collection-a6fdd566617b5b01",
+      "relationshipType": "CONTAINS"
+    },
+    {
+      "spdxElementId": "SPDXRef-DocumentRoot-Directory-arcadia",
+      "relatedSpdxElement": "SPDXRef-Package-npm--discordjs-formatters-9bbd6f37c2ffb146",
+      "relationshipType": "CONTAINS"
+    },
+    {
+      "spdxElementId": "SPDXRef-DocumentRoot-Directory-arcadia",
+      "relatedSpdxElement": "SPDXRef-Package-npm--discordjs-formatters-b0af21709547f001",
+      "relationshipType": "CONTAINS"
+    },
+    {
+      "spdxElementId": "SPDXRef-DocumentRoot-Directory-arcadia",
+      "relatedSpdxElement": "SPDXRef-Package-npm--discordjs-rest-ed51823b344c4e13",
+      "relationshipType": "CONTAINS"
+    },
+    {
+      "spdxElementId": "SPDXRef-DocumentRoot-Directory-arcadia",
+      "relatedSpdxElement": "SPDXRef-Package-npm--discordjs-util-79c1afffdcabb13a",
+      "relationshipType": "CONTAINS"
+    },
+    {
+      "spdxElementId": "SPDXRef-DocumentRoot-Directory-arcadia",
+      "relatedSpdxElement": "SPDXRef-Package-npm--discordjs-ws-3b71769ed8c04d97",
+      "relationshipType": "CONTAINS"
+    },
+    {
+      "spdxElementId": "SPDXRef-DocumentRoot-Directory-arcadia",
+      "relatedSpdxElement": "SPDXRef-Package-npm--sapphire-async-queue-52b14a5c3bad0055",
+      "relationshipType": "CONTAINS"
+    },
+    {
+      "spdxElementId": "SPDXRef-DocumentRoot-Directory-arcadia",
+      "relatedSpdxElement": "SPDXRef-Package-npm--sapphire-shapeshift-4a762c0f66e715e0",
+      "relationshipType": "CONTAINS"
+    },
+    {
+      "spdxElementId": "SPDXRef-DocumentRoot-Directory-arcadia",
+      "relatedSpdxElement": "SPDXRef-Package-npm--sapphire-snowflake-59bdd7614f3127d3",
+      "relationshipType": "CONTAINS"
+    },
+    {
+      "spdxElementId": "SPDXRef-DocumentRoot-Directory-arcadia",
+      "relatedSpdxElement": "SPDXRef-Package-npm--sapphire-snowflake-51525d63d83e313d",
+      "relationshipType": "CONTAINS"
+    },
+    {
+      "spdxElementId": "SPDXRef-DocumentRoot-Directory-arcadia",
+      "relatedSpdxElement": "SPDXRef-Package-npm--types-node-9f90a32d4fc5e4bd",
+      "relationshipType": "CONTAINS"
+    },
+    {
+      "spdxElementId": "SPDXRef-DocumentRoot-Directory-arcadia",
+      "relatedSpdxElement": "SPDXRef-Package-npm--types-ws-c4386f2d094335b4",
+      "relationshipType": "CONTAINS"
+    },
+    {
+      "spdxElementId": "SPDXRef-DocumentRoot-Directory-arcadia",
+      "relatedSpdxElement": "SPDXRef-Package-npm--vladfrangu-async-event-emitter-cbb0c53a98f11d48",
+      "relationshipType": "CONTAINS"
+    },
+    {
+      "spdxElementId": "SPDXRef-DocumentRoot-Directory-arcadia",
+      "relatedSpdxElement": "SPDXRef-Package-github-action-actions-checkout-6c6b4648c07f7f27",
+      "relationshipType": "CONTAINS"
+    },
+    {
+      "spdxElementId": "SPDXRef-DocumentRoot-Directory-arcadia",
+      "relatedSpdxElement": "SPDXRef-Package-npm-ascii-table-80d2cc80041d86ec",
+      "relationshipType": "CONTAINS"
+    },
+    {
+      "spdxElementId": "SPDXRef-DocumentRoot-Directory-arcadia",
+      "relatedSpdxElement": "SPDXRef-Package-npm-asynckit-8a3701f173c08a3b",
+      "relationshipType": "CONTAINS"
+    },
+    {
+      "spdxElementId": "SPDXRef-DocumentRoot-Directory-arcadia",
+      "relatedSpdxElement": "SPDXRef-Package-npm-axios-6c0c7ead995192f4",
+      "relationshipType": "CONTAINS"
+    },
+    {
+      "spdxElementId": "SPDXRef-DocumentRoot-Directory-arcadia",
+      "relatedSpdxElement": "SPDXRef-Package-npm-combined-stream-ecba06e036b6afed",
+      "relationshipType": "CONTAINS"
+    },
+    {
+      "spdxElementId": "SPDXRef-DocumentRoot-Directory-arcadia",
+      "relatedSpdxElement": "SPDXRef-Package-npm-delayed-stream-cfbc726f0617aa9b",
+      "relationshipType": "CONTAINS"
+    },
+    {
+      "spdxElementId": "SPDXRef-DocumentRoot-Directory-arcadia",
+      "relatedSpdxElement": "SPDXRef-Package-npm-discord-api-types-0b689c3fe0d86bdf",
+      "relationshipType": "CONTAINS"
+    },
+    {
+      "spdxElementId": "SPDXRef-DocumentRoot-Directory-arcadia",
+      "relatedSpdxElement": "SPDXRef-Package-npm-discord-api-types-3b278a58e5bac17f",
+      "relationshipType": "CONTAINS"
+    },
+    {
+      "spdxElementId": "SPDXRef-DocumentRoot-Directory-arcadia",
+      "relatedSpdxElement": "SPDXRef-Package-npm-discord-api-types-667f124cedc379b7",
+      "relationshipType": "CONTAINS"
+    },
+    {
+      "spdxElementId": "SPDXRef-DocumentRoot-Directory-arcadia",
+      "relatedSpdxElement": "SPDXRef-Package-npm-discord-api-types-89751cf6344320d2",
+      "relationshipType": "CONTAINS"
+    },
+    {
+      "spdxElementId": "SPDXRef-DocumentRoot-Directory-arcadia",
+      "relatedSpdxElement": "SPDXRef-Package-npm-discord.js-7128a1ada79b6beb",
+      "relationshipType": "CONTAINS"
+    },
+    {
+      "spdxElementId": "SPDXRef-DocumentRoot-Directory-arcadia",
+      "relatedSpdxElement": "SPDXRef-Package-github-action-docker-build-push-action-e52fdfd5bbbba453",
+      "relationshipType": "CONTAINS"
+    },
+    {
+      "spdxElementId": "SPDXRef-DocumentRoot-Directory-arcadia",
+      "relatedSpdxElement": "SPDXRef-Package-github-action-docker-login-action-d70a6af7ffbe2f77",
+      "relationshipType": "CONTAINS"
+    },
+    {
+      "spdxElementId": "SPDXRef-DocumentRoot-Directory-arcadia",
+      "relatedSpdxElement": "SPDXRef-Package-github-action-docker-setup-buildx-action-ee21302d2ce44afc",
+      "relationshipType": "CONTAINS"
+    },
+    {
+      "spdxElementId": "SPDXRef-DocumentRoot-Directory-arcadia",
+      "relatedSpdxElement": "SPDXRef-Package-npm-fast-deep-equal-93046d72c3636dc7",
+      "relationshipType": "CONTAINS"
+    },
+    {
+      "spdxElementId": "SPDXRef-DocumentRoot-Directory-arcadia",
+      "relatedSpdxElement": "SPDXRef-Package-npm-follow-redirects-dc7623ae1813c8e8",
+      "relationshipType": "CONTAINS"
+    },
+    {
+      "spdxElementId": "SPDXRef-DocumentRoot-Directory-arcadia",
+      "relatedSpdxElement": "SPDXRef-Package-npm-form-data-d2b8e869b46ab834",
+      "relationshipType": "CONTAINS"
+    },
+    {
+      "spdxElementId": "SPDXRef-DocumentRoot-Directory-arcadia",
+      "relatedSpdxElement": "SPDXRef-Package-npm-lodash-e275bbdb1ece6fdc",
+      "relationshipType": "CONTAINS"
+    },
+    {
+      "spdxElementId": "SPDXRef-DocumentRoot-Directory-arcadia",
+      "relatedSpdxElement": "SPDXRef-Package-npm-lodash.snakecase-4db93646a56c3897",
+      "relationshipType": "CONTAINS"
+    },
+    {
+      "spdxElementId": "SPDXRef-DocumentRoot-Directory-arcadia",
+      "relatedSpdxElement": "SPDXRef-Package-npm-magic-bytes.js-0005b17673e4db59",
+      "relationshipType": "CONTAINS"
+    },
+    {
+      "spdxElementId": "SPDXRef-DocumentRoot-Directory-arcadia",
+      "relatedSpdxElement": "SPDXRef-Package-npm-memebot-discord-74267da08588f87c",
+      "relationshipType": "CONTAINS"
+    },
+    {
+      "spdxElementId": "SPDXRef-DocumentRoot-Directory-arcadia",
+      "relatedSpdxElement": "SPDXRef-Package-npm-mime-db-9048a6e7fca67080",
+      "relationshipType": "CONTAINS"
+    },
+    {
+      "spdxElementId": "SPDXRef-DocumentRoot-Directory-arcadia",
+      "relatedSpdxElement": "SPDXRef-Package-npm-mime-types-1c9ad1eb64c00f9b",
+      "relationshipType": "CONTAINS"
+    },
+    {
+      "spdxElementId": "SPDXRef-DocumentRoot-Directory-arcadia",
+      "relatedSpdxElement": "SPDXRef-Package-npm-ts-mixer-cd0aeb1a93c2a04b",
+      "relationshipType": "CONTAINS"
+    },
+    {
+      "spdxElementId": "SPDXRef-DocumentRoot-Directory-arcadia",
+      "relatedSpdxElement": "SPDXRef-Package-npm-tslib-e6347e09cb3e6986",
+      "relationshipType": "CONTAINS"
+    },
+    {
+      "spdxElementId": "SPDXRef-DocumentRoot-Directory-arcadia",
+      "relatedSpdxElement": "SPDXRef-Package-npm-undici-b24c657e9e4f3a00",
+      "relationshipType": "CONTAINS"
+    },
+    {
+      "spdxElementId": "SPDXRef-DocumentRoot-Directory-arcadia",
+      "relatedSpdxElement": "SPDXRef-Package-npm-undici-be9a7b845e056cb2",
+      "relationshipType": "CONTAINS"
+    },
+    {
+      "spdxElementId": "SPDXRef-DocumentRoot-Directory-arcadia",
+      "relatedSpdxElement": "SPDXRef-Package-npm-undici-types-6b84657d87ee56b7",
+      "relationshipType": "CONTAINS"
+    },
+    {
+      "spdxElementId": "SPDXRef-DocumentRoot-Directory-arcadia",
+      "relatedSpdxElement": "SPDXRef-Package-npm-ws-a62503d3b01f9ec6",
+      "relationshipType": "CONTAINS"
+    },
+    {
+      "spdxElementId": "SPDXRef-DocumentRoot-Directory-arcadia",
+      "relatedSpdxElement": "SPDXRef-File-.github-workflows-build-and-deploy.yml-8655c0f19474fdc2",
+      "relationshipType": "CONTAINS"
+    },
+    {
+      "spdxElementId": "SPDXRef-DocumentRoot-Directory-arcadia",
+      "relatedSpdxElement": "SPDXRef-File-package-lock.json-fd71c2238fc07657",
+      "relationshipType": "CONTAINS"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-DocumentRoot-Directory-arcadia",
+      "relationshipType": "DESCRIBES"
+    }
+  ]
+}
