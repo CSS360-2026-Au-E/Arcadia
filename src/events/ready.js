@@ -92,7 +92,6 @@ const event = {
           slotsCommand.toJSON(),
           pokerCommand.toJSON(),
           ...DUBLOON_COMMANDS.map((command) => command.toJSON()),
-          ...DUBLOON_COMMANDS.map((command) => command.toJSON()),
           ...CATCHER_COMMANDS.map((command) => command.toJSON()),
         ]);
         console.log(
