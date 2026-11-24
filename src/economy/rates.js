@@ -36,6 +36,11 @@ export const RATES = {
 
   // ovjason's game. A win is 50 (easy), 100 (medium) or 300 (hard), a draw is 30.
   tictactoe: { name: "Tic Tac Toe", points: 100, dubloons: 10 },
+
+  // cpukarma's game. CATcher's points are called mewroons, and they're worth
+  // 1 dubloon each. Catching a cat is 5 (common), 10 (rare), 20 (legendary)
+  // or 50 (mythical) mewroons.
+  catcher: { name: "CATcher (mewroons)", points: 1, dubloons: 1 },
 };
 
 // The game keys in the order /points and /convert list them.
