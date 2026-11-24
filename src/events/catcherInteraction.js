@@ -222,7 +222,10 @@ async function explore(interaction) {
 
   const explorerId = interaction.user.id;
   const { cat, encounter, picture, message: content } = newWildCat(explorerId);
-  const message = await interaction.reply({ ...content, fetchReply: true });
+  await interaction.reply(content);
+  // Get the real message, so button clicks can be matched to this cat.
+  // (Newer discord.js ignores reply's old fetchReply option.)
+  const message = await interaction.fetchReply();
   placeCat(interaction.channelId, explorerId, message, cat, encounter, picture);
 }
 
