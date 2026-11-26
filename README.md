@@ -15,6 +15,7 @@ CSS 360, Group 4.
 | `/horserace` | 1+ | Bet dubloons on five horses at racetrack odds (2x for the favorite up to 10x for the long shot), then watch them race. Winning bets pay out at the odds. | Playable |
 | `/slots` | 1 | Bet dubloons on a three-reel slot machine. Three sevens pay 100x. | Playable |
 | `/poker` | 1 | Video poker (Jacks or Better). Bet dubloons, get 5 cards, hold the ones you like and draw new ones. A royal flush pays 250x. | Playable |
+| `/explore` | 1+ | **CATcher:** a wild cat appears in a random mood (sleepy, calm or angry). Anyone can try to catch it with pspsps or the cat's favorite treat; the explorer can skip it for a new cat. Catching earns **mewroons**, which buy treats in `/catshop` and convert to dubloons 1:1. See your cats, treats and mewroons with `/catventory`. | Playable |
 | Personality test | 1 | Answer quick questions and get a four letter type like ENFJ. | Planned |
 
 ## Dubloons
