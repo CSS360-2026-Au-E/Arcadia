@@ -102,3 +102,14 @@ export function tictactoePoints(difficulty, status) {
   if (status === "draw") return TICTACTOE_DRAW;
   return 0;
 }
+
+// ---------------------------------------------------------------------------
+// PERSONALITY QUIZ: it's a one-time quiz, so finishing it is worth 100 points
+// (1 dubloon at the quiz's rate). When someone finishes, the quiz calls
+// awardPoints(userId, "mbti", mbtiPoints(), guildId) from bank.js.
+// ---------------------------------------------------------------------------
+export const MBTI_COMPLETE = 100;
+
+export function mbtiPoints() {
+  return MBTI_COMPLETE;
+}
